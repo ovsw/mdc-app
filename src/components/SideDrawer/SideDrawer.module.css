@@ -1,0 +1,21 @@
+.sideDrawer {
+  @apply fixed h-full overflow-auto pin-y pin-r p-3 shadow-md w-full shadow-lg z-30;
+  background-image: linear-gradient(to top, #367c2b 0%, #0ba360 100%);
+}
+
+@screen sm {
+  .sideDrawer {
+  @apply w-1/2;
+  }
+}
+
+@screen lg {
+  .sideDrawer {
+  @apply w-1/3;
+  }
+}
+@screen xl {
+  .sideDrawer {
+    @apply w-1/4;
+  }
+}

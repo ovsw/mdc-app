@@ -1,0 +1,7 @@
+.link {
+  @apply no-underline text-xs font-bold text-white uppercase;
+}
+
+.link:hover{
+  @apply text-yellow-light;
+}

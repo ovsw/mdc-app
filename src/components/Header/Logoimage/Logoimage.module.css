@@ -1,0 +1,24 @@
+.logo {
+  top: -30px;
+  left: 50%;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 19;
+}
+
+.image {
+  @apply my-px;
+  width: 120px;
+}
+
+@screen md {
+  .logo {
+    top: -37px;
+    left: 50%;
+    margin-left: -75px;
+    position: absolute;
+  }
+  .image {
+    width: 150px;
+  }
+}

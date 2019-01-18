@@ -1,0 +1,17 @@
+
+.quickLink {
+  @apply  m-0 border-t-2 border-l border-b-2 border-solid border-green-dark;
+}
+
+.quickLink a {
+  @apply inline-block py-2 px-3;
+  @apply uppercase no-underline text-xs font-bold;
+}
+
+.quickLink a:hover {
+  @apply text-green-dark bg-yellow-light;
+}
+
+.quickLink:last-child{
+  @apply  border-r-2;
+}

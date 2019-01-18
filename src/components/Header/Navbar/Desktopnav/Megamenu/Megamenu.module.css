@@ -1,0 +1,16 @@
+.mainItem {
+  @apply m-0 text-center w-2/12;
+}
+
+.megaMenu {
+  @apply  bg-green-dark text-white absolute pin-x w-full text-left p-4 shadow-md;
+  top: 4.3rem;
+  background: linear-gradient(to right, rgb(11, 163, 96) 0%, rgb(54, 124, 43) 100%);
+}
+
+.menuColumn {
+  @apply list-reset mx-8;
+}
+.menuColumn a {
+  @apply no-underline;
+}
