@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-datocms-demo",
-  "description": "Gatsby DatoCMS creative portfolio demo",
+  "name": "mdc-app",
+  "description": "MDC PWA powered by Gatsby & DatoCMS",
   "version": "1.0.0",
   "author": "Ovi Savescu <ovi@ovswebsites.com>",
   "dependencies": {
