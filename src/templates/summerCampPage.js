@@ -4,10 +4,9 @@ import React from 'react'
 // import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import Layout from 'src/components/layout'
 
-const BasicPage = ({ data }) => (
-  <Layout>
+const SummerCampPage = ({ data }) => (
+  <>
     <h1>This is a basic page with title: {data.datoCmsSummerCampPage.title}</h1>
     {data.datoCmsSummerCampPage.body.map(block => (
       <div key={block.id}>
@@ -21,10 +20,10 @@ const BasicPage = ({ data }) => (
         {block.model.apiKey === 'image' && <Img fluid={block.image.fluid} style={{ maxWidth: '600px' }} />}
       </div>
     ))}
-  </Layout>
+  </>
 )
 
-export default BasicPage
+export default SummerCampPage
 
 export const query = graphql`
   query SummerCampPageQuery($slug: String!) {
@@ -32,6 +31,7 @@ export const query = graphql`
       title
       body {
         ... on DatoCmsRichText {
+          id
           model {
             apiKey
           }
@@ -40,7 +40,15 @@ export const query = graphql`
             text
           }
         }
+        ... on DatoCmsQuote {
+          id
+          model {
+            apiKey
+          }
+          text
+        }
         ... on DatoCmsImage {
+          id
           model {
             apiKey
           }

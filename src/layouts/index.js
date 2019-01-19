@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
+import Transition from 'src/components/transition'
 import Header from 'src/components/Header/Header'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -119,7 +120,7 @@ class Layout extends React.Component {
                   </div>
                 </div>
               </div>
-              {children}
+              <Transition location={this.props.location}>{children}</Transition>
             </div>
             {/* END CONTENT */}
           </div>

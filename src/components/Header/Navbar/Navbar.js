@@ -4,7 +4,7 @@ import { CSSTransition } from 'react-transition-group'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-import { MobileNavToggleContext } from 'src/components/layout'
+import { MobileNavToggleContext } from 'src/layouts'
 
 import SideDrawer from 'src/components/SideDrawer/SideDrawer'
 import BarButton from 'src/components/SideDrawer/BarButton/BarButton'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { MobileNavToggleContext } from 'src/components/layout'
+import { MobileNavToggleContext } from 'src/layouts'
 import { CSSTransition } from 'react-transition-group'
 
 import Backdrop from 'src/components/Backdrop/Backdrop'

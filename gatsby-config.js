@@ -94,6 +94,7 @@ module.exports = {
     `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-layout`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -108,6 +109,7 @@ module.exports = {
       options: {
         apiToken: process.env.DATO_API_TOKEN,
         previewMode: process.env.DATO_PREVIEW,
+        disableLiveReload: true,
       },
     },
     {

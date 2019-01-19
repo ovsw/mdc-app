@@ -24,6 +24,9 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
               node {
                 slug
+                pageParent {
+                  slug
+                }
               }
             }
           }
@@ -45,8 +48,15 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         result.data.allDatoCmsSummerCampPage.edges.forEach(({ node: page }) => {
+          let fullSlug = ''
+
+          if (page.pageParent !== null) {
+            fullSlug = `${page.pageParent.slug}/${page.slug}`
+          } else {
+            fullSlug = page.slug
+          }
           createPage({
-            path: `summer-camp/${page.slug}`,
+            path: `summer-camp/${fullSlug}`,
             component: summerCampPagetemplate,
             context: {
               slug: page.slug,
