@@ -27,13 +27,13 @@ class Megamenu extends React.Component {
   }
 
   render() {
-    const { menuModel } = this.props
+    const { menuTitle, menuModel } = this.props
     const { megaMenuVisible } = this.state
 
     return (
       <li className={styles.mainItem}>
         <a
-          className="cursor-pointer font-bold py-6 px-12 hover:text-green-dark"
+          className="cursor-pointer font-bold py-6 px-8 mx-2 xl:mx-6 hover:text-green-dark"
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}
@@ -41,7 +41,7 @@ class Megamenu extends React.Component {
           role="link"
           tabIndex="-1"
         >
-          About Us
+          {menuTitle}
         </a>
         <div
           onMouseEnter={this.showMenu}
@@ -51,17 +51,23 @@ class Megamenu extends React.Component {
             this._megaMenuWrapper = megaMenuWrapper
           }}
         >
-          <div className="container mx-auto flex justify-around">
+          <div className="container mx-auto flex justify-center">
             {menuModel.map((column, index) => (
-              <ul className={styles.menuColumn} key={index}>
+              <ul className={`${styles.menuColumn}`} key={index}>
                 {column.map((item, key) => (
                   <li key={key}>
-                    <Link to={item.url}>{item.title}</Link>
-                    {item.children.length > 0 && (
+                    {item.url.indexOf('https') !== 0 ? (
+                      <Link to={item.url}>{item.title}</Link>
+                    ) : (
+                      <a href={item.url} rel="noopener noreferrer" target="_blank">
+                        {item.title}
+                      </a>
+                    )}
+                    {item.children != undefined && item.children.length > 0 && (
                       <ul className="list-reset">
                         {item.children.map((child, key) => (
                           <li key={key}>
-                            <Link to={child.url}>{child.title}</Link>
+                            <a to={child.url}>{child.title}</a>
                           </li>
                         ))}
                       </ul>

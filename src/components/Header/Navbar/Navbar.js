@@ -11,6 +11,7 @@ import BarButton from 'src/components/SideDrawer/BarButton/BarButton'
 import Logoimage from 'src/components/Header/Logoimage/Logoimage'
 import DesktopNav from 'src/components/Header/Navbar/Desktopnav/Desktopnav'
 
+import whitewoodbg from 'src/images/whitewood-texture.jpg'
 import styles from './Navbar.module.css'
 
 const navbar = props => (
@@ -28,6 +29,14 @@ const navbar = props => (
                 url
               }
             }
+            familiesNav {
+              title
+              url
+            }
+            staffNav {
+              title
+              url
+            }
           }
         }
       }
@@ -35,9 +44,13 @@ const navbar = props => (
     render={data => (
       <div className="relative">
         <Logoimage />
-        <nav className="bg-white">
+        <nav className={styles.navBg}>
           <div className="hidden lg:block container mx-auto">
-            <DesktopNav aboutNav={data.site.siteMetadata.aboutNav} />
+            <DesktopNav
+              aboutNav={data.site.siteMetadata.aboutNav}
+              familiesNav={data.site.siteMetadata.familiesNav}
+              staffNav={data.site.siteMetadata.staffNav}
+            />
           </div>
 
           {/* MOBILE */}

@@ -1,4 +1,7 @@
 
+.navBg {
+  background: url('src/images/whitewood-texture.jpg');
+}
 .navigationItems ul{
   @apply flex m-0 list-reset;
 }

@@ -8,6 +8,8 @@ exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     const basicPagetemplate = path.resolve(`./src/templates/aboutPage.js`)
     const summerCampPagetemplate = path.resolve(`./src/templates/summerCampPage.js`)
+    const schoolYearPagetemplate = path.resolve(`./src/templates/schoolYearPage.js`)
+    const staffPagetemplate = path.resolve(`./src/templates/staffPage.js`)
 
     // Query for markdown nodes to use in creating pages.
     resolve(
@@ -27,6 +29,20 @@ exports.createPages = ({ graphql, actions }) => {
                 pageParent {
                   slug
                 }
+              }
+            }
+          }
+          allDatoCmsSchoolYearPage {
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+          allDatoCmsStaffPage {
+            edges {
+              node {
+                slug
               }
             }
           }
@@ -58,6 +74,26 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: `summer-camp/${fullSlug}`,
             component: summerCampPagetemplate,
+            context: {
+              slug: page.slug,
+            },
+          })
+        })
+
+        result.data.allDatoCmsSchoolYearPage.edges.forEach(({ node: page }) => {
+          createPage({
+            path: `school-year/${page.slug}`,
+            component: schoolYearPagetemplate,
+            context: {
+              slug: page.slug,
+            },
+          })
+        })
+
+        result.data.allDatoCmsStaffPage.edges.forEach(({ node: page }) => {
+          createPage({
+            path: `staff/${page.slug}`,
+            component: staffPagetemplate,
             context: {
               slug: page.slug,
             },

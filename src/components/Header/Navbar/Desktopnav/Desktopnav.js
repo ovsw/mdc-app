@@ -5,18 +5,23 @@ import Megamenu from 'src/components/Header/Navbar/Desktopnav/Megamenu/Megamenu'
 import styles from './Desktopnav.module.css'
 
 class DesktopNav extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      mobileNavVisible: false,
+    }
+  }
+
   render() {
-    const { aboutNav } = this.props
+    const { aboutNav, familiesNav, staffNav } = this.props
     return (
       <ul className="list-reset m-0 py-2 px-2 flex items-center">
-        <Megamenu menuModel={aboutNav} />
-        <li className="m-0 text-center w-1/4">
-          <a className={styles.mainMenuLink}>Shibley Families</a>
-        </li>
+        <Megamenu menuTitle="About Us" menuModel={aboutNav} />
+        <Megamenu menuTitle="Maplewood Families" menuModel={familiesNav} />
         <li className="m-0 text-center flex-auto" />
-        <li className="m-0 text-center w-2/12">
-          <a className={styles.mainMenuLink}>Staff</a>
-        </li>
+        <Megamenu menuTitle="Staff" menuModel={staffNav} />
+
         <li className="m-0 text-center w-2/6">
           <ul
             className="list-reset m-0 flex"

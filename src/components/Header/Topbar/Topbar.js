@@ -24,8 +24,8 @@ const Topbar = props => (
           </a>
         </div>
         <div>
-          <Link to="/" className={styles.link} style={{ marginRight: '1rem' }}>
-            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Shiblog
+          <Link to="/" className={styles.link} style={{ marginRight: '1rem', color: 'yellow' }}>
+            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Blog
           </Link>
           <Link to="/" className={styles.link}>
             <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Parent Login

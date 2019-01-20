@@ -1,16 +1,36 @@
 .mainItem {
-  @apply m-0 text-center w-2/12;
+  @apply m-0 text-center;
+  
 }
 
 .megaMenu {
-  @apply  bg-green-dark text-white absolute pin-x w-full text-left p-4 shadow-md;
+  @apply  bg-green-dark text-white absolute   pin-x w-full text-left  shadow-md;
   top: 4.3rem;
   background: linear-gradient(to right, rgb(11, 163, 96) 0%, rgb(54, 124, 43) 100%);
 }
 
 .menuColumn {
-  @apply list-reset mx-8;
+  @apply list-reset py-4 px-16 m-0 border-grey border-r border-solid;
 }
-.menuColumn a {
-  @apply no-underline;
+.menuColumn:last-child {
+  @apply  border-none ;
+}
+.menuColumn li {
+  @apply my-1;
+}
+.menuColumn li:first-child a{
+  @apply  font-bold ;
+}
+.menuColumn ul {
+  @apply my-1 ml-4;
+}
+.menuColumn ul li:first-child a{
+  @apply text-white text-sm font-normal;
+}
+.menuColumn li a {
+  @apply no-underline text-sm;
+}
+
+.menuColumn li a:hover {
+  @apply text-yellow-light underline;
 }
