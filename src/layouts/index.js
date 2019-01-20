@@ -64,7 +64,7 @@ class Layout extends React.Component {
           }
         `}
         render={data => (
-          <div className="container pt-32 mt-4 mx-auto">
+          <>
             <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags}>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
             </HelmetDatoCms>
@@ -74,56 +74,14 @@ class Layout extends React.Component {
               <Header />
             </MobileNavToggleContext.Provider>
             {/* END HEADER & NAV */}
-
-            {/* CONTENT */}
-            <div className="container__sidebar">
-              <div className="sidebar">
-                <h6 className="sidebar__title">
-                  <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-                </h6>
-                <div
-                  className="sidebar__intro"
-                  dangerouslySetInnerHTML={{
-                    __html: data.datoCmsHome.introTextNode.childMarkdownRemark.html,
-                  }}
-                />
-                <div className="bg-blue">
-                  <h2>Tailwind Test</h2>
-                  <button
-                    type="button"
-                    className="bg-white border-purple border font-semibold hover:bg-purple hover:text-white leading-normal px-4 py-1 rounded-full text-purple text-xs"
-                  >
-                    Test Button
-                  </button>
-                </div>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/the-maplewood-experience">Maplewood Experience</Link>
-                  </li>
-                  <li>
-                    <Link to="/summer-camp/new-for-2019">New for 2019!</Link>
-                  </li>
-                </ul>
+            <div className="container pt-20 md:pt-24 lg:pt-32 px-6 md:px-8 xl:px-16 mt-4 mx-auto">
+              {/* CONTENT */}
+              <div className="container__body">
+                <Transition location={this.props.location}>{children}</Transition>
               </div>
+              {/* END CONTENT */}
             </div>
-            <div className="container__body">
-              <div className="container__mobile-header">
-                <div className="mobile-header">
-                  <div className="mobile-header__menu">
-                    <Link to="#" data-js="toggleSidebar" />
-                  </div>
-                  <div className="mobile-header__logo">
-                    <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-                  </div>
-                </div>
-              </div>
-              <Transition location={this.props.location}>{children}</Transition>
-            </div>
-            {/* END CONTENT */}
-          </div>
+          </>
         )}
       />
     )
