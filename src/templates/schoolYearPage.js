@@ -21,6 +21,16 @@ export const query = graphql`
   query SchoolYearPageQuery($slug: String!) {
     datoCmsSchoolYearPage(slug: { eq: $slug }) {
       title
+      bannerImage {
+        url
+        fluid(
+          maxWidth: 1200
+          maxHeight: 400
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", mono: "14FF5D00" }
+        ) {
+          ...GatsbyDatoCmsFluid
+        }
+      }
       body {
         ... on DatoCmsRichText {
           id
@@ -28,9 +38,6 @@ export const query = graphql`
             apiKey
           }
           text
-          textNode {
-            text
-          }
         }
         ... on DatoCmsQuote {
           id
@@ -46,7 +53,7 @@ export const query = graphql`
           }
           image {
             url
-            fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fluid(maxWidth: 1040, maxHeight: 400, imgixParams: { fm: "jpg", auto: "enhance,compress" }) {
               ...GatsbyDatoCmsSizes
             }
           }

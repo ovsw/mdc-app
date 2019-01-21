@@ -23,8 +23,12 @@ export const query = graphql`
       title
       bannerImage {
         url
-        fluid(imgixParams: { fm: "jpg", auto: "compress", mono: "8026D435", fit: "facearea", w: "1420", h: "100" }) {
-          ...GatsbyDatoCmsSizes
+        fluid(
+          maxWidth: 1200
+          maxHeight: 400
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", mono: "14FF5D00" }
+        ) {
+          ...GatsbyDatoCmsFluid
         }
       }
       body {
@@ -34,9 +38,6 @@ export const query = graphql`
             apiKey
           }
           text
-          textNode {
-            text
-          }
         }
         ... on DatoCmsQuote {
           id
@@ -52,7 +53,7 @@ export const query = graphql`
           }
           image {
             url
-            fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+            fluid(maxWidth: 1040, maxHeight: 400, imgixParams: { fm: "jpg", auto: "enhance,compress" }) {
               ...GatsbyDatoCmsSizes
             }
           }
