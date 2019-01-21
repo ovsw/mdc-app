@@ -27,16 +27,18 @@ const AboutPage = ({ title, bannerImage, body }) => (
           )}
 
           {block.model.apiKey === 'quote' && (
-            <div className="container mx-auto narrowContent">
-              <blockquote>
-                <span className="bqstart">“</span>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: block.text,
-                  }}
-                />
-                <span className="bqend">”</span>
-              </blockquote>
+            <div className="container mx-auto">
+              <div className="narrowContent">
+                <blockquote className=" border-l-0">
+                  <span className="bqstart">“</span>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: block.text,
+                    }}
+                  />
+                  {/* <span className="bqend">”</span> */}
+                </blockquote>
+              </div>
             </div>
           )}
 
