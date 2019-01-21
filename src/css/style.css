@@ -60,3 +60,40 @@
   * @import "utilities/background-patterns";
   * @import "utilities/skew-transforms";
   */
+
+  .mainContentWrapper {
+    @apply mt-12;
+    color: #607568;
+  }
+  .mainContentWrapper h1{
+    @apply pb-8 text-center;
+    color: #119443;
+    font-size: 3rem;
+  }
+
+  .mainContentWrapper h2,.mainContentWrapper h3 {
+    @apply font-normal;
+    color: #119443;
+  }
+  
+.narrowContent {
+  @apply px-4;
+}
+
+@screen md {
+  .narrowContent {
+    @apply px-20;
+  }
+}
+
+@screen lg {
+  .narrowContent {
+    @apply mx-4 px-32;
+  }
+}
+
+@screen xl {
+  .narrowContent {
+    @apply mx-20 px-32;
+  }
+}
