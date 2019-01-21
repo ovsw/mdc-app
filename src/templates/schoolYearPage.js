@@ -1,27 +1,19 @@
 import React from 'react'
-// import Slider from 'react-slick'
-// import { HelmetDatoCms } from 'gatsby-source-datocms'
-// import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const SchoolYearPage = ({ data }) => (
-  <>
-    <h1>This is a basic page with title: {data.datoCmsSchoolYearPage.title}</h1>
-    {data.datoCmsSchoolYearPage.body.map(block => (
-      <div key={block.id}>
-        {block.model.apiKey === 'rich_text' && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: block.text,
-            }}
-          />
-        )}
-        {block.model.apiKey === 'image' && <Img fluid={block.image.fluid} style={{ maxWidth: '600px' }} />}
-      </div>
-    ))}
-  </>
-)
+const SchoolYearPage = ({ data }) => {
+  const bannerImage =
+    data.datoCmsSchoolYearPage.bannerImage != null ? data.datoCmsSchoolYearPage.bannerImage : 'missingImage'
+
+  return (
+    <BasicPageTemplate
+      title={data.datoCmsSchoolYearPage.title}
+      bannerImage={bannerImage}
+      body={data.datoCmsSchoolYearPage.body}
+    />
+  )
+}
 
 export default SchoolYearPage
 

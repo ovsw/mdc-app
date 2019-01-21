@@ -1,27 +1,19 @@
 import React from 'react'
-// import Slider from 'react-slick'
-// import { HelmetDatoCms } from 'gatsby-source-datocms'
-// import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const SummerCampPage = ({ data }) => (
-  <>
-    <h1>This is a basic page with title: {data.datoCmsSummerCampPage.title}</h1>
-    {data.datoCmsSummerCampPage.body.map(block => (
-      <div key={block.id}>
-        {block.model.apiKey === 'rich_text' && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: block.text,
-            }}
-          />
-        )}
-        {block.model.apiKey === 'image' && <Img fluid={block.image.fluid} style={{ maxWidth: '600px' }} />}
-      </div>
-    ))}
-  </>
-)
+const SummerCampPage = ({ data }) => {
+  const bannerImage =
+    data.datoCmsSummerCampPage.bannerImage != null ? data.datoCmsSummerCampPage.bannerImage : 'missingImage'
+
+  return (
+    <BasicPageTemplate
+      title={data.datoCmsSummerCampPage.title}
+      bannerImage={bannerImage}
+      body={data.datoCmsSummerCampPage.body}
+    />
+  )
+}
 
 export default SummerCampPage
 
@@ -29,6 +21,12 @@ export const query = graphql`
   query SummerCampPageQuery($slug: String!) {
     datoCmsSummerCampPage(slug: { eq: $slug }) {
       title
+      bannerImage {
+        url
+        fluid(imgixParams: { fm: "jpg", auto: "compress", mono: "8026D435", fit: "facearea", w: "1420", h: "100" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
       body {
         ... on DatoCmsRichText {
           id

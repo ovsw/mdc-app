@@ -1,27 +1,18 @@
 import React from 'react'
-// import Slider from 'react-slick'
-// import { HelmetDatoCms } from 'gatsby-source-datocms'
-// import Img from 'gatsby-image'
 import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const StaffPage = ({ data }) => (
-  <>
-    <h1>This is a basic page with title: {data.datoCmsStaffPage.title}</h1>
-    {data.datoCmsStaffPage.body.map(block => (
-      <div key={block.id}>
-        {block.model.apiKey === 'rich_text' && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: block.text,
-            }}
-          />
-        )}
-        {block.model.apiKey === 'image' && <Img fluid={block.image.fluid} style={{ maxWidth: '600px' }} />}
-      </div>
-    ))}
-  </>
-)
+const StaffPage = ({ data }) => {
+  const bannerImage = data.datoCmsStaffPage.bannerImage != null ? data.datoCmsStaffPage.bannerImage : 'missingImage'
+
+  return (
+    <BasicPageTemplate
+      title={data.datoCmsStaffPage.title}
+      bannerImage={bannerImage}
+      body={data.datoCmsStaffPage.body}
+    />
+  )
+}
 
 export default StaffPage
 

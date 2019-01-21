@@ -74,13 +74,10 @@ class Layout extends React.Component {
               <Header />
             </MobileNavToggleContext.Provider>
             {/* END HEADER & NAV */}
-            <div className="container pt-20 md:pt-24 lg:pt-32 px-6 md:px-8 xl:px-16 mt-4 mx-auto">
-              {/* CONTENT */}
-              <div className="container__body">
-                <Transition location={this.props.location}>{children}</Transition>
-              </div>
-              {/* END CONTENT */}
-            </div>
+
+            {/* CONTENT */}
+            <Transition location={this.props.location}>{children}</Transition>
+            {/* END CONTENT */}
           </>
         )}
       />
