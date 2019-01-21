@@ -25,7 +25,7 @@ export const query = graphql`
         fluid(
           maxWidth: 1200
           maxHeight: 400
-          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", mono: "14FF5D00" }
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "entropy", mono: "14FF5D00" }
         ) {
           ...GatsbyDatoCmsFluid
         }
@@ -52,7 +52,11 @@ export const query = graphql`
           }
           image {
             url
-            fluid(maxWidth: 1040, maxHeight: 400, imgixParams: { fm: "jpg", auto: "enhance,compress" }) {
+            fluid(
+              maxWidth: 1040
+              maxHeight: 400
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "entropy", mono: "14FF5D00" }
+            ) {
               ...GatsbyDatoCmsSizes
             }
           }
