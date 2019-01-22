@@ -1,0 +1,50 @@
+.pullQuoteWrapper {
+  @apply px-4 py-8;
+}
+
+.pullQuote {
+  
+  @apply my-0 mx-4 px-6 py-8 border-t-2 border-b-2 border-green border-l-0 italic;
+  text-indent: 2.5rem;
+}
+
+@screen sm {
+  .pullQuoteWrapper {
+    @apply mx-10;
+  }
+}
+
+@screen lg {
+  .pullQuoteWrapper {
+    @apply mx-20;
+  }
+}
+@screen xl {
+  .pullQuoteWrapper {
+    @apply mx-32 px-12;
+  }
+}
+
+.pullQuote .bqstart {
+  @apply roman;
+  float: left;
+  height: 45px;
+  margin-top: -1rem;
+  padding-top: 2.5rem;
+  margin-bottom: -50px;
+  font-size: 700%;
+  color: green;
+  margin-left: -3rem;
+  text-shadow: 3px 3px 0 rgb(255, 243, 130),4px 4px 0 green ;
+  }
+  
+  .pullQuote .bqend {
+  @apply roman;
+  
+  float: right;
+  height: 25px;
+  margin-top: 0px;
+  padding-top: 45px;
+  font-size: 700%;
+  color: rgb(133, 212, 153);
+  }

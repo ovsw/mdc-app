@@ -36,6 +36,12 @@
   * @import "components/forms";
   */
 
+  @import "./components/basicPageContent.css";
+  @import "./components/mainHeading.css";
+  @import "./components/narrowContent.css";
+  @import "./components/quote.css";
+  @import "./components/contentImage.css";
+
  /**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
@@ -61,67 +67,4 @@
   * @import "utilities/skew-transforms";
   */
 
-  .mainContentWrapper {
-    @apply mt-12;
-    color: #607568;
-  }
-  .mainContentWrapper h1{
-    @apply pb-8 text-center;
-    color: #119443;
-    font-size: 3rem;
-  }
-
-  .mainContentWrapper h2,.mainContentWrapper h3 {
-    @apply font-normal;
-    color: #119443;
-  }
-
-  .mainContentWrapper blockquote {
-    @apply italic py-10 border-t-2  border-b-2 border-grey-light  -mx-10 mb-10;
-    text-indent: 2.5rem;
-  }
-  
-.narrowContent {
-  @apply px-4;
-}
-
-@screen md {
-  .narrowContent {
-    @apply px-20;
-  }
-}
-
-@screen lg {
-  .narrowContent {
-    @apply mx-4 px-32;
-  }
-}
-
-@screen xl {
-  .narrowContent {
-    @apply mx-20 px-32;
-  }
-}
-
-.bqstart {
-  @apply roman;
-  float: left;
-  height: 45px;
-  margin-top: -1rem;
-  padding-top: 2.5rem;
-  margin-bottom: -50px;
-  font-size: 700%;
-  color: rgba(133, 212, 153, 0.5);
-  margin-left: -3rem;
-}
-
-.bqend {
-  @apply roman;
-
-  float: right;
-  height: 25px;
-  margin-top: 0px;
-  padding-top: 45px;
-  font-size: 700%;
-  color: rgb(133, 212, 153);
-}
+  @import "./utilities/main.css";

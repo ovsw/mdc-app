@@ -11,7 +11,6 @@ import BarButton from 'src/components/SideDrawer/BarButton/BarButton'
 import Logoimage from 'src/components/Header/Logoimage/Logoimage'
 import DesktopNav from 'src/components/Header/Navbar/Desktopnav/Desktopnav'
 
-import whitewoodbg from 'src/images/whitewood-texture.jpg'
 import styles from './Navbar.module.css'
 
 const navbar = props => (

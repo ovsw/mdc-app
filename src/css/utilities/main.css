@@ -1,0 +1,23 @@
+.text-green-body {
+  color: #607568;
+}
+.background-white-off {
+  background-color: #fdfcf9;
+}
+
+.border-yellow-highlight {
+  border-color: rgba(255, 243, 130, 0.5) ;
+}
+@variants responsive {
+  .box-shadow-md-yellow-highlight {
+    box-shadow: 1px 1px 0 #607568, 10px 10px 0 rgba(255, 243, 130, 0.3) ;
+  }
+}
+
+.text-shadow-yellow-green {
+  text-shadow: 3px 3px 0 rgb(255, 243, 130),4px 4px 0 green ;
+}
+
+.background-fauxbois-light {
+  background-image: url('../images/whitewood-texture-3.jpg');
+}

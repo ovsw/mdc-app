@@ -1,0 +1,21 @@
+.mainHeading{
+  @apply py-8 mb-2  text-center ;
+  color: #119443;
+}
+
+@screen md {
+  .mainHeading{
+    @apply py-10;
+    font-size: 2.5rem;
+  }
+}
+
+@screen lg {
+  .mainHeading {
+    @apply py-16;
+  }
+}
+
+.mainHeading span {
+  @apply border-b-8 border-solid border-yellow-highlight text-shadow-yellow-green;
+}

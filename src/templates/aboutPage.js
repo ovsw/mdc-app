@@ -54,7 +54,7 @@ export const query = graphql`
             url
             fluid(
               maxWidth: 1040
-              maxHeight: 400
+              maxHeight: 500
               imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines", mono: "14FF5D00" }
             ) {
               ...GatsbyDatoCmsSizes

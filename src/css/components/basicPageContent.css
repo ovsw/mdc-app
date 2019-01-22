@@ -1,0 +1,30 @@
+.mainContentWrapper {
+  background-image: url('../images/whitewood-texture-3.jpg');
+}
+
+/* @media only screen and (min-width: 1400px) {
+  .mainContentWrapper {
+    background-image: url('../images/sky-bg.png'),  url('../images/sky-bg.png'), url('../images/whitewood-texture-3.jpg');
+    background-position: -15% 0px,  115% 0px, left top;
+    background-repeat:  no-repeat,  no-repeat, repeat;
+    background-attachment: fixed,  fixed, scroll;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+  .mainContentWrapper {
+    background-position: -7% 0px,  107% 0px, left top;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+  .mainContentWrapper {
+    background-position: -1% 0px,  101% 0px, left top;
+    }
+} */
+
+
+.mainContentWrapper h2,.mainContentWrapper h3 {
+  @apply font-normal;
+  color: #119443;
+}

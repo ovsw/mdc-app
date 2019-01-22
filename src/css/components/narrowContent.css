@@ -1,0 +1,23 @@
+.narrowContent {
+  @apply px-4 py-8;
+}
+  
+@screen md {
+  .narrowContent {
+    @apply mx-0 px-16 py-12;
+  }
+}
+  
+@screen lg {
+  .narrowContent {
+    margin-left: 15%;
+    margin-right:  15%;
+  }
+}
+
+@screen xl {
+  .narrowContent {
+    @apply px-24;
+    
+  }
+}
