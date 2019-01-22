@@ -54,7 +54,7 @@ module.exports = {
         },
         {
           title: 'Programs',
-          url: '/summer-camp/programs',
+          url: '/summer-camp/',
           children: [
             {
               title: 'Preschool & Kindergarten',

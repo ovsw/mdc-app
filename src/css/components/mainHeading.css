@@ -1,6 +1,6 @@
 .mainHeading{
   @apply py-8 mb-2  text-center ;
-  color: #119443;
+  color: #37846f;
 }
 
 @screen md {

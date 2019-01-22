@@ -5,11 +5,14 @@ import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 const AboutPage = ({ data }) => {
   const bannerImage = data.datoCmsAboutPage.bannerImage != null ? data.datoCmsAboutPage.bannerImage : 'missingImage'
 
+  const quickLinks = data.datoCmsAboutPage.quickLinks !== [] ? data.datoCmsAboutPage.quickLinks : 'noQuicklinks'
+
   return (
     <BasicPageTemplate
       title={data.datoCmsAboutPage.title}
       bannerImage={bannerImage}
       body={data.datoCmsAboutPage.body}
+      quickLinks={quickLinks}
     />
   )
 }
@@ -59,6 +62,22 @@ export const query = graphql`
             ) {
               ...GatsbyDatoCmsSizes
             }
+          }
+        }
+      }
+      quickLinks {
+        title
+        link {
+          slug
+        }
+        image {
+          url
+          fluid(
+            maxWidth: 400
+            maxHeight: 200
+            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+          ) {
+            ...GatsbyDatoCmsFluid
           }
         }
       }
