@@ -2,7 +2,7 @@
   background-image: url('../images/whitewood-texture-3.jpg');
 }
 
-@media only screen and (min-width: 1400px) {
+/* @media only screen and (min-width: 1400px) {
   .mainContentWrapper {
     background-image: url('../images/sky-bg.png'),  url('../images/sky-bg.png'), url('../images/whitewood-texture-3.jpg');
     background-position: -15% 0px,  115% 0px, left top;
@@ -21,7 +21,7 @@
   .mainContentWrapper {
     background-position: -1% 0px,  101% 0px, left top;
     }
-}
+} */
 
 
 .mainContentWrapper h2,.mainContentWrapper h3 {
