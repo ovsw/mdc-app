@@ -2,7 +2,7 @@ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
-    title: `Maplewood Day Cmap`,
+    title: `Maplewood Day Camp`,
     aboutNav: [
       [
         {

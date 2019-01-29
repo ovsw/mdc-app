@@ -76,7 +76,6 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => {
             ))}
           </div>
         )}
-        <p>a</p>
       </div>
     </div>
   )
