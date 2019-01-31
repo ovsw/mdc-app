@@ -133,22 +133,11 @@ class Layout extends React.Component {
                 ...GatsbyDatoCmsFaviconMetaTags
               }
             }
-            datoCmsHome {
-              seoMetaTags {
-                ...GatsbyDatoCmsSeoMetaTags
-              }
-              introTextNode {
-                childMarkdownRemark {
-                  html
-                }
-              }
-              copyright
-            }
           }
         `}
         render={data => (
           <>
-            <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} seo={data.datoCmsHome.seoMetaTags}>
+            <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags}>
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
             </HelmetDatoCms>
 

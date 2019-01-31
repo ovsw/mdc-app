@@ -1,3 +1,28 @@
+
+.m-t-navbar {
+  margin-top: 4.8rem;
+}
+
+@screen lg {
+  .m-t-navbar {
+    margin-top: 6.2rem;
+  }
+}
+
+
+/* slick slider bottom space fix */
+.slick-slider{
+  margin-bottom: -7px;
+}
+
+.iconhover {
+  color: red;
+  transition: all 1s;
+}
+.iconhover:hover {
+  color: blue;
+  width: 100px;
+}
 .text-green-body {
   color: #607568;
 }

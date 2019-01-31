@@ -1,0 +1,9 @@
+.gradient-green {
+  background: linear-gradient(to right, #006600 0%, #006600 100%);
+  /* background-color: linear-gradient(to right, #367c2b 0%, #006600 100%); */
+  /* background-color: linear-gradient(to right, #0ba360 0%, #367c2b 100%); */
+}
+
+.gradient-yellow-green {
+  background: linear-gradient(to right, #dce35b, #45b649);
+}
