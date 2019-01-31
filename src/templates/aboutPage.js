@@ -67,9 +67,7 @@ export const query = graphql`
       }
       quickLinks {
         title
-        link {
-          slug
-        }
+        link
         image {
           url
           fluid(

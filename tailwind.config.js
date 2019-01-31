@@ -126,6 +126,11 @@ const colors = {
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
+
+  'green-brand': '#006600',
+  'green-brand-light': '#008000',
+  'yellow-brand': 'hsl(45, 100%, 50%)',
+  'yellow-brand-light': 'hsl(52, 100%, 60%)',
 }
 
 module.exports = {
@@ -217,6 +222,7 @@ module.exports = {
       'serif',
     ],
     mono: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+    primary: ['Roboto Slab', 'serif'],
   },
 
   /*

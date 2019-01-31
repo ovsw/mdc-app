@@ -1,0 +1,14 @@
+.innerContent {
+  @apply absolute pin-x pin-y ;
+  @apply flex items-center justify-end flex-col;
+  @apply pb-8 m-1;
+  @apply text-white text-center;
+}
+.innerContent:hover h3{
+  @apply text-yellow-brand-light;
+}
+@screen md {
+  .innerContent {
+    @apply mx-2 ;
+  }
+}

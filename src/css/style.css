@@ -41,6 +41,7 @@
   @import "./components/narrowContent.css";
   @import "./components/quote.css";
   @import "./components/contentImage.css";
+  @import "./components/buttons.css";
 
  /**
   * This injects all of Tailwind's utility classes, generated based on your
@@ -68,3 +69,4 @@
   */
 
   @import "./utilities/main.css";
+  @import "./utilities/gradients.css";

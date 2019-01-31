@@ -9,11 +9,10 @@ import styles from './Topbar.module.css'
 const Topbar = props => (
   <>
     <div
-      className="px-4"
+      className="px-4 gradient-green"
       style={{
         paddingTop: rhythm(0.25),
         paddingBottom: rhythm(0.25),
-        background: 'linear-gradient(to right, #0ba360 0%, #367c2b 100%)',
       }}
     >
       {/* DESKTOP  */}
@@ -24,7 +23,11 @@ const Topbar = props => (
           </a>
         </div>
         <div>
-          <Link to="/" className={styles.link} style={{ marginRight: '1rem', color: 'yellow' }}>
+          <Link
+            to="/"
+            className={`${styles.link} text-yellow-brand-light hover:text-white`}
+            style={{ marginRight: '1rem' }}
+          >
             <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Blog
           </Link>
           <Link to="/" className={styles.link}>

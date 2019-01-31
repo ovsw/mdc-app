@@ -1,0 +1,52 @@
+.btn {
+  @apply bg-grey text-black font-bold py-3 px-5 cursor-pointer no-underline inline-block;
+}
+.btn:hover {
+  @apply bg-grey-dark text-white ; 
+}
+
+.btn-green-border {
+  @apply relative bg-green-brand text-yellow-brand-light;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+.btn-green-border:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: 5px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  border: 1px solid white;
+  
+}
+.btn-green-border:hover {
+  @apply bg-yellow-brand-light text-green-brand;
+}
+
+.btn-green-border:hover:before {
+  @apply border border-green-brand-light;
+  margin:  3px;
+}
+
+.btn-white-border {
+  @apply relative bg-white text-green-brand;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+.btn-white-border:before {
+  @apply border border-green-brand;
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: 5px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  
+}
+.btn-white-border:hover {
+  @apply bg-yellow-brand-light text-green-brand;
+}
+
+.btn-white-border:hover:before {
+  @apply border border-green-brand;
+  margin: 3px;
+}

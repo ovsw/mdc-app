@@ -1,0 +1,23 @@
+.footer {
+  @apply px-2 pb-8 mt-1 bg-green-brand text-white;
+}
+
+.footer a {
+  @apply text-yellow-brand-light;
+}
+.footer a:hover {
+  @apply text-yellow-brand;
+}
+a.icon {
+  @apply text-3xl text-white mx-4;
+}
+
+a.icon:hover{
+  @apply text-yellow-brand-light;
+}
+
+@screen md {
+  .icon {
+    @apply ml-2 mr-0;
+  }
+}

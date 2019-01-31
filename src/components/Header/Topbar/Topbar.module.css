@@ -1,7 +1,12 @@
 .link {
-  @apply no-underline text-xs font-bold text-white uppercase;
+  @apply no-underline text-xs font-bold uppercase text-white;
 }
-
+.linkEmphasized {
+  @apply text-yellow-brand-light;
+}
 .link:hover{
   @apply text-yellow-light;
+}
+.linkEmphasized:hover{
+  @apply text-white;
 }
