@@ -1,5 +1,6 @@
 .mainContentWrapper {
   background-image: url('../images/whitewood-texture-3.jpg');
+  @apply pb-10;
 }
 
 /* @media only screen and (min-width: 1400px) {
@@ -24,7 +25,7 @@
 } */
 
 
-.mainContentWrapper h2,.mainContentWrapper h3 {
-  @apply font-normal;
+.rteWrapper h2, .rteWrapper h3 {
+
   color: #119443;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import QuickLink from 'src/components/QuickLink/QuickLink'
 // import Slider from 'react-slick'
 
 import Img from 'gatsby-image'
@@ -11,7 +12,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
       <Img fluid={bannerImage.fluid} className="border border-b-8" style={{ borderColor: '#1c944c' }} />
     )}
 
-    <div className="mainContentWrapper text-green-body">
+    <div className="mainContentWrapper rteWrapper text-green-body">
       <div className="container mx-auto">
         <h1 className="mainHeading">
           <span>{title}</span>
@@ -58,19 +59,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
       {quickLinks != undefined && (
         <div className="container mx-auto flex flex-wrap justify-around mb-10 -px-1">
           {quickLinks.map((item, index) => (
-            <div className="w-full md:w-1/2 lg:w-1/3 px-1">
-              <Link
-                to={`/summer-camp/programs/${item.link.slug}`}
-                className="block mx-auto overflow-hidden sm:box-shadow-md-yellow-highlight bg-white max-w-full mb-2 md:mb-8 md:mx-2  bg-white hover:text-yellow hover:bg-green no-underline"
-                style={{ color: '#1c944c' }}
-              >
-                <Img className="w-full" fluid={item.image.fluid} />
-                <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{item.title}</div>
-                  <div className="">Details</div>
-                </div>
-              </Link>
-            </div>
+            <QuickLink item={item} key={index} />
           ))}
         </div>
       )}

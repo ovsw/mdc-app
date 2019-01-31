@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
 import Countdown from 'src/components/Countdown/Countdown'
+import SectionLinks from 'src/components/SectionLinks/SectionLinks'
 
 import { MobileNavToggleContext } from 'src/layouts'
 
@@ -46,6 +47,7 @@ class IndexPage extends React.Component {
               <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
             )}
           </MobileNavToggleContext.Consumer>
+          <SectionLinks items={data.datoCmsHome.sectionLinks} />
         </div>
       </div>
     )
@@ -68,6 +70,20 @@ export const query = graphql`
             maxWidth: 1200
             maxHeight: 400
             imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy" }
+          ) {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+      }
+      sectionLinks {
+        title
+        link
+        image {
+          url
+          fluid(
+            maxWidth: 600
+            maxHeight: 400
+            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
           ) {
             ...GatsbyDatoCmsFluid
           }

@@ -49,7 +49,7 @@ const MainSlideshow = ({ slides }) => {
         {slides.map((slide, index) => (
           <div key={slide.image.url} className="relative">
             <Img className={styles.slideImage} style={{ minHeight: '300px' }} fluid={slide.image.fluid} />
-            <div className={styles.slideContent}>
+            <div className={`${styles.slideContent} overlaybg`}>
               <div className="text-center">
                 <p className={styles.slideTitle}>{slide.slideTitle}</p>
                 <a className="btn btn-green-border lg:mt-8" href={slide.buttonLinkUrl}>

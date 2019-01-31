@@ -9,12 +9,17 @@
   }
 }
 
-
 /* slick slider bottom space fix */
 .slick-slider{
   margin-bottom: -7px;
 }
 
+.overlaybg {
+  background-color: rgba(0,0,0,0.4);
+}
+
+
+/* slider icons */
 .iconhover {
   color: red;
   transition: all 1s;

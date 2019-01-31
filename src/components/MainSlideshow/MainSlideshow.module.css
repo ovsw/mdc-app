@@ -3,7 +3,6 @@
 }
 .slideContent {
   @apply absolute pin-x pin-y px-4 flex justify-center items-center;
-  background-color: rgba(0,0,0,0.4);
 }
 .slideTitle {
   @apply  text-2xl text-white font-primary ;
