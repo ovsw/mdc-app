@@ -8,7 +8,7 @@ const SectionLinks = ({ items }) => (
   <section
     className="container mx-auto 
     
-    mt-10 mb-10 px-4"
+    mt-10  px-4"
   >
     <h2
       className="mb-8 md:mb-8 md:mt-16

@@ -5,6 +5,7 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import Transition from 'src/components/transition'
 import Header from 'src/components/Header/Header'
+import Footer from 'src/components/Footer/Footer'
 import Overlay from 'src/components/Overlay/Overlay'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -160,6 +161,10 @@ class Layout extends React.Component {
               {/* CONTENT */}
               <Transition location={location}>{children}</Transition>
               {/* END CONTENT */}
+
+              {/* FOOTER */}
+              <Footer />
+              {/* END FOOTER */}
             </MobileNavToggleContext.Provider>
             {/* <button onClick={toggleDatesRatesOverlay} type="button">
               Toggle Overlay
