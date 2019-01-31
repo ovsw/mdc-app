@@ -141,8 +141,8 @@ class Layout extends React.Component {
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
             </HelmetDatoCms>
 
-            {/* HEADER & NAV */}
             <MobileNavToggleContext.Provider value={this.state}>
+              {/* HEADER & NAV */}
               <Header />
               {showOverlay && (
                 <Overlay
@@ -155,12 +155,12 @@ class Layout extends React.Component {
                   toggleEnrollSchoolOverlay={toggleEnrollSchoolOverlay}
                 />
               )}
-            </MobileNavToggleContext.Provider>
-            {/* END HEADER & NAV */}
+              {/* END HEADER & NAV */}
 
-            {/* CONTENT */}
-            <Transition location={location}>{children}</Transition>
-            {/* END CONTENT */}
+              {/* CONTENT */}
+              <Transition location={location}>{children}</Transition>
+              {/* END CONTENT */}
+            </MobileNavToggleContext.Provider>
             {/* <button onClick={toggleDatesRatesOverlay} type="button">
               Toggle Overlay
             </button> */}

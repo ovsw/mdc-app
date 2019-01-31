@@ -13,12 +13,15 @@
     @apply px-16;
   }
   .slideTitle{
-    @apply text-4xl mt-16;
+    @apply text-3xl;
   }
 }
 @screen xl {
   .slideTitle{
     @apply text-5xl;
+  }
+  .slideTitle{
+    @apply text-4xl;
   }
 }
 .nextArrow,

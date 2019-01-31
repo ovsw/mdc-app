@@ -52,7 +52,7 @@ const MainSlideshow = ({ slides }) => {
             <div className={styles.slideContent}>
               <div className="text-center">
                 <p className={styles.slideTitle}>{slide.slideTitle}</p>
-                <a className="btn btn-green lg:mt-8" href={slide.buttonLinkUrl}>
+                <a className="btn btn-green-border lg:mt-8" href={slide.buttonLinkUrl}>
                   {slide.buttonText}
                 </a>
               </div>

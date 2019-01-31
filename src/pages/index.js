@@ -2,6 +2,9 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
+import Countdown from 'src/components/Countdown/Countdown'
+
+import { MobileNavToggleContext } from 'src/layouts'
 
 import IconUkulele from 'src/icons/ukulele'
 
@@ -15,13 +18,21 @@ class IndexPage extends React.Component {
 
   render() {
     const {
-      state: { something },
       props: { data },
     } = this
+
+    const currentDate = new Date()
+    const year =
+      currentDate.getMonth() === 6 && currentDate.getDate() > 23
+        ? currentDate.getFullYear() + 1
+        : currentDate.getFullYear()
+
+    console.log(`${year}-06-24T00:00:00`)
 
     return (
       <div className="m-t-navbar">
         <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+
         <div className="mainContentWrapper">
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
           <div
@@ -30,6 +41,11 @@ class IndexPage extends React.Component {
               __html: data.datoCmsHome.introText,
             }}
           />
+          <MobileNavToggleContext.Consumer>
+            {({ toggleDatesRatesOverlay }) => (
+              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
+            )}
+          </MobileNavToggleContext.Consumer>
         </div>
       </div>
     )
