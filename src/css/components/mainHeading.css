@@ -1,5 +1,5 @@
 .mainHeading{
-  @apply py-8 mb-2  text-center ;
+  @apply py-8 mb-2  text-center text-3xl ;
   color: #37846f;
 }
 
@@ -16,6 +16,6 @@
   }
 }
 
-.mainHeading span {
+.mainHeading  {
   @apply border-b-8 border-solid border-yellow-highlight text-shadow-yellow-green;
 }

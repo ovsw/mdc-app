@@ -7,12 +7,14 @@ import Img from 'gatsby-image'
 
 const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
   <div className="m-t-navbar">
-    {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
-    {bannerImage != 'missingImage' && (
-      <Img fluid={bannerImage.fluid} className="border border-b-8" style={{ borderColor: '#1c944c' }} />
-    )}
+    <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
+      {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
+      {bannerImage != 'missingImage' && (
+        <Img fluid={bannerImage.fluid} className="border border-b-8 xl:h-full" style={{ borderColor: '#1c944c' }} />
+      )}
+    </div>
 
-    <div className="mainContentWrapper rteWrapper text-green-body">
+    <div className="mainContentWrapper rteWrapper text-green-body xl:w-1/2 xl:mr-auto">
       <div className="container mx-auto">
         <h1 className="mainHeading">
           <span>{title}</span>
@@ -22,9 +24,9 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
       {body.map(block => (
         <div key={block.id}>
           {block.model.apiKey === 'rich_text' && (
-            <div className="container mx-auto xxl:px-32">
+            <div className="container mx-auto">
               <div
-                className="narrowContent bg-grey-lightest sm:box-shadow-md-yellow-highlight"
+                className="narrowContent sm:box-shadow-md-yellow-highlight"
                 dangerouslySetInnerHTML={{
                   __html: block.text,
                 }}

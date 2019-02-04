@@ -14,7 +14,8 @@
   }
 }
 
-@screen lg {
+
+/* @screen lg {
   .pullQuoteWrapper {
     @apply mx-20;
   }
@@ -23,7 +24,7 @@
   .pullQuoteWrapper {
     @apply mx-32 px-12;
   }
-}
+} */
 
 .pullQuote .bqstart {
   @apply roman;

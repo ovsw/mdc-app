@@ -44,7 +44,7 @@ const navbar = props => (
       <div className="relative">
         <Logoimage />
         <nav className={styles.navBg}>
-          <div className="hidden lg:block container mx-auto">
+          <div className="container hidden mx-auto lg:block">
             <DesktopNav
               aboutNav={data.site.siteMetadata.aboutNav}
               familiesNav={data.site.siteMetadata.familiesNav}

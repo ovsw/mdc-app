@@ -1,0 +1,16 @@
+.bigH2 {
+  @apply my-8 px-4 font-bold  text-green-brand  text-center  ;
+}
+
+@screen  md {
+  .bigH2 {
+    @apply mt-16 text-3xl px-10;
+  }
+}
+
+@screen xl {
+  .bigH2 {
+    @apply my-8 text-3xl;
+    line-height: 1.7;
+  }
+}

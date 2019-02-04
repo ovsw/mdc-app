@@ -44,11 +44,11 @@ const MainSlideshow = ({ slides }) => {
   }
 
   return (
-    <section className="m-0 p-0">
-      <Slider {...settings}>
+    <section className="m-0 p-0 lg:h-full">
+      <Slider {...settings} className="lg:h-full">
         {slides.map((slide, index) => (
-          <div key={slide.image.url} className="relative">
-            <Img className={styles.slideImage} style={{ minHeight: '300px' }} fluid={slide.image.fluid} />
+          <div key={slide.image.url} className="relative lg:h-full">
+            <Img className={styles.slideImage} style={{ minHeight: '400px' }} fluid={slide.image.fluid} />
             <div className={`${styles.slideContent} overlaybg`}>
               <div className="text-center">
                 <p className={styles.slideTitle}>{slide.slideTitle}</p>

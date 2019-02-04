@@ -3,15 +3,15 @@ import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
 const AboutPage = ({ data }) => {
-  const bannerImage = data.datoCmsAboutPage.bannerImage != null ? data.datoCmsAboutPage.bannerImage : 'missingImage'
+  const bannerImage = data.largeImageQuery.bannerImage != null ? data.largeImageQuery.bannerImage : 'missingImage'
 
-  const quickLinks = data.datoCmsAboutPage.quickLinks !== [] ? data.datoCmsAboutPage.quickLinks : 'noQuicklinks'
+  const quickLinks = data.mainQuery.quickLinks !== [] ? data.mainQuery.quickLinks : 'noQuicklinks'
 
   return (
     <BasicPageTemplate
-      title={data.datoCmsAboutPage.title}
+      title={data.mainQuery.title}
       bannerImage={bannerImage}
-      body={data.datoCmsAboutPage.body}
+      body={data.mainQuery.body}
       quickLinks={quickLinks}
     />
   )
@@ -21,7 +21,7 @@ export default AboutPage
 
 export const query = graphql`
   query AboutPageQuery($slug: String!) {
-    datoCmsAboutPage(slug: { eq: $slug }) {
+    mainQuery: datoCmsAboutPage(slug: { eq: $slug }) {
       title
       bannerImage {
         url
@@ -77,6 +77,19 @@ export const query = graphql`
           ) {
             ...GatsbyDatoCmsFluid
           }
+        }
+      }
+    }
+    largeImageQuery: datoCmsAboutPage(slug: { eq: $slug }) {
+      title
+      bannerImage {
+        url
+        fluid(
+          maxWidth: 1200
+          maxHeight: 769
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+        ) {
+          ...GatsbyDatoCmsFluid
         }
       }
     }

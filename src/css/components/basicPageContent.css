@@ -1,6 +1,12 @@
 .mainContentWrapper {
   background-image: url('../images/whitewood-texture-3.jpg');
-  @apply pb-10;
+  @apply py-px;
+}
+
+@screen lg {
+  .mainContentWrapper {
+    box-shadow: inset -5px 0 10px rgba(51, 50, 15, 0.23);
+  }
 }
 
 /* @media only screen and (min-width: 1400px) {

@@ -32,16 +32,22 @@ class IndexPage extends React.Component {
 
     return (
       <div className="m-t-navbar">
-        <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+        <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
+          <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+        </div>
 
-        <div className="mainContentWrapper">
+        <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
-          <div
-            className="narrowContent bg-grey-lightest sm:box-shadow-md-yellow-highlight"
-            dangerouslySetInnerHTML={{
-              __html: data.datoCmsHome.introText,
-            }}
-          />
+          {/* sm:box-shadow-md-yellow-highlight */}
+          <div className="container mx-auto py-px">
+            <h2 className="mainHeading">Maplewood Country Day Camp & Enrichment Center</h2>
+            <div
+              className="narrowContent sm:box-shadow-md-yellow-highlight"
+              dangerouslySetInnerHTML={{
+                __html: data.datoCmsHome.introText,
+              }}
+            />
+          </div>
           <MobileNavToggleContext.Consumer>
             {({ toggleDatesRatesOverlay }) => (
               <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
@@ -68,7 +74,7 @@ export const query = graphql`
           url
           fluid(
             maxWidth: 1200
-            maxHeight: 400
+            maxHeight: 768
             imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy" }
           ) {
             ...GatsbyDatoCmsFluid

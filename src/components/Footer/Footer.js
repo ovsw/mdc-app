@@ -8,7 +8,7 @@ const Footer = () => (
   <footer className={styles.footer}>
     <div className="container mx-auto md:flex">
       <div className="text-center">
-        <p className="text-sm md:text-left md:pt-6">
+        <p className="text-sm md:text-left pt-6">
           <h4
             className="border-b-2 
           pb-4 mx-4 md:mx-0 md:mb-1
