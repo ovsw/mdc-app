@@ -5,19 +5,13 @@ import Img from 'gatsby-image'
 import styles from './SectionLinks.module.css'
 
 const SectionLinks = ({ items }) => (
-  <section
-    className="container mx-auto 
-    
-    mt-10  px-4"
-  >
-    <h2
-      className="mb-8 md:mb-8 md:mt-16
-    font-bold text-shadow-yellow-green text-green-brand  text-center
-    text-3xl md:text-4xl"
-    >
-      The fun doesn't end with the summer
-    </h2>
-    <div className="narrowContent bg-grey-lightest sm:box-shadow-md-yellow-highlight">
+  <section className="container mx-auto">
+    <div className="narrowContent md:mb-0 lg:pb-2">
+      <h2 className="mainHeading">
+        <span>The fun doesn't end with the summer</span>
+      </h2>
+    </div>
+    <div className="narrowContent mb-0 pb-0">
       <p>At Maplewood we offer both summer camp and School Year programs!</p>
     </div>
 

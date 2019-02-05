@@ -1,0 +1,16 @@
+.mainItem {
+  @apply text-white border-b border-grey-lightest pb-2 px-4;
+}
+.mainItem a {
+  @apply no-underline;
+}
+.mainItem a:hover {
+  @apply text-yellow-brand-light;
+}
+
+.mainItem a:active  {
+  @apply text-white;
+}
+.subMenu {
+  @apply list-reset;
+}

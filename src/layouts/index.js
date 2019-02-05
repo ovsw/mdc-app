@@ -11,7 +11,7 @@ import Overlay from 'src/components/Overlay/Overlay'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'src/css/style.css'
 
-export const MobileNavToggleContext = React.createContext({
+export const NavContext = React.createContext({
   mobileNavVisible: false,
   datesRatesOverlayVisible: false,
   enrollNowOverlayVisible: false,
@@ -32,11 +32,21 @@ class Layout extends React.Component {
     super(props)
 
     this.toggleMobileNav = () => {
+      if (
+        this.state.datesRatesOverlayVisible ||
+        this.state.enrollNowOverlayVisible ||
+        this.state.enrollCampOverlayVisible ||
+        this.state.enrollSchoolOverlayVisible ||
+        this.state.requestInfoOverlayVisible
+      ) {
+        this.closeAllOverlays()
+      }
       this.setState(state => ({ mobileNavVisible: !state.mobileNavVisible }))
     }
 
     this.closeAllOverlays = () => {
       this.setState({
+        mobileNavVisible: false,
         datesRatesOverlayVisible: false,
         enrollNowOverlayVisible: false,
         enrollCampOverlayVisible: false,
@@ -142,7 +152,7 @@ class Layout extends React.Component {
               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
             </HelmetDatoCms>
 
-            <MobileNavToggleContext.Provider value={this.state}>
+            <NavContext.Provider value={this.state}>
               {/* HEADER & NAV */}
               <Header />
               {showOverlay && (
@@ -165,7 +175,7 @@ class Layout extends React.Component {
               {/* FOOTER */}
               <Footer />
               {/* END FOOTER */}
-            </MobileNavToggleContext.Provider>
+            </NavContext.Provider>
             {/* <button onClick={toggleDatesRatesOverlay} type="button">
               Toggle Overlay
             </button> */}

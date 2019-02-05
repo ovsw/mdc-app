@@ -3,9 +3,15 @@
   margin-top: 4.8rem;
 }
 
+@media (min-width: 340px) {
+  .only-vsmall {
+    display: none;
+  }
+}
+
 @screen lg {
   .m-t-navbar {
-    margin-top: 6.2rem;
+    margin-top: 6.5rem;
   }
 }
 
@@ -45,7 +51,13 @@
 }
 
 .text-shadow-yellow-green {
-  text-shadow: 3px 3px 0 rgb(255, 243, 130),4px 4px 0 green ;
+  text-shadow: 2px 2px 0 rgb(255, 243, 130), 3px 3px 10px #419e19db ;
+  /* text-shadow: 2px 2px 0 rgb(255, 243, 130),3px 3px 0 green, 3px 3px 10px #419e19db ; */
+  letter-spacing: 0.07rem;
+}
+
+.text-shadow-blurry-green{
+  text-shadow: 3px 3px 10px #153109db;
 }
 
 .background-fauxbois-light {

@@ -1,5 +1,5 @@
 .link {
-  @apply no-underline text-xs font-bold uppercase text-white;
+  @apply inline-block py-2 no-underline text-xs font-bold uppercase text-white;
 }
 .linkEmphasized {
   @apply text-yellow-brand-light;
@@ -9,4 +9,8 @@
 }
 .linkEmphasized:hover{
   @apply text-white;
+}
+.linkActive {
+  @apply no-underline text-xs font-bold uppercase text-yellow-brand-light;
+  @apply px-4;
 }

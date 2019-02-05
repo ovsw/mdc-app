@@ -1,23 +1,33 @@
 .narrowContent {
-  @apply px-4 py-8;
+  @apply px-4 mb-8 pb-px;
 }
   
 @screen md {
   .narrowContent {
     @apply mx-0 px-16 py-12;
+
   }
 }
-  
-@screen lg {
+
+@sreen lg {
   .narrowContent {
-    margin-left: 15%;
-    margin-right:  15%;
+    margin-left: 10%;
+    margin-right:  10%;
   }
 }
 
 @screen xl {
   .narrowContent {
-    @apply px-24;
+    margin-left: 5%;
+    margin-right: 5%;
     
+  }
+}
+
+@media (min-width: 1600px) {
+  .narrowContent {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto; 
   }
 }

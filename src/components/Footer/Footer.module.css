@@ -1,5 +1,5 @@
 .footer {
-  @apply px-2 pb-8 mt-1 bg-green-brand text-white;
+  @apply px-2 py-4 mt-1 bg-green-brand text-white;
 }
 
 .footer a {
@@ -19,5 +19,12 @@ a.icon:hover{
 @screen md {
   .icon {
     @apply ml-2 mr-0;
+  }
+}
+
+
+@screen xl {
+  .footer {
+    @apply w-1/2 mr-auto px-8;
   }
 }

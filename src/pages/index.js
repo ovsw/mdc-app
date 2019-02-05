@@ -5,7 +5,7 @@ import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
 import Countdown from 'src/components/Countdown/Countdown'
 import SectionLinks from 'src/components/SectionLinks/SectionLinks'
 
-import { MobileNavToggleContext } from 'src/layouts'
+import { NavContext } from 'src/layouts'
 
 import IconUkulele from 'src/icons/ukulele'
 
@@ -32,21 +32,35 @@ class IndexPage extends React.Component {
 
     return (
       <div className="m-t-navbar">
-        <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+        <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
+          <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+        </div>
 
-        <div className="mainContentWrapper">
+        <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
-          <div
-            className="narrowContent bg-grey-lightest sm:box-shadow-md-yellow-highlight"
-            dangerouslySetInnerHTML={{
-              __html: data.datoCmsHome.introText,
-            }}
-          />
-          <MobileNavToggleContext.Consumer>
+          {/* sm:box-shadow-md-yellow-highlight */}
+
+          <div className="container mx-auto">
+            <div className="narrowContent md:mb-0 md:pb-0">
+              <h1 className="mainHeading">
+                <span>Maplewood Country Day Camp & Enrichment Center</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="container mx-auto py-px pb-0 mb-0">
+            <div
+              className="narrowContent md:mb-0 md:pb-0"
+              dangerouslySetInnerHTML={{
+                __html: data.datoCmsHome.introText,
+              }}
+            />
+          </div>
+          <NavContext.Consumer>
             {({ toggleDatesRatesOverlay }) => (
               <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
             )}
-          </MobileNavToggleContext.Consumer>
+          </NavContext.Consumer>
           <SectionLinks items={data.datoCmsHome.sectionLinks} />
         </div>
       </div>
@@ -68,7 +82,7 @@ export const query = graphql`
           url
           fluid(
             maxWidth: 1200
-            maxHeight: 400
+            maxHeight: 768
             imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy" }
           ) {
             ...GatsbyDatoCmsFluid

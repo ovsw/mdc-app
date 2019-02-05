@@ -1,6 +1,7 @@
 .slideImage img{
   @apply w-full mb-0;
 }
+
 .slideContent {
   @apply absolute pin-x pin-y px-4 flex justify-center items-center;
 }
@@ -13,6 +14,14 @@
   }
   .slideTitle{
     @apply text-3xl;
+  }
+}
+@screen lg {
+  .slideImage, .slideImage img {
+    @apply h-full;
+  }
+  .slideContent {
+    @apply h-full;
   }
 }
 @screen xl {

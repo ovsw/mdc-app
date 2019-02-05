@@ -60,15 +60,19 @@ class Countdown extends React.Component {
     console.log(toggleDatesRatesOverlay)
 
     return (
-      <div className="container mx-auto sm:my-8 flex flex-col md:flex-row px-8 py-6 bg-green-brand text-white font-primary justify-between align-middle">
+      <div
+        className="container mx-auto 
+      flex flex-col md:flex-row  
+      py-6 px-8 sm:mt-20 sm:mb-4 
+      bg-green-brand text-white font-primary justify-between align-middle"
+      >
         <div className="flex flex-auto align-middle lg:justify-center mb-6  md:mb-0">
-          <span className="mr-2  text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light">
+          <span className="mr-2  text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
             {days} {days === 1 ? 'Day ' : 'Days '}
           </span>{' '}
-          <span className="flex items-center text-xl pl-2 border-grey-lighter border-l-2 md:pt-0 lg:pt-2 lg:text-center lg:border-l-0">
-            {' '}
+          <span className="flex items-center text-xl pl-2 border-grey-lighter border-l-2 md:pt-0 lg:pb-1 text-shadow-blurry-green">
             <span>
-              left to <span className="text-yellow-brand-light">Summer Camp</span> Opening
+              to <span className="text-yellow-brand-light">Summer Camp</span> Opening
             </span>
           </span>
         </div>
