@@ -39,10 +39,18 @@ class IndexPage extends React.Component {
         <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
           {/* sm:box-shadow-md-yellow-highlight */}
-          <div className="container mx-auto py-px">
-            <h2 className="mainHeading">Maplewood Country Day Camp & Enrichment Center</h2>
+
+          <div className="container mx-auto">
+            <div className="narrowContent md:mb-0 md:pb-0">
+              <h1 className="mainHeading">
+                <span>Maplewood Country Day Camp & Enrichment Center</span>
+              </h1>
+            </div>
+          </div>
+
+          <div className="container mx-auto py-px pb-0 mb-0">
             <div
-              className="narrowContent sm:box-shadow-md-yellow-highlight"
+              className="narrowContent md:mb-0 md:pb-0"
               dangerouslySetInnerHTML={{
                 __html: data.datoCmsHome.introText,
               }}

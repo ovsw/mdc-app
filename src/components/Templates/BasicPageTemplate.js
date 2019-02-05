@@ -16,9 +16,11 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
 
     <div className="mainContentWrapper rteWrapper text-green-body xl:w-1/2 xl:mr-auto">
       <div className="container mx-auto">
-        <h1 className="mainHeading">
-          <span>{title}</span>
-        </h1>
+        <div className="narrowContent md:mb-0 lg:pb-2">
+          <h1 className="mainHeading">
+            <span>{title}</span>
+          </h1>
+        </div>
       </div>
 
       {body.map(block => (
@@ -26,7 +28,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
           {block.model.apiKey === 'rich_text' && (
             <div className="container mx-auto">
               <div
-                className="narrowContent sm:box-shadow-md-yellow-highlight"
+                className="narrowContent"
                 dangerouslySetInnerHTML={{
                   __html: block.text,
                 }}
@@ -51,7 +53,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
           )}
 
           {block.model.apiKey === 'image' && (
-            <div className="container mx-auto xl:px-16">
+            <div className="container mx-auto md:px-8 xl:px-16">
               <Img fluid={block.image.fluid} className="contentImage" />
             </div>
           )}

@@ -6,8 +6,12 @@ import styles from './SectionLinks.module.css'
 
 const SectionLinks = ({ items }) => (
   <section className="container mx-auto">
-    <h2 className="mainHeading">The fun doesn't end with the summer</h2>
-    <div className="narrowContent sm:box-shadow-md-yellow-highlight">
+    <div className="narrowContent md:mb-0 lg:pb-2">
+      <h2 className="mainHeading">
+        <span>The fun doesn't end with the summer</span>
+      </h2>
+    </div>
+    <div className="narrowContent mb-0 pb-0">
       <p>At Maplewood we offer both summer camp and School Year programs!</p>
     </div>
 

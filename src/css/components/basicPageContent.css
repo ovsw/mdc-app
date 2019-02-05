@@ -1,5 +1,5 @@
 .mainContentWrapper {
-  background-image: url('../images/whitewood-texture-3.jpg');
+  /* background-image: url('../images/whitewood-texture-3.jpg'); */
   @apply py-px;
 }
 

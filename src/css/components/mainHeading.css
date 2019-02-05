@@ -1,21 +1,24 @@
 .mainHeading{
-  @apply py-8 mb-2  text-center text-3xl ;
-  color: #37846f;
+  @apply  pt-10  mb-2  text-green-brand; 
 }
 
 @screen md {
-  .mainHeading{
+  .mainHeading {
+    @apply text-center py-0 mb-0;
+  }
+
+  /* .mainHeading{
     @apply py-10;
     font-size: 2.5rem;
-  }
+  } */
 }
 
 @screen lg {
-  .mainHeading {
+  /* .mainHeading {
     @apply py-16;
-  }
+  } */
 }
 
 .mainHeading  {
-  @apply border-b-8 border-solid border-yellow-highlight text-shadow-yellow-green;
+  /* @apply border-b-8 border-solid border-yellow-highlight text-shadow-yellow-green; */
 }

@@ -1,17 +1,18 @@
 .narrowContent {
-  @apply py-8 pt-8   bg-grey-lightest;
+  @apply px-4 mb-8 pb-px;
 }
   
 @screen md {
   .narrowContent {
     @apply mx-0 px-16 py-12;
+
   }
 }
 
 @sreen lg {
   .narrowContent {
-    margin-left: 15%;
-    margin-right:  15%;
+    margin-left: 10%;
+    margin-right:  10%;
   }
 }
 
