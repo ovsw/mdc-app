@@ -9,6 +9,7 @@ import { MobileNavToggleContext } from 'src/layouts'
 import SideDrawer from 'src/components/SideDrawer/SideDrawer'
 import BarButton from 'src/components/SideDrawer/BarButton/BarButton'
 import Logoimage from 'src/components/Header/Logoimage/Logoimage'
+import MobileNav from 'src/components/Header/Navbar/MobileNav/MobileNav'
 import DesktopNav from 'src/components/Header/Navbar/Desktopnav/Desktopnav'
 
 import styles from './Navbar.module.css'
@@ -90,7 +91,14 @@ const navbar = props => (
                       }}
                       unmountOnExit
                     >
-                      <SideDrawer />
+                      <SideDrawer>
+                        <MobileNav
+                          aboutNav={data.site.siteMetadata.aboutNav}
+                          familiesNav={data.site.siteMetadata.familiesNav}
+                          staffNav={data.site.siteMetadata.staffNav}
+                          toggleMobileNav={toggleMobileNav}
+                        />
+                      </SideDrawer>
                     </CSSTransition>
                   </>
                 )}

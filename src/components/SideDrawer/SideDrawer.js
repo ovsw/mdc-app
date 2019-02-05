@@ -6,18 +6,11 @@ import Backdrop from 'src/components/Backdrop/Backdrop'
 
 import styles from './SideDrawer.module.css'
 
-const SideDrawer = props => (
+const SideDrawer = ({ children }) => (
   <>
     <nav className={styles.sideDrawer} style={{ animationDuration: '.3s' }}>
       {/* Side Drawer Conttent */}
-      <ul>
-        <li>
-          <a href="/">Products</a>
-        </li>
-        <li>
-          <a href="/">Users</a>
-        </li>
-      </ul>
+      {children}
       {/* Side Drawer Conttent */}
     </nav>
 
