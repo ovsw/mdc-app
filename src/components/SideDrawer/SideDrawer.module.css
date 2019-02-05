@@ -1,6 +1,7 @@
 .sideDrawer {
-  @apply fixed h-full overflow-auto pin-y pin-r p-3 shadow-md w-full shadow-lg z-30;
-  background-image: linear-gradient(to top, #367c2b 0%, #0ba360 100%);
+  @apply fixed h-full overflow-auto pin-y pin-r p-3 shadow-md w-full shadow-lg;
+  z-index: 4;
+  background-color: #060;
 }
 
 @screen sm {

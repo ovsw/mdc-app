@@ -1,5 +1,5 @@
 import React from 'react'
-import { MobileNavToggleContext } from 'src/layouts'
+import { NavContext } from 'src/layouts'
 import { CSSTransition } from 'react-transition-group'
 
 import Backdrop from 'src/components/Backdrop/Backdrop'
@@ -15,7 +15,7 @@ const SideDrawer = ({ children }) => (
     </nav>
 
     {/* Backdrop */}
-    <MobileNavToggleContext.Consumer>
+    {/* <NavContext.Consumer>
       {({ mobileNavVisible, toggleMobileNav }) => (
         <CSSTransition
           in={mobileNavVisible}
@@ -31,7 +31,7 @@ const SideDrawer = ({ children }) => (
           <Backdrop onClick={toggleMobileNav} />
         </CSSTransition>
       )}
-    </MobileNavToggleContext.Consumer>
+    </NavContext.Consumer> */}
   </>
 )
 

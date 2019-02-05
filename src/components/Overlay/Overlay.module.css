@@ -1,0 +1,17 @@
+.overlayWrapper {
+  @apply fixed pin-x pin-y flex flex-col items-stretch bg-green-dark;
+  z-index: 12;
+  margin-top: 5rem;
+}
+
+@screen md {
+  .overlayWrapper {
+    @apply flex-row;
+  }
+}
+
+@screen lg {
+  .overlayWrapper {
+    z-index: 5;
+  }
+}

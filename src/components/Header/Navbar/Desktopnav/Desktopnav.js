@@ -1,10 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Megamenu from 'src/components/Header/Navbar/Desktopnav/Megamenu/Megamenu'
-
-import { MobileNavToggleContext } from 'src/layouts'
-
-import styles from './Desktopnav.module.css'
+import CtaLinks from 'src/components/Header/Navbar/CtaLinks/CtaLinks'
 
 class DesktopNav extends React.Component {
   constructor(props) {
@@ -25,73 +21,7 @@ class DesktopNav extends React.Component {
         <Megamenu menuTitle="Staff" menuModel={staffNav} />
 
         <li className="m-0 text-center w-2/6">
-          <ul
-            className="list-reset m-0 flex"
-            // style={{ background: 'linear-gradient(to left, rgb(11, 163, 96) 0%, rgb(54, 124, 43) 100%)' }}
-          >
-            <MobileNavToggleContext.Consumer>
-              {({
-                datesRatesOverlayVisible,
-                enrollNowOverlayVisible,
-                enrollCampOverlayVisible,
-                enrollSchoolOverlayVisible,
-                requestInfoOverlayVisible,
-                toggleDatesRatesOverlay,
-                toggleEnrollNowOverlay,
-                toggleRequestInfoOverlay,
-                closeAllOverlays,
-              }) => (
-                <>
-                  <li className={`${styles.quickLink}${datesRatesOverlayVisible ? ` ${styles.quickLinkActive}` : ``}`}>
-                    {!datesRatesOverlayVisible ? (
-                      <button type="button" onClick={toggleDatesRatesOverlay}>
-                        <span>
-                          Dates &amp; <br /> Rates
-                        </span>
-                      </button>
-                    ) : (
-                      <button type="button" onClick={closeAllOverlays}>
-                        <span>Close</span>
-                      </button>
-                    )}
-                  </li>
-                  <li
-                    className={`${styles.quickLink}${
-                      enrollNowOverlayVisible || enrollCampOverlayVisible || enrollSchoolOverlayVisible
-                        ? ` ${styles.quickLinkActive}`
-                        : ``
-                    }`}
-                  >
-                    {enrollNowOverlayVisible || enrollCampOverlayVisible || enrollSchoolOverlayVisible ? (
-                      <button type="button" onClick={closeAllOverlays}>
-                        <span>Close</span>
-                      </button>
-                    ) : (
-                      <button type="button" onClick={toggleEnrollNowOverlay}>
-                        <span>
-                          Enroll <br /> Now
-                        </span>
-                      </button>
-                    )}
-                  </li>
-                  <li className={styles.quickLink}>
-                    {!requestInfoOverlayVisible ? (
-                      <button type="button" onClick={toggleRequestInfoOverlay}>
-                        <span>
-                          Request <br />
-                          Info
-                        </span>
-                      </button>
-                    ) : (
-                      <button type="button" onClick={closeAllOverlays}>
-                        <span>Close</span>
-                      </button>
-                    )}
-                  </li>
-                </>
-              )}
-            </MobileNavToggleContext.Consumer>
-          </ul>
+          <CtaLinks />
         </li>
       </ul>
     )

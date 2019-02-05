@@ -3,9 +3,15 @@
   margin-top: 4.8rem;
 }
 
+@media (min-width: 340px) {
+  .only-vsmall {
+    display: none;
+  }
+}
+
 @screen lg {
   .m-t-navbar {
-    margin-top: 6.2rem;
+    margin-top: 6.5rem;
   }
 }
 

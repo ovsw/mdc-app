@@ -1,6 +1,12 @@
 .mainLink {
-  @apply flex-1 flex items-center text-white  items-stretch  border-white border-r-2 text-center;
+  @apply flex-1 flex items-center text-white  items-stretch  border-white border-t-2 text-center;
   
+}
+
+@screen md {
+  .mainLink {
+    @apply border-t-0 border-r-2;
+  }
 }
 
 .mainLink a {

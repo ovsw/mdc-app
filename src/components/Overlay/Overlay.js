@@ -2,6 +2,8 @@ import React from 'react'
 import OverlayLink from 'src/components/Overlay/OverlayLink/OverlayLink'
 import IntOverlayLink from 'src/components/Overlay/IntOverlayLink/IntOverlayLink'
 
+import styles from './Overlay.module.css'
+
 const Overlay = ({
   datesRatesOverlayVisible,
   enrollNowOverlayVisible,
@@ -11,10 +13,7 @@ const Overlay = ({
   toggleEnrollCampOverlay,
   toggleEnrollSchoolOverlay,
 }) => (
-  <div
-    className="fixed pin-x pin-y flex flex-col md:flex-row items-stretch bg-green-dark"
-    style={{ zIndex: '5', paddingTop: '120px' }}
-  >
+  <div className={styles.overlayWrapper}>
     {datesRatesOverlayVisible && (
       <>
         <OverlayLink linkTitle="Summer Camp" linkSubtitle="Dates & Rates" linkUrl="#" label="scDatesRates" />

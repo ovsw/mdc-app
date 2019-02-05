@@ -5,7 +5,7 @@ import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
 import Countdown from 'src/components/Countdown/Countdown'
 import SectionLinks from 'src/components/SectionLinks/SectionLinks'
 
-import { MobileNavToggleContext } from 'src/layouts'
+import { NavContext } from 'src/layouts'
 
 import IconUkulele from 'src/icons/ukulele'
 
@@ -48,11 +48,11 @@ class IndexPage extends React.Component {
               }}
             />
           </div>
-          <MobileNavToggleContext.Consumer>
+          <NavContext.Consumer>
             {({ toggleDatesRatesOverlay }) => (
               <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
             )}
-          </MobileNavToggleContext.Consumer>
+          </NavContext.Consumer>
           <SectionLinks items={data.datoCmsHome.sectionLinks} />
         </div>
       </div>

@@ -16,8 +16,8 @@ class Backdrop extends React.Component {
 
     return (
       <div
-        className="fixed h-full pin w-full z-20"
-        style={{ backgroundColor: 'rgba(0,0,0,0.5)', animationDuration: '.3s' }}
+        className="fixed h-full pin w-full"
+        style={{ zIndex: '3', backgroundColor: 'rgba(0,0,0,0.5)', animationDuration: '.3s' }}
         onClick={onClick}
         onKeyUp={this.handleKeyUp}
         role="button"
