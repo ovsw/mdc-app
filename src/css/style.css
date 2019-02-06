@@ -72,11 +72,3 @@
 
   @import "./utilities/main.css";
   @import "./utilities/gradients.css";
-
-@screen lg {
-
-.slick-slide>div, .slick-list,
-  .slick-track {
-    @apply h-full;
-  }
-}
