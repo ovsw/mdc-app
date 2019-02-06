@@ -6,7 +6,7 @@
 .megaMenu {
   @apply  bg-green-dark text-white absolute   pin-x w-full text-left  shadow-md;
   top: 4.3rem;
-  background: linear-gradient(to right, rgb(11, 163, 96) 0%, rgb(54, 124, 43) 100%);
+  background: #060;
 }
 
 .menuColumn {

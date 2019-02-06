@@ -33,7 +33,7 @@ class Megamenu extends React.Component {
     return (
       <li className={styles.mainItem}>
         <a
-          className="cursor-pointer font-bold py-6 px-8 mx-2 xl:mx-6 hover:text-green-dark"
+          className="cursor-pointer font-bold py-6 px-8 mx-2 xl:mx-6 hover:text-green-brand-light"
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}

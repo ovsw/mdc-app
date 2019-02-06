@@ -27,7 +27,6 @@ const SectionLinks = ({ items }) => (
             to={item.link}
             className="block mx-auto 
             bg-green-brand hover:bg-yellow-brand-light
-            sm:box-shadow-md-yellow-highlight
             no-underline"
             style={{ color: '#1c944c' }}
           >

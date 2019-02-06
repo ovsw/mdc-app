@@ -38,7 +38,6 @@ class IndexPage extends React.Component {
 
         <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
-          {/* sm:box-shadow-md-yellow-highlight */}
 
           <div className="container mx-auto">
             <div className="narrowContent md:mb-0 md:pb-0">

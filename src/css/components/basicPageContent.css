@@ -1,6 +1,6 @@
 .mainContentWrapper {
-  /* background-image: url('../images/whitewood-texture-3.jpg'); */
   @apply py-px;
+  background-color: #fffcfa;
 }
 
 @screen lg {

@@ -44,11 +44,6 @@
 .border-yellow-highlight {
   border-color: rgba(255, 243, 130, 0.5) ;
 }
-@variants responsive {
-  .box-shadow-md-yellow-highlight {
-    box-shadow: 1px 1px 0 #607568, 10px 10px 0 rgba(255, 243, 130, 0.3) ;
-  }
-}
 
 .text-shadow-yellow-green {
   text-shadow: 2px 2px 0 rgb(255, 243, 130), 3px 3px 10px #419e19db ;

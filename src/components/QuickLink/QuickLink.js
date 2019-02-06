@@ -6,7 +6,7 @@ const QuickLink = ({ item }) => (
   <div className="w-full md:w-1/2 lg:w-1/3 px-1">
     <Link
       to={item.link}
-      className="block mx-auto overflow-hidden sm:box-shadow-md-yellow-highlight bg-white max-w-full mb-2 md:mb-8 md:mx-2  bg-white hover:text-yellow hover:bg-green no-underline"
+      className="block mx-auto overflow-hidden bg-white max-w-full mb-2 md:mb-8 md:mx-2  bg-white hover:text-yellow hover:bg-green no-underline"
       style={{ color: '#1c944c' }}
     >
       <Img className="w-full" fluid={item.image.fluid} />
