@@ -1,0 +1,5 @@
+@media (min-width: 1024px) {
+  .slick-slide > div, .slick-list,.slick-track {
+    height:100%!important;
+  } 
+}

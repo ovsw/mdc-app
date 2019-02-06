@@ -1,3 +1,5 @@
+require('./src/css/override.css')
+
 const transitionDelay = 500
 
 exports.shouldUpdateScroll = ({ routerProps: { location }, getSavedScrollPosition }) => {
