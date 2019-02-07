@@ -14,12 +14,14 @@ import 'src/css/style.css'
 export const NavContext = React.createContext({
   mobileNavVisible: false,
   datesRatesOverlayVisible: false,
+  datesRatesSchoolOverlayVisible: false,
   enrollNowOverlayVisible: false,
   enrollCampOverlayVisible: false,
   enrollSchoolOverlayVisible: false,
   requestInfoOverlayVisible: false,
   toggleMobileNav: () => {},
   toggleDatesRatesOverlay: () => {},
+  toggleDatesRatesSchoolOverlay: () => {},
   toggleEnrollNowOverlay: () => {},
   toggleEnrollCampOverlay: () => {},
   toggleEnrollSchoolOverlay: () => {},
@@ -34,6 +36,7 @@ class Layout extends React.Component {
     this.toggleMobileNav = () => {
       if (
         this.state.datesRatesOverlayVisible ||
+        this.state.datesRatesSchoolOverlayVisible ||
         this.state.enrollNowOverlayVisible ||
         this.state.enrollCampOverlayVisible ||
         this.state.enrollSchoolOverlayVisible ||
@@ -48,6 +51,7 @@ class Layout extends React.Component {
       this.setState({
         mobileNavVisible: false,
         datesRatesOverlayVisible: false,
+        datesRatesSchoolOverlayVisible: false,
         enrollNowOverlayVisible: false,
         enrollCampOverlayVisible: false,
         enrollSchoolOverlayVisible: false,
@@ -59,6 +63,13 @@ class Layout extends React.Component {
       this.closeAllOverlays()
       this.setState(state => ({
         datesRatesOverlayVisible: !state.datesRatesOverlayVisible,
+      }))
+    }
+
+    this.toggleDatesRatesSchoolOverlay = () => {
+      this.closeAllOverlays()
+      this.setState(state => ({
+        datesRatesSchoolOverlayVisible: !state.datesRatesSchoolOverlayVisible,
       }))
     }
 
@@ -95,12 +106,14 @@ class Layout extends React.Component {
     this.state = {
       mobileNavVisible: false,
       datesRatesOverlayVisible: false,
+      datesRatesSchoolOverlayVisible: false,
       enrollNowOverlayVisible: false,
       enrollCampOverlayVisible: false,
       enrollSchoolOverlayVisible: false,
       requestInfoOverlayVisible: false,
       toggleMobileNav: this.toggleMobileNav,
       toggleDatesRatesOverlay: this.toggleDatesRatesOverlay,
+      toggleDatesRatesSchoolOverlay: this.toggleDatesRatesSchoolOverlay,
       toggleEnrollNowOverlay: this.toggleEnrollNowOverlay,
       toggleEnrollCampOverlay: this.toggleEnrollCampOverlay,
       toggleEnrollSchoolOverlay: this.toggleEnrollSchoolOverlay,
@@ -113,11 +126,13 @@ class Layout extends React.Component {
     const { children, location } = this.props
     const {
       datesRatesOverlayVisible,
+      datesRatesSchoolOverlayVisible,
       enrollNowOverlayVisible,
       enrollCampOverlayVisible,
       enrollSchoolOverlayVisible,
       requestInfoOverlayVisible,
       toggleEnrollCampOverlay,
+      toggleDatesRatesSchoolOverlay,
       toggleEnrollSchoolOverlay,
       closeAllOverlays,
     } = this.state
@@ -126,6 +141,7 @@ class Layout extends React.Component {
 
     if (
       datesRatesOverlayVisible ||
+      datesRatesSchoolOverlayVisible ||
       enrollNowOverlayVisible ||
       enrollCampOverlayVisible ||
       enrollSchoolOverlayVisible ||
@@ -159,10 +175,12 @@ class Layout extends React.Component {
               {showOverlay && (
                 <Overlay
                   datesRatesOverlayVisible={datesRatesOverlayVisible}
+                  datesRatesSchoolOverlayVisible={datesRatesSchoolOverlayVisible}
                   enrollNowOverlayVisible={enrollNowOverlayVisible}
                   enrollCampOverlayVisible={enrollCampOverlayVisible}
                   enrollSchoolOverlayVisible={enrollSchoolOverlayVisible}
                   requestInfoOverlayVisible={requestInfoOverlayVisible}
+                  toggleDatesRatesSchoolOverlay={toggleDatesRatesSchoolOverlay}
                   toggleEnrollCampOverlay={toggleEnrollCampOverlay}
                   toggleEnrollSchoolOverlay={toggleEnrollSchoolOverlay}
                   closeAllOverlays={closeAllOverlays}

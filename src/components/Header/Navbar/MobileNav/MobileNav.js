@@ -10,8 +10,8 @@ const MobileNav = ({ aboutNav, familiesNav, staffNav, toggleMobileNav }) => (
     <CtaLinks />
     <ul className="list-reset ml-0 mt-4">
       <MobileNavDropDown menuTitle="About Maplewood" menuModel={aboutNav[0]} toggleMobileNav={toggleMobileNav} />
-      <MobileNavDropDown menuTitle="About Summer Camp" menuModel={aboutNav[1]} toggleMobileNav={toggleMobileNav} />
-      <MobileNavDropDown menuTitle="About Year Round" menuModel={aboutNav[2]} toggleMobileNav={toggleMobileNav} />
+      <MobileNavDropDown menuTitle="Summer Camp" menuModel={aboutNav[1]} toggleMobileNav={toggleMobileNav} />
+      <MobileNavDropDown menuTitle="School Year" menuModel={aboutNav[2]} toggleMobileNav={toggleMobileNav} />
 
       <MobileNavDropDown
         menuTitle="Maplewood Families"
