@@ -1,6 +1,6 @@
 .contentImage {
-  @apply -mt-10 mb-8;
+  @apply  mb-12 mx-2;
   border:10px solid white;
-  box-shadow: 0px 0px 15px rgba(49, 49, 49, 0.9), 0px 0px 5px rgba(0, 0, 0, 0.5) ;
+  box-shadow: 0px 0px 15px rgba(49, 49, 49, 0.2), 0px 0px 5px rgba(0, 0, 0, 0.5) ;
   transform: rotate(-1deg)
 }
