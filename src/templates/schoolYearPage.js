@@ -23,10 +23,10 @@ export const query = graphql`
       title
       bannerImage {
         url
-        fluid(
+        portrait: fluid(
           maxWidth: 1200
-          maxHeight: 400
-          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "entropy", mono: "14FF5D00" }
+          maxHeight: 769
+          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
         ) {
           ...GatsbyDatoCmsFluid
         }
@@ -51,12 +51,14 @@ export const query = graphql`
           model {
             apiKey
           }
+          caption
           image {
             url
+            width
+            height
             fluid(
-              maxWidth: 1040
-              maxHeight: 400
-              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "entropy", mono: "14FF5D00" }
+              maxWidth: 892
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines", mono: "14FF5D00" }
             ) {
               ...GatsbyDatoCmsSizes
             }

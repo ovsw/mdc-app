@@ -10,7 +10,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
     <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
       {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
       {bannerImage != 'missingImage' && (
-        <Img fluid={bannerImage.fluid} className="border border-b-8 xl:h-full" style={{ borderColor: '#1c944c' }} />
+        <Img fluid={bannerImage.portrait} className="border border-b-8 xl:h-full" style={{ borderColor: '#1c944c' }} />
       )}
     </div>
 
@@ -53,8 +53,14 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
           )}
 
           {block.model.apiKey === 'image' && (
-            <div className="container mx-auto md:px-8 xl:px-16">
-              <Img fluid={block.image.fluid} className="contentImage" />
+            <div
+              className="container mx-auto md:px-8 xl:px-16"
+              style={block.image.width < block.image.height ? { paddingLeft: '8rem', paddingRight: '8rem' } : {}}
+            >
+              <figure className="contentImage">
+                <Img fluid={block.image.fluid} />
+                <figcaption>{block.caption}</figcaption>
+              </figure>
             </div>
           )}
         </div>

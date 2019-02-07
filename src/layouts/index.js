@@ -119,6 +119,7 @@ class Layout extends React.Component {
       requestInfoOverlayVisible,
       toggleEnrollCampOverlay,
       toggleEnrollSchoolOverlay,
+      closeAllOverlays,
     } = this.state
 
     let showOverlay = false
@@ -164,6 +165,7 @@ class Layout extends React.Component {
                   requestInfoOverlayVisible={requestInfoOverlayVisible}
                   toggleEnrollCampOverlay={toggleEnrollCampOverlay}
                   toggleEnrollSchoolOverlay={toggleEnrollSchoolOverlay}
+                  closeAllOverlays={closeAllOverlays}
                 />
               )}
               {/* END HEADER & NAV */}
