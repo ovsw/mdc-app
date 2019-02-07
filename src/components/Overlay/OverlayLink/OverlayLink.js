@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import styles from './OverlayLink.module.css'
 
 const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click }) => (
-  // console.log(click)
   <div className={`${styles.mainLink} ${styles[label]}`}>
     {linkUrl.indexOf('https') !== 0 ? (
       <Link to={linkUrl} onClick={click}>

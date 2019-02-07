@@ -28,7 +28,7 @@ class IndexPage extends React.Component {
         ? currentDate.getFullYear() + 1
         : currentDate.getFullYear()
 
-    console.log(`${year}-06-24T00:00:00`)
+    // console.log(`${year}-06-24T00:00:00`)
 
     return (
       <div className="m-t-navbar">

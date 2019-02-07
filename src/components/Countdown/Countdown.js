@@ -57,8 +57,6 @@ class Countdown extends React.Component {
       props: { toggleDatesRatesOverlay },
     } = this
 
-    console.log(toggleDatesRatesOverlay)
-
     return (
       <div
         className="container mx-auto 

@@ -17,7 +17,6 @@ const Overlay = ({
   closeAllOverlays,
 }) => (
   <div className={styles.overlayWrapper}>
-    {console.log(toggleEnrollSchoolOverlay)}
     {datesRatesOverlayVisible && (
       <>
         <OverlayLink
