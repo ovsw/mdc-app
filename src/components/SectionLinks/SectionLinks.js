@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import styles from './SectionLinks.module.css'
 
 const SectionLinks = ({ items }) => (
-  <section className="container mx-auto">
+  <section className="container mx-auto mb-16">
     <div className="narrowContent md:mb-0 lg:pb-2">
       <h2 className="mainHeading">
         <span>The fun doesn't end with the summer</span>

@@ -1,5 +1,6 @@
 .footer {
-  @apply px-2 py-4 mt-1 bg-green-brand text-white;
+  @apply px-2 py-4 mt-0 bg-green-brand text-white;
+  box-shadow: inset -5px 0 10px rgba(51, 50, 15, .23);
 }
 
 .footer a {

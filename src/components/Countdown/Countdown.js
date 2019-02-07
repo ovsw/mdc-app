@@ -65,6 +65,7 @@ class Countdown extends React.Component {
       flex flex-col md:flex-row  
       py-6 px-8 sm:mt-20 sm:mb-4 
       bg-green-brand text-white font-primary justify-between align-middle"
+        style={{ boxShadow: 'inset -5px 0 10px rgba(51, 50, 15, .23)' }}
       >
         <div className="flex flex-auto align-middle lg:justify-center mb-6  md:mb-0">
           <span className="mr-2  text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
