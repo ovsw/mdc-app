@@ -98,37 +98,42 @@ module.exports = {
       [
         {
           title: 'School-year',
-          url: '/school-year',
+          url: '/school-year-programs',
           children: [],
         },
         {
-          title: 'Preschool (2.9-5 yrs)',
-          url: '/school-year/preschool',
-          children: [],
-        },
-        {
-          title: 'After School (K-8th)',
-          url: '/school-year/after-school',
+          title: "Children's Classes",
+          url: '/school-year-programs/childrens-classes',
           children: [],
         },
         {
           title: `Kids' Weekly Events`,
-          url: '/school-year/kids-weekly-events',
+          url: '/school-year-programs/kids-weekly-events',
+          children: [],
+        },
+        {
+          title: 'Preschool (2.9-5 yrs)',
+          url: '/school-year-programs/preschool-program',
+          children: [],
+        },
+        {
+          title: 'After School (K-8th)',
+          url: '/school-year-programs/after-school-program',
           children: [],
         },
         {
           title: 'Vacation Program',
-          url: '/school-year/vacation-program',
+          url: '/school-year-programs/vacation-program',
           children: [],
         },
         {
           title: 'Birthday Parties',
-          url: '/school-year/birthday-parties',
+          url: '/school-year-programs/birthday-parties',
           children: [],
         },
         {
           title: 'Testimonials',
-          url: '/school-year/testimonials',
+          url: '/school-year-programs/testimonials',
           children: [],
         },
       ],
@@ -182,24 +187,24 @@ module.exports = {
       [
         {
           title: 'Why work at Maplewood?',
-          url: '/summer-camp/new-for-2019',
+          url: '/staff/why-work-at-maplewood',
           children: [],
         },
         {
           title: 'Apply to work here',
-          url: '/events',
+          url: '/staff/application-summer-camp-job',
           children: [],
         },
       ],
       [
         {
           title: 'Staff Training',
-          url: 'https://maplewood.campintouch.com/v2/login/login.aspx?',
+          url: '/staff/camp-staff-training',
           children: [],
         },
         {
           title: 'Hired Summer Staff',
-          url: 'https://shop.maplewoodyearround.com/shop/',
+          url: 'staff/hired-summer-staff',
           children: [],
         },
       ],

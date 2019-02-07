@@ -82,7 +82,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         result.data.allDatoCmsSchoolYearPage.edges.forEach(({ node: page }) => {
           createPage({
-            path: `school-year/${page.slug}`,
+            path: `school-year-programs/${page.slug}`,
             component: schoolYearPagetemplate,
             context: {
               slug: page.slug,
