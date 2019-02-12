@@ -5,8 +5,8 @@ import Img from 'gatsby-image'
 import styles from './SectionLinks.module.css'
 
 const SectionLinks = ({ items }) => (
-  <section className="container mx-auto mb-16">
-    <div className="narrowContent md:mb-0 lg:pb-2">
+  <section className="container mx-auto mb-16 lg:px-8">
+    <div className="narrowContent md:mb-0 lg:pb-2 ">
       <h2 className="mainHeading">
         <span>The fun doesn't end with the summer</span>
       </h2>
@@ -15,12 +15,12 @@ const SectionLinks = ({ items }) => (
       <p>At Maplewood we offer both summer camp and School Year programs!</p>
     </div>
 
-    <div className="flex flex-col md:flex-row ">
+    <div className="flex flex-col md:flex-row px-2">
       {items.map((item, index) => (
         <div
           className="relative 
         w-full md:w-1/2 md:px-1 
-        mb-4"
+        mb-2"
           key={index}
         >
           <Link
