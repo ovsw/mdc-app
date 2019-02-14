@@ -11,7 +11,7 @@
 
 @screen lg {
   .m-t-navbar {
-    margin-top: 6.5rem;
+    margin-top: 6.3rem;
   }
 }
 
@@ -23,7 +23,12 @@
 .overlaybg {
   background-color: rgba(0,0,0,0.4);
 }
-
+.overlaybg-green {
+  background-color: rgba(0,102,0,0.8);
+}
+.overlaybg-green:hover {
+  background-color: rgba(0,102,0,0.6);
+}
 
 /* slider icons */
 .iconhover {

@@ -1,0 +1,33 @@
+.innerContent {
+  @apply absolute pin p-1;
+  @apply flex items-center flex-col justify-center ;
+  @apply text-white text-center;
+}
+.innerContent:before {
+  content: '';
+  @apply border absolute;
+  border-color: rgba(255,255,255,0);
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.innerContent:hover:before{
+  @apply border-yellow-brand-light;
+}
+
+.innerContent h3 {
+  @apply text-white;
+  transition: color 0.5s ease;
+}
+.innerContent:hover h3{
+  @apply text-yellow-brand-light;
+}
+@screen md {
+  .innerContent {
+    @apply border;
+    border-color: #71b571;
+  }
+}

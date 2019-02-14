@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import QuickLink from 'src/components/QuickLink/QuickLink'
 // import Slider from 'react-slick'
-
 import Img from 'gatsby-image'
+import SectionLinks from 'src/components/SectionLinks/SectionLinks'
 
 const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
   <div className="m-t-navbar">
@@ -66,13 +65,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
         </div>
       ))}
 
-      {quickLinks != undefined && (
-        <div className="container mx-auto flex flex-wrap justify-around mb-10 -px-1">
-          {quickLinks.map((item, index) => (
-            <QuickLink item={item} key={index} />
-          ))}
-        </div>
-      )}
+      {quickLinks != undefined && <SectionLinks items={quickLinks} />}
     </div>
   </div>
 )

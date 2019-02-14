@@ -104,7 +104,16 @@ module.exports = {
         {
           title: "Children's Classes",
           url: '/school-year-programs/childrens-classes',
-          children: [],
+          children: [
+            {
+              title: '6 Years & Under',
+              url: '/school-year-programs/childrens-classes/6-years-and-under-classes',
+            },
+            {
+              title: 'K-8th grade',
+              url: '/school-year-programs/childrens-classes/kindergarten-to-8th-grade-classes',
+            },
+          ],
         },
         {
           title: `Kids' Weekly Events`,

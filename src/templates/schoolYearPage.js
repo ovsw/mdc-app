@@ -6,11 +6,15 @@ const SchoolYearPage = ({ data }) => {
   const bannerImage =
     data.datoCmsSchoolYearPage.bannerImage != null ? data.datoCmsSchoolYearPage.bannerImage : 'missingImage'
 
+  const quickLinks =
+    data.datoCmsSchoolYearPage.quickLinks !== [] ? data.datoCmsSchoolYearPage.quickLinks : 'noQuicklinks'
+
   return (
     <BasicPageTemplate
       title={data.datoCmsSchoolYearPage.title}
       bannerImage={bannerImage}
       body={data.datoCmsSchoolYearPage.body}
+      quickLinks={quickLinks}
     />
   )
 }
@@ -62,6 +66,20 @@ export const query = graphql`
             ) {
               ...GatsbyDatoCmsSizes
             }
+          }
+        }
+      }
+      quickLinks {
+        title
+        link
+        image {
+          url
+          fluid(
+            maxWidth: 400
+            maxHeight: 300
+            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+          ) {
+            ...GatsbyDatoCmsFluid
           }
         }
       }

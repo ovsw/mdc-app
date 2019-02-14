@@ -36,6 +36,9 @@ exports.createPages = ({ graphql, actions }) => {
             edges {
               node {
                 slug
+                pageParent {
+                  slug
+                }
               }
             }
           }
@@ -81,8 +84,15 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         result.data.allDatoCmsSchoolYearPage.edges.forEach(({ node: page }) => {
+          let fullSlug = ''
+
+          if (page.pageParent !== null) {
+            fullSlug = `${page.pageParent.slug}/${page.slug}`
+          } else {
+            fullSlug = page.slug
+          }
           createPage({
-            path: `school-year-programs/${page.slug}`,
+            path: `school-year-programs/${fullSlug}`,
             component: schoolYearPagetemplate,
             context: {
               slug: page.slug,

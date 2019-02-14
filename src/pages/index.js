@@ -61,7 +61,17 @@ class IndexPage extends React.Component {
               <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
             )}
           </NavContext.Consumer>
-          <SectionLinks items={data.datoCmsHome.sectionLinks} />
+          <section className="container mx-auto mb-16 lg:px-8">
+            <div className="narrowContent md:mb-0 lg:pb-2 ">
+              <h2 className="mainHeading">
+                <span>The fun doesn't end with the summer</span>
+              </h2>
+            </div>
+            <div className="narrowContent mb-0 pb-0">
+              <p>At Maplewood we offer both summer camp and School Year programs!</p>
+            </div>
+            <SectionLinks items={data.datoCmsHome.sectionLinks} />
+          </section>
           {/* <Accordion panels={panels} /> */}
         </div>
       </div>

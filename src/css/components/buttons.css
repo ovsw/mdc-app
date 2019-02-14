@@ -31,7 +31,7 @@
 .btn-white-border {
   @apply relative bg-white text-green-brand;
   box-sizing: border-box;
-  transition: all 0.5s ease;
+  transition: background-color 0.2s ease;
 }
 .btn-white-border:before {
   @apply border border-green-brand;
