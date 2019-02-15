@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import styles from './SectionLink.module.css'
+import styles from './BlockLink.module.css'
 
-const SectionLink = ({ item }) => (
+const BlockLink = ({ item }) => (
   <div
     className="relative 
         w-full md:w-1/2 mb-1 md:mb-0"
@@ -26,4 +26,4 @@ const SectionLink = ({ item }) => (
   </div>
 )
 
-export default SectionLink
+export default BlockLink

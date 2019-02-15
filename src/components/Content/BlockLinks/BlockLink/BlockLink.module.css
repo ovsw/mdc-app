@@ -15,7 +15,7 @@
 }
 
 .innerContent:hover:before{
-  @apply border-yellow-brand-light;
+  @apply border-yellow-brand-light; 
 }
 
 .innerContent h3 {
@@ -28,6 +28,6 @@
 @screen md {
   .innerContent {
     @apply border;
-    border-color: #71b571;
+    border-color: white;
   }
 }

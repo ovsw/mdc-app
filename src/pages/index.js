@@ -1,82 +1,71 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
+import CtaBlock from 'src/components/Content/CtaBlock'
 import Countdown from 'src/components/Countdown/Countdown'
-import SectionLinks from 'src/components/SectionLinks/SectionLinks'
-import Accordion from 'src/components/Accordion/Accordion'
+import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
+import Accordion from 'src/components/Content/Accordion/Accordion'
 
 import { NavContext } from 'src/layouts'
 
 import IconUkulele from 'src/icons/ukulele'
 
-class IndexPage extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      something: true,
-    }
-  }
+const IndexPage = ({ data }) => {
+  const currentDate = new Date()
+  const year =
+    currentDate.getMonth() === 6 && currentDate.getDate() > 23
+      ? currentDate.getFullYear() + 1
+      : currentDate.getFullYear()
 
-  render() {
-    const {
-      props: { data },
-    } = this
+  // console.log(`${year}-06-24T00:00:00`)
 
-    const currentDate = new Date()
-    const year =
-      currentDate.getMonth() === 6 && currentDate.getDate() > 23
-        ? currentDate.getFullYear() + 1
-        : currentDate.getFullYear()
-
-    // console.log(`${year}-06-24T00:00:00`)
-
-    return (
-      <div className="m-t-navbar">
-        <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
-          <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
-        </div>
-
-        <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
-          {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
-
-          <div className="container mx-auto">
-            <div className="narrowContent md:mb-0 md:pb-0">
-              <h1 className="mainHeading">
-                <span>Maplewood Country Day Camp & Enrichment Center</span>
-              </h1>
-            </div>
-          </div>
-
-          <div className="container mx-auto py-px pb-0 mb-0">
-            <div
-              className="narrowContent md:mb-0 md:pb-0"
-              dangerouslySetInnerHTML={{
-                __html: data.datoCmsHome.introText,
-              }}
-            />
-          </div>
-          <NavContext.Consumer>
-            {({ toggleDatesRatesOverlay }) => (
-              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
-            )}
-          </NavContext.Consumer>
-          <section className="container mx-auto mb-16 lg:px-8">
-            <div className="narrowContent md:mb-0 lg:pb-2 ">
-              <h2 className="mainHeading">
-                <span>The fun doesn't end with the summer</span>
-              </h2>
-            </div>
-            <div className="narrowContent mb-0 pb-0">
-              <p>At Maplewood we offer both summer camp and School Year programs!</p>
-            </div>
-            <SectionLinks items={data.datoCmsHome.sectionLinks} />
-          </section>
-          {/* <Accordion panels={panels} /> */}
-        </div>
+  return (
+    <div className="m-t-navbar">
+      <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
+        <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
       </div>
-    )
-  }
+
+      <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
+        {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
+
+        <div className="container mx-auto">
+          <div className="narrowContent md:mb-0 md:pb-0">
+            <h1 className="mainHeading">
+              <span>Maplewood Country Day Camp & Enrichment Center</span>
+            </h1>
+          </div>
+        </div>
+
+        <div className="container mx-auto py-px pb-0 mb-0">
+          <div
+            className="narrowContent md:mb-0 md:pb-0"
+            dangerouslySetInnerHTML={{
+              __html: data.datoCmsHome.introText,
+            }}
+          />
+        </div>
+        <NavContext.Consumer>
+          {({ toggleDatesRatesOverlay }) => (
+            <CtaBlock>
+              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
+            </CtaBlock>
+          )}
+        </NavContext.Consumer>
+        <section className="container mx-auto mb-16 lg:px-8">
+          <div className="narrowContent md:mb-0 lg:pb-2 ">
+            <h2 className="mainHeading">
+              <span>The fun doesn't end with the summer</span>
+            </h2>
+          </div>
+          <div className="narrowContent mb-0 pb-0">
+            <p>At Maplewood we offer both summer camp and School Year programs!</p>
+          </div>
+          <BlockLinks items={data.datoCmsHome.sectionLinks} />
+        </section>
+        {/* <Accordion panels={panels} /> */}
+      </div>
+    </div>
+  )
 }
 
 const panels = [

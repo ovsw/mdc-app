@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 // import Slider from 'react-slick'
 import Img from 'gatsby-image'
-import SectionLinks from 'src/components/SectionLinks/SectionLinks'
+import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
 
 const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
   <div className="m-t-navbar">
@@ -65,7 +65,7 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
         </div>
       ))}
 
-      {quickLinks != undefined && <SectionLinks items={quickLinks} />}
+      {quickLinks != undefined && <BlockLink items={quickLinks} />}
     </div>
   </div>
 )

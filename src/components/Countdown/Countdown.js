@@ -58,29 +58,25 @@ class Countdown extends React.Component {
     } = this
 
     return (
-      <div
-        className="container mx-auto 
-      flex flex-col md:flex-row  
-      py-6 px-8 sm:mt-20 sm:mb-4 
-      bg-green-brand text-white font-primary justify-between align-middle"
-        style={{ boxShadow: 'inset -5px 0 10px rgba(51, 50, 15, .23)' }}
-      >
-        <div className="flex flex-auto align-middle lg:justify-center mb-6  md:mb-0">
-          <span className="mr-2  text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
-            {days} {days === 1 ? 'Day ' : 'Days '}
-          </span>{' '}
-          <span className="flex items-center text-xl pl-2 border-grey-lighter border-l-2 md:pt-0 lg:pb-1 text-shadow-blurry-green">
-            <span>
-              to <span className="text-yellow-brand-light">Summer Camp</span> Opening
+      <>
+        <div className="flex flex-col md:flex-row justify-between align-middle">
+          <div className="flex flex-auto align-middle lg:justify-center mb-6  md:mb-0">
+            <span className="mr-2 text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
+              {days} {days === 1 ? 'Day ' : 'Days '}
+            </span>{' '}
+            <span className="flex items-center text-xl pl-2 border-grey-lighter border-l-2 md:pt-0 lg:pb-1 text-shadow-blurry-green">
+              <span>
+                to <span className="text-yellow-brand-light">Summer Camp</span> Opening
+              </span>
             </span>
-          </span>
+          </div>
+          <div className="flex-auto flex justify-center">
+            <button className="btn btn-white-border" type="button" onClick={toggleDatesRatesOverlay}>
+              Enroll Now!
+            </button>
+          </div>
         </div>
-        <div className="flex-auto flex justify-center">
-          <button className="btn btn-white-border" type="button" onClick={toggleDatesRatesOverlay}>
-            Enroll Now!
-          </button>
-        </div>
-      </div>
+      </>
     )
   }
 }
