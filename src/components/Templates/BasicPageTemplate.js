@@ -2,13 +2,17 @@ import React from 'react'
 import { Link } from 'gatsby'
 // import Slider from 'react-slick'
 import Img from 'gatsby-image'
+import RichTextBlock from 'src/components/Content/RichTextBlock'
+import QuoteBlock from 'src/components/Content/QuoteBlock'
+import CtaBlock from 'src/components/Content/CtaBlock'
+import BigLinkBlock from 'src/components/Content/BigLinkBlock'
 import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
 
-const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
+const BasicPageTemplate = ({ data: { title, bannerImage, body, quickLinks, bodyContinued } }) => (
   <div className="m-t-navbar">
     <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
       {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
-      {bannerImage != 'missingImage' && (
+      {bannerImage && (
         <Img fluid={bannerImage.portrait} className="border border-b-8 xl:h-full" style={{ borderColor: '#1c944c' }} />
       )}
     </div>
@@ -24,32 +28,9 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
 
       {body.map(block => (
         <div key={block.id}>
-          {block.model.apiKey === 'rich_text' && (
-            <div className="container mx-auto">
-              <div
-                className="narrowContent"
-                dangerouslySetInnerHTML={{
-                  __html: block.text,
-                }}
-              />
-            </div>
-          )}
+          {block.model.apiKey === 'rich_text' && <RichTextBlock htmlText={block.text} />}
 
-          {block.model.apiKey === 'quote' && (
-            <div className="container mx-auto">
-              <div className="pullQuoteWrapper">
-                <blockquote className="pullQuote">
-                  <span className="bqstart">“</span>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: block.text,
-                    }}
-                  />
-                  {/* <span className="bqend">”</span> */}
-                </blockquote>
-              </div>
-            </div>
-          )}
+          {block.model.apiKey === 'quote' && <QuoteBlock htmlText={block.text} />}
 
           {block.model.apiKey === 'image' && (
             <div
@@ -65,9 +46,22 @@ const AboutPage = ({ title, bannerImage, body, quickLinks }) => (
         </div>
       ))}
 
-      {quickLinks != undefined && <BlockLink items={quickLinks} />}
+      {quickLinks && <BlockLink items={quickLinks} />}
+
+      {bodyContinued &&
+        bodyContinued.map(block => (
+          <div key={block.id}>
+            {block.model.apiKey === 'rich_text' && <RichTextBlock htmlText={block.text} />}
+
+            {block.model.apiKey === 'big_link' && (
+              <CtaBlock>
+                <BigLinkBlock block={block} />
+              </CtaBlock>
+            )}
+          </div>
+        ))}
     </div>
   </div>
 )
 
-export default AboutPage
+export default BasicPageTemplate

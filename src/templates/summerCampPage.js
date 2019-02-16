@@ -2,18 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const SummerCampPage = ({ data }) => {
-  const bannerImage =
-    data.datoCmsSummerCampPage.bannerImage != null ? data.datoCmsSummerCampPage.bannerImage : 'missingImage'
-
-  return (
-    <BasicPageTemplate
-      title={data.datoCmsSummerCampPage.title}
-      bannerImage={bannerImage}
-      body={data.datoCmsSummerCampPage.body}
-    />
-  )
-}
+const SummerCampPage = ({ data }) => <BasicPageTemplate data={data.datoCmsSummerCampPage} />
 
 export default SummerCampPage
 

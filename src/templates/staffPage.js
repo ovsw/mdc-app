@@ -2,17 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const StaffPage = ({ data }) => {
-  const bannerImage = data.datoCmsStaffPage.bannerImage != null ? data.datoCmsStaffPage.bannerImage : 'missingImage'
-
-  return (
-    <BasicPageTemplate
-      title={data.datoCmsStaffPage.title}
-      bannerImage={bannerImage}
-      body={data.datoCmsStaffPage.body}
-    />
-  )
-}
+const StaffPage = ({ data }) => <BasicPageTemplate data={data.datoCmsStaffPage} />
 
 export default StaffPage
 

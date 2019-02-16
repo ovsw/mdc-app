@@ -2,22 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const SchoolYearPage = ({ data }) => {
-  const bannerImage =
-    data.datoCmsSchoolYearPage.bannerImage != null ? data.datoCmsSchoolYearPage.bannerImage : 'missingImage'
-
-  const quickLinks =
-    data.datoCmsSchoolYearPage.quickLinks !== [] ? data.datoCmsSchoolYearPage.quickLinks : 'noQuicklinks'
-
-  return (
-    <BasicPageTemplate
-      title={data.datoCmsSchoolYearPage.title}
-      bannerImage={bannerImage}
-      body={data.datoCmsSchoolYearPage.body}
-      quickLinks={quickLinks}
-    />
-  )
-}
+const SchoolYearPage = ({ data }) => <BasicPageTemplate data={data.datoCmsSchoolYearPage} />
 
 export default SchoolYearPage
 
@@ -81,6 +66,24 @@ export const query = graphql`
           ) {
             ...GatsbyDatoCmsFluid
           }
+        }
+      }
+      bodyContinued {
+        ... on DatoCmsRichText {
+          id
+          model {
+            apiKey
+          }
+          text
+        }
+        ... on DatoCmsBigLink {
+          id
+          model {
+            apiKey
+          }
+          text
+          buttonText
+          buttonLink
         }
       }
     }

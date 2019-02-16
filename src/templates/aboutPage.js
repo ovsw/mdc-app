@@ -2,20 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const AboutPage = ({ data }) => {
-  const bannerImage = data.datoCmsAboutPage.bannerImage != null ? data.datoCmsAboutPage.bannerImage : 'missingImage'
-
-  const quickLinks = data.datoCmsAboutPage.quickLinks !== [] ? data.datoCmsAboutPage.quickLinks : 'noQuicklinks'
-
-  return (
-    <BasicPageTemplate
-      title={data.datoCmsAboutPage.title}
-      bannerImage={bannerImage}
-      body={data.datoCmsAboutPage.body}
-      quickLinks={quickLinks}
-    />
-  )
-}
+const AboutPage = ({ data }) => <BasicPageTemplate data={data.datoCmsAboutPage} />
 
 export default AboutPage
 
