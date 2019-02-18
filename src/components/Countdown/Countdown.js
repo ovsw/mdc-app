@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'src/components/common/Button'
 
 class Countdown extends React.Component {
   calculateCountdown(endDate) {
@@ -71,9 +72,9 @@ class Countdown extends React.Component {
             </span>
           </div>
           <div className="flex-auto flex justify-center">
-            <button className="btn btn-white-border" type="button" onClick={toggleDatesRatesOverlay}>
+            <Button primary light onClick={toggleDatesRatesOverlay}>
               Enroll Now!
-            </button>
+            </Button>
           </div>
         </div>
       </>

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-import styled from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
+import MdcTheme from 'src/themes/MdcTheme.js'
 import media from 'src/components/responsive'
 
 import Transition from 'src/components/transition'
@@ -171,44 +172,49 @@ class Layout extends React.Component {
           }
         `}
         render={data => (
-          <>
-            <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags}>
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-            </HelmetDatoCms>
-
-            <NavContext.Provider value={this.state}>
-              {/* HEADER & NAV */}
-              <Header />
-              {showOverlay && (
-                <Overlay
-                  datesRatesOverlayVisible={datesRatesOverlayVisible}
-                  datesRatesSchoolOverlayVisible={datesRatesSchoolOverlayVisible}
-                  enrollNowOverlayVisible={enrollNowOverlayVisible}
-                  enrollCampOverlayVisible={enrollCampOverlayVisible}
-                  enrollSchoolOverlayVisible={enrollSchoolOverlayVisible}
-                  requestInfoOverlayVisible={requestInfoOverlayVisible}
-                  toggleDatesRatesSchoolOverlay={toggleDatesRatesSchoolOverlay}
-                  toggleEnrollCampOverlay={toggleEnrollCampOverlay}
-                  toggleEnrollSchoolOverlay={toggleEnrollSchoolOverlay}
-                  closeAllOverlays={closeAllOverlays}
+          <ThemeProvider theme={MdcTheme}>
+            <>
+              <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags}>
+                <link
+                  rel="stylesheet"
+                  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
                 />
-              )}
-              {/* END HEADER & NAV */}
+              </HelmetDatoCms>
 
-              {/* CONTENT */}
-              <ContentWrapper>
-                <Transition location={location}>{children}</Transition>
-              </ContentWrapper>
-              {/* END CONTENT */}
+              <NavContext.Provider value={this.state}>
+                {/* HEADER & NAV */}
+                <Header />
+                {showOverlay && (
+                  <Overlay
+                    datesRatesOverlayVisible={datesRatesOverlayVisible}
+                    datesRatesSchoolOverlayVisible={datesRatesSchoolOverlayVisible}
+                    enrollNowOverlayVisible={enrollNowOverlayVisible}
+                    enrollCampOverlayVisible={enrollCampOverlayVisible}
+                    enrollSchoolOverlayVisible={enrollSchoolOverlayVisible}
+                    requestInfoOverlayVisible={requestInfoOverlayVisible}
+                    toggleDatesRatesSchoolOverlay={toggleDatesRatesSchoolOverlay}
+                    toggleEnrollCampOverlay={toggleEnrollCampOverlay}
+                    toggleEnrollSchoolOverlay={toggleEnrollSchoolOverlay}
+                    closeAllOverlays={closeAllOverlays}
+                  />
+                )}
+                {/* END HEADER & NAV */}
 
-              {/* FOOTER */}
-              <Footer />
-              {/* END FOOTER */}
-            </NavContext.Provider>
-            {/* <button onClick={toggleDatesRatesOverlay} type="button">
+                {/* CONTENT */}
+                <ContentWrapper>
+                  <Transition location={location}>{children}</Transition>
+                </ContentWrapper>
+                {/* END CONTENT */}
+
+                {/* FOOTER */}
+                <Footer />
+                {/* END FOOTER */}
+              </NavContext.Provider>
+              {/* <button onClick={toggleDatesRatesOverlay} type="button">
               Toggle Overlay
             </button> */}
-          </>
+            </>
+          </ThemeProvider>
         )}
       />
     )

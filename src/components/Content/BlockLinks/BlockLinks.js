@@ -1,12 +1,17 @@
 import React from 'react'
-import BlockLink from './BlockLink/BlockLink'
+import styled from 'styled-components'
+import BlockLink from './BlockLink'
+
+const BlockLinksWrapper = styled.div`
+  ${tw`flex flex-col md:flex-row md:flex-wrap px-2 mb-2`};
+`
 
 const BlockLinks = ({ items }) => (
-  <div className="flex flex-col md:flex-row md:flex-wrap px-2 mb-2">
+  <BlockLinksWrapper>
     {items.map(item => (
       <BlockLink item={item} key={item.title} />
     ))}
-  </div>
+  </BlockLinksWrapper>
 )
 
 export default BlockLinks

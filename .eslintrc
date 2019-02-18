@@ -84,5 +84,8 @@
       }
     ]
   },
-  "plugins": ["prettier"]
+  "plugins": ["prettier"],
+  "globals": {
+    "tw": true
+  }
 }
