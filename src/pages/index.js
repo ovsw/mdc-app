@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
   // console.log(`${year}-06-24T00:00:00`)
 
   return (
-    <div className="m-t-navbar">
+    <>
       <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
         <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
       </div>
@@ -64,7 +64,7 @@ const IndexPage = ({ data }) => {
         </section>
         {/* <Accordion panels={panels} /> */}
       </div>
-    </div>
+    </>
   )
 }
 

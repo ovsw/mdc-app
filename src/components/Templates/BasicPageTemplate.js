@@ -9,7 +9,7 @@ import BigLinkBlock from 'src/components/Content/BigLinkBlock'
 import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
 
 const BasicPageTemplate = ({ data: { title, bannerImage, body, quickLinks, bodyContinued } }) => (
-  <div className="m-t-navbar">
+  <>
     <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
       {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
       {bannerImage && (
@@ -61,7 +61,7 @@ const BasicPageTemplate = ({ data: { title, bannerImage, body, quickLinks, bodyC
           </div>
         ))}
     </div>
-  </div>
+  </>
 )
 
 export default BasicPageTemplate

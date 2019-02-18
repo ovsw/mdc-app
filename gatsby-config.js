@@ -220,6 +220,8 @@ module.exports = {
     ],
   },
   plugins: [
+    'gatsby-plugin-tailwindcss',
+    'gatsby-plugin-styled-components',
     `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,

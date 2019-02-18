@@ -1,19 +1,11 @@
 
-.m-t-navbar {
-  margin-top: 4.8rem;
-}
-
 @media (min-width: 340px) {
   .only-vsmall {
     display: none;
   }
 }
 
-@screen lg {
-  .m-t-navbar {
-    margin-top: 6.3rem;
-  }
-}
+
 
 /* slick slider bottom space fix */
 .slick-slider{

@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql, Link } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
+import styled from 'styled-components'
+import media from 'src/components/responsive'
 
 import Transition from 'src/components/transition'
 import Header from 'src/components/Header/Header'
@@ -10,6 +12,11 @@ import Overlay from 'src/components/Overlay/Overlay'
 
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'src/css/style.css'
+
+const ContentWrapper = styled.div`
+  margin-top: 4.8rem;
+  ${media.lg`margin-top: 6.3rem;`}
+`
 
 export const NavContext = React.createContext({
   mobileNavVisible: false,
@@ -189,7 +196,9 @@ class Layout extends React.Component {
               {/* END HEADER & NAV */}
 
               {/* CONTENT */}
-              <Transition location={location}>{children}</Transition>
+              <ContentWrapper>
+                <Transition location={location}>{children}</Transition>
+              </ContentWrapper>
               {/* END CONTENT */}
 
               {/* FOOTER */}
