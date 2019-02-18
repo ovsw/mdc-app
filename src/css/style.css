@@ -37,9 +37,6 @@
   */
 
   @import "./components/header.css";
-  @import "./components/basicPageContent.css";
-  @import "./components/mainHeading.css";
-  @import "./components/narrowContent.css";
   @import "./components/quote.css";
   @import "./components/contentImage.css";
   @import "./components/headings.css";

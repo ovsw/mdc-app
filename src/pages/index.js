@@ -1,6 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
+import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
+import MainContentWrapper from 'src/components/Content/MainContentWrapper'
+import PageSection from 'src/components/Content/PageSection'
+import NarrowContent from 'src/components/common/NarrowContent'
+import MainHeading from 'src/components/Content/MainHeading'
 import CtaBlock from 'src/components/Content/CtaBlock'
 import Countdown from 'src/components/Countdown/Countdown'
 import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
@@ -21,49 +26,46 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <div className="xl:fixed xl:w-1/2 xl:pin-r xl:bg-grey xl:h-full">
+      <MainBannerWrapper>
         <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
-      </div>
+      </MainBannerWrapper>
 
-      <div className="mainContentWrapper xl:w-1/2 xl:mr-auto">
-        {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
+      <MainContentWrapper>
+        <PageSection>
+          {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
+          <NarrowContent>
+            <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
+          </NarrowContent>
 
-        <div className="container mx-auto">
-          <div className="narrowContent md:mb-0 md:pb-0">
-            <h1 className="mainHeading">
-              <span>Maplewood Country Day Camp & Enrichment Center</span>
-            </h1>
-          </div>
-        </div>
+          <NarrowContent className="md:mb-0 md:pb-0">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: data.datoCmsHome.introText,
+              }}
+            />
+          </NarrowContent>
+        </PageSection>
 
-        <div className="container mx-auto py-px pb-0 mb-0">
-          <div
-            className="narrowContent md:mb-0 md:pb-0"
-            dangerouslySetInnerHTML={{
-              __html: data.datoCmsHome.introText,
-            }}
-          />
-        </div>
         <NavContext.Consumer>
           {({ toggleDatesRatesOverlay }) => (
-            <CtaBlock>
-              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
-            </CtaBlock>
+            <PageSection>
+              <CtaBlock>
+                <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
+              </CtaBlock>
+            </PageSection>
           )}
         </NavContext.Consumer>
-        <section className="container mx-auto mb-16 lg:px-8">
-          <div className="narrowContent md:mb-0 lg:pb-2 ">
-            <h2 className="mainHeading">
-              <span>The fun doesn't end with the summer</span>
-            </h2>
-          </div>
-          <div className="narrowContent mb-0 pb-0">
+
+        <PageSection>
+          <NarrowContent className="md:mb-0 lg:pb-2">
+            <h2>The fun doesn't end with the summer</h2>
             <p>At Maplewood we offer both summer camp and School Year programs!</p>
-          </div>
+          </NarrowContent>
+
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
-        </section>
+        </PageSection>
         {/* <Accordion panels={panels} /> */}
-      </div>
+      </MainContentWrapper>
     </>
   )
 }
