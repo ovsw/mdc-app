@@ -3,8 +3,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
-
-import Button from 'src/components/common/Button'
+import { FakeButton } from 'src/components/common/Button'
 
 const BlockLinkWrapper = styled.div`
   ${tw`relative w-full md:w-1/2 mb-1 md:mb-0`};
@@ -51,9 +50,9 @@ const BlockLink = ({ item }) => (
 
       <InnerContent>
         <LinkTitle>{item.title}</LinkTitle>
-        <Button primary light>
+        <FakeButton primary light to={item.link}>
           Details
-        </Button>
+        </FakeButton>
       </InnerContent>
     </Link>
   </BlockLinkWrapper>

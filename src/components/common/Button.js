@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'gatsby'
 
 const ButtonPrimary = css`
   ${tw`relative`};
@@ -31,7 +32,7 @@ const ButtonLight = css`
   }
 `
 
-const Button = styled.button`
+const ButtonStyles = css`
   ${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline inline-block`};
   
   ${props => (props.primary ? ButtonPrimary : ``)}
@@ -45,4 +46,27 @@ const Button = styled.button`
   }
 `
 
-export default Button
+export const FakeButton = styled.button`${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline inline-block`};
+  
+${props => (props.primary ? ButtonPrimary : ``)}
+
+${props => (props.dark ? ButtonDark : ``)}
+${props => (props.light ? ButtonLight : ``)}
+
+
+&:hover {
+  ${tw`bg-grey-light`};
+}`
+export const LinkButton = styled(
+  Link
+)`${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline block`};
+  
+${props => (props.primary ? ButtonPrimary : ``)}
+
+${props => (props.dark ? ButtonDark : ``)}
+${props => (props.light ? ButtonLight : ``)}
+
+
+&:hover {
+  ${tw`bg-grey-light`};
+}`

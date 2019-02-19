@@ -9,12 +9,25 @@ import ImageBlock from 'src/components/Content/ImageBlock'
 import CtaBlock from 'src/components/Content/CtaBlock'
 import BigLinkBlock from 'src/components/Content/BigLinkBlock'
 import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
+import CTAWrapper from 'src/components/CTAWrapper'
 import CTAMobileBtn from 'src/components/CTAMobileBtn'
 
 const BasicPageTemplate = ({
-  data: { title, bannerImage, body, quickLinks, bodyContinued, callToActionText, callToActionLink },
+  data: {
+    title,
+    bannerImage,
+    body,
+    quickLinks,
+    bodyContinued,
+    callToActionText,
+    callToActionLink,
+    callToActionText2,
+    callToActionLink2,
+    embedCodes,
+  },
 }) => (
   <>
+    {console.log(callToActionText)}
     <BannerImage image={bannerImage} />
 
     <MainContentWrapper className="rteWrapper">
@@ -44,8 +57,19 @@ const BasicPageTemplate = ({
             )}
           </div>
         ))}
+
+      <div
+        dangerouslySetInnerHTML={{
+          __html: embedCodes,
+        }}
+      />
     </MainContentWrapper>
-    {callToActionLink && <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>}
+    {callToActionLink && (
+      <CTAWrapper>
+        <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>
+        {callToActionText2 && <CTAMobileBtn to={callToActionLink2}>{callToActionText2}</CTAMobileBtn>}
+      </CTAWrapper>
+    )}
   </>
 )
 

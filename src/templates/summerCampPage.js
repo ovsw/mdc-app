@@ -12,6 +12,8 @@ export const query = graphql`
       title
       callToActionText
       callToActionLink
+      callToActionText2
+      callToActionLink2
       bannerImage {
         url
         portrait: fluid(
