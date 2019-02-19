@@ -10,6 +10,8 @@ export const query = graphql`
   query AboutPageQuery($slug: String!) {
     datoCmsAboutPage(slug: { eq: $slug }) {
       title
+      callToActionText
+      callToActionLink
       bannerImage {
         url
         portrait: fluid(

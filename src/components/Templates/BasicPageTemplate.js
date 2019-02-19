@@ -9,8 +9,11 @@ import ImageBlock from 'src/components/Content/ImageBlock'
 import CtaBlock from 'src/components/Content/CtaBlock'
 import BigLinkBlock from 'src/components/Content/BigLinkBlock'
 import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
+import CTAMobileBtn from 'src/components/CTAMobileBtn'
 
-const BasicPageTemplate = ({ data: { title, bannerImage, body, quickLinks, bodyContinued } }) => (
+const BasicPageTemplate = ({
+  data: { title, bannerImage, body, quickLinks, bodyContinued, callToActionText, callToActionLink },
+}) => (
   <>
     <BannerImage image={bannerImage} />
 
@@ -42,6 +45,7 @@ const BasicPageTemplate = ({ data: { title, bannerImage, body, quickLinks, bodyC
           </div>
         ))}
     </MainContentWrapper>
+    {callToActionLink && <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>}
   </>
 )
 
