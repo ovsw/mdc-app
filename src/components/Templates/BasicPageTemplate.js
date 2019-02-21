@@ -27,7 +27,6 @@ const BasicPageTemplate = ({
   },
 }) => (
   <>
-    {console.log(callToActionText)}
     <BannerImage image={bannerImage} />
 
     <MainContentWrapper className="rteWrapper">
