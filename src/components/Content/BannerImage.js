@@ -1,11 +1,11 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import media from 'src/components/responsive'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
 
 const BannerImageStyled = styled(Img)`
-  ${tw`border border-b-8 xl:h-full`};
-  bordercolor: '#1c944c';
+  ${tw`xl:h-full`};
 `
 
 const BannerImage = ({ image }) => (
