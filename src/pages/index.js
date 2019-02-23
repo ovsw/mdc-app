@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import MainSlideshow from 'src/components/MainSlideshow/MainSlideshow'
+import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
 import PageSection from 'src/components/Content/PageSection'

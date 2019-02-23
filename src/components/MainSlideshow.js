@@ -1,30 +1,52 @@
 import React from 'react'
-import { link, query } from 'gatsby'
+import styled from 'styled-components'
+import media from 'src/components/responsive'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { LinkButton } from 'src/components/common/Button'
+import Arrow from 'src/components/common/Arrow'
 
 import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
 
-import styles from './MainSlideshow.module.css'
+const Slide = styled.div`
+  ${tw`relative lg:h-full`};
+`
+const SlideImage = styled(Img)`
+  ${tw`lg:h-full`};
+  min-height: 400px;
+  img {
+    ${tw`w-full mb-0 lg:h-full`};
+  }
+`
+const SlideContent = styled.div`
+  ${tw`absolute pin-x pin-y px-4 flex justify-center items-center text-center`};
+  ${tw`md:px-16 lg:h-full`};
+  background-color: rgba(50, 50, 0, 0.3);
+
+  p {
+    ${tw`text-2xl text-white font-primary`};
+    ${tw`md:text-3xl xl:text-4xl font-bold`};
+  }
+`
 
 function NextArrow(props) {
   const { className, style, onClick } = props
   return (
-    <div className={styles.nextArrow} style={{ ...style, display: 'block' }} onClick={onClick}>
+    <Arrow dir="right" onClick={onClick}>
       <FontAwesomeIcon icon={faChevronRight} />
-    </div>
+    </Arrow>
   )
 }
 
 function PrevArrow(props) {
   const { className, style, onClick } = props
   return (
-    <div className={styles.prevArrow} style={{ ...style, display: 'block' }} onClick={onClick}>
+    <Arrow dir="left" onClick={onClick}>
       <FontAwesomeIcon icon={faChevronLeft} />
-    </div>
+    </Arrow>
   )
 }
 
@@ -47,17 +69,17 @@ const MainSlideshow = ({ slides }) => {
     <section className="m-0 p-0 lg:h-full">
       <Slider {...settings} className="lg:h-full">
         {slides.map((slide, index) => (
-          <div key={slide.image.url} className="relative lg:h-full">
-            <Img className={styles.slideImage} style={{ minHeight: '400px' }} fluid={slide.image.fluid} />
-            <div className={`${styles.slideContent} overlaybg`}>
-              <div className="text-center">
-                <p className={styles.slideTitle}>{slide.slideTitle}</p>
-                <a className="btn btn-green-border lg:mt-8" href={slide.buttonLinkUrl}>
+          <Slide key={slide.image.url}>
+            <SlideImage fluid={slide.image.fluid} />
+            <SlideContent>
+              <div>
+                <p>{slide.slideTitle}</p>
+                <LinkButton primary="true" dark="true" to={slide.buttonLinkUrl}>
                   {slide.buttonText}
-                </a>
+                </LinkButton>
               </div>
-            </div>
-          </div>
+            </SlideContent>
+          </Slide>
         ))}
       </Slider>
     </section>
