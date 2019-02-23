@@ -11,6 +11,7 @@ import BigLinkBlock from 'src/components/Content/BigLinkBlock'
 import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
 import CTAWrapper from 'src/components/CTAWrapper'
 import CTAMobileBtn from 'src/components/CTAMobileBtn'
+import KidsEvents from 'src/components/KidsEvents'
 
 const BasicPageTemplate = ({
   data: {
@@ -24,6 +25,7 @@ const BasicPageTemplate = ({
     callToActionText2,
     callToActionLink2,
     embedCodes,
+    events,
   },
 }) => (
   <>
@@ -56,6 +58,8 @@ const BasicPageTemplate = ({
             )}
           </div>
         ))}
+
+      {events && <KidsEvents events={events} />}
 
       <div
         dangerouslySetInnerHTML={{

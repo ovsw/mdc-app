@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
 const ButtonPrimary = css`
-  ${tw`relative`};
+  ${tw`relative px-6`};
   transition: all 0.5s ease;
   &:before {
     content: '';
@@ -11,7 +11,7 @@ const ButtonPrimary = css`
     right: 0;
     bottom: 0;
     left: 0;
-    margin: 5px;
+    margin: 3px;
     border-radius: inherit;
     border: 1px solid white;
   }
@@ -20,6 +20,13 @@ const ButtonPrimary = css`
 const ButtonDark = css`
   background-color: ${props => props.theme.primaryColor};
   color: white;
+  &:hover {
+    color: ${props => props.theme.primaryColor};
+    background-color: ${props => props.theme.secondaryColor}!important;
+    &:before {
+      border-color: ${props => props.theme.primaryColor};
+    }
+  }
 `
 const ButtonLight = css`
   background-color: white;
@@ -40,33 +47,15 @@ const ButtonStyles = css`
   ${props => (props.dark ? ButtonDark : ``)}
   ${props => (props.light ? ButtonLight : ``)}
 
-
   &:hover {
     ${tw`bg-grey-light`};
   }
 `
 
-export const FakeButton = styled.button`${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline inline-block`};
-  
-${props => (props.primary ? ButtonPrimary : ``)}
+export const FakeButton = styled.button`
+  ${() => ButtonStyles}
+`
 
-${props => (props.dark ? ButtonDark : ``)}
-${props => (props.light ? ButtonLight : ``)}
-
-
-&:hover {
-  ${tw`bg-grey-light`};
-}`
-export const LinkButton = styled(
-  Link
-)`${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline block`};
-  
-${props => (props.primary ? ButtonPrimary : ``)}
-
-${props => (props.dark ? ButtonDark : ``)}
-${props => (props.light ? ButtonLight : ``)}
-
-
-&:hover {
-  ${tw`bg-grey-light`};
-}`
+export const LinkButton = styled(Link)`
+  ${() => ButtonStyles}
+`
