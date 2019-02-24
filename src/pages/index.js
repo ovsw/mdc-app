@@ -7,7 +7,7 @@ import PageSection from 'src/components/Content/PageSection'
 import NarrowContent from 'src/components/common/NarrowContent'
 import MainHeading from 'src/components/Content/MainHeading'
 import CtaBlock from 'src/components/Content/CtaBlock'
-import Countdown from 'src/components/Countdown/Countdown'
+import Countdown from 'src/components/Countdown'
 import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
 import Accordion from 'src/components/Content/Accordion/Accordion'
 
