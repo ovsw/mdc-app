@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const PageSectionStyled = styled.div`
-  ${tw`my-16`};
-`
+const PageSectionStyled = styled.div``
 
 const PageSection = ({ children }) => <PageSectionStyled>{children}</PageSectionStyled>
 

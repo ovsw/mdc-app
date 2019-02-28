@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import media from 'src/components/responsive'
 
 const ArrowBaseStyles = css`
-  color: white;
+  color: ${props => (props.dark ? props.theme.primaryColor : 'white')};
   position: absolute;
   display: none !important;
   height: 40px;
@@ -19,9 +19,12 @@ const ArrowBaseStyles = css`
   border: none;
   outline: none;
   z-index: 3;
-  -webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7));
+  ${props => (props.dark ? '' : '-webkit-filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7))')};
+  ${props => (props.dark ? '' : 'filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.7))')};
   ${media.md`display:block!important;`};
+  &:focus {
+    outline: none;
+  }
 `
 const ArrowLeft = styled.button`
   ${() => ArrowBaseStyles};

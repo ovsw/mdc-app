@@ -9,6 +9,7 @@ import MainHeading from 'src/components/Content/MainHeading'
 import CtaBlock from 'src/components/Content/CtaBlock'
 import Countdown from 'src/components/Countdown'
 import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
+import TestimonialSliders from 'src/components/TestimonialSliders'
 import Accordion from 'src/components/Content/Accordion/Accordion'
 
 import { NavContext } from 'src/layouts'
@@ -57,13 +58,21 @@ const IndexPage = ({ data }) => {
         </NavContext.Consumer>
 
         <PageSection>
-          <NarrowContent className="md:mb-0 lg:pb-2">
-            <h2>The fun doesn't end with the summer</h2>
+          <NarrowContent>
+            <MainHeading h2>The fun doesn't end with the summer</MainHeading>
             <p>At Maplewood we offer both summer camp and School Year programs!</p>
           </NarrowContent>
 
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
         </PageSection>
+
+        <PageSection>
+          <NarrowContent className="md:mb-0 lg:pb-2">
+            <MainHeading h2>What our families say:</MainHeading>
+          </NarrowContent>
+          <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
+        </PageSection>
+
         {/* <Accordion panels={panels} /> */}
       </MainContentWrapper>
     </>
@@ -127,6 +136,20 @@ export const query = graphql`
           fluid(
             maxWidth: 600
             maxHeight: 400
+            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+          ) {
+            ...GatsbyDatoCmsFluid
+          }
+        }
+      }
+      testimonials {
+        body
+        author
+        image {
+          url
+          fluid(
+            maxWidth: 1060
+            maxHeight: 500
             imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
           ) {
             ...GatsbyDatoCmsFluid
