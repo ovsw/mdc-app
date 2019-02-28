@@ -1,4 +1,4 @@
-require('./src/css/override.css')
+// require('./src/css/override.css')
 
 const transitionDelay = 500
 

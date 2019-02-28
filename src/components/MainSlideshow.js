@@ -11,6 +11,18 @@ import Arrow from 'src/components/common/Arrow'
 import 'slick-carousel/slick/slick.css'
 // import 'slick-carousel/slick/slick-theme.css'
 
+const SlideshowWrapper = styled.section`
+  ${tw`m-0 p-0 lg:h-full`};
+`
+const SliderStyled = styled(Slider)`
+  ${tw`lg:h-full`};
+  ${media.lg`
+    .slick-slide > div, .slick-list,.slick-track {
+      height:100%!important;
+    } 
+  `};
+`
+
 const Slide = styled.div`
   ${tw`relative lg:h-full`};
 `
@@ -66,8 +78,8 @@ const MainSlideshow = ({ slides }) => {
   }
 
   return (
-    <section className="m-0 p-0 lg:h-full">
-      <Slider {...settings} className="lg:h-full">
+    <SlideshowWrapper>
+      <SliderStyled {...settings}>
         {slides.map((slide, index) => (
           <Slide key={slide.image.url}>
             <SlideImage fluid={slide.image.fluid} />
@@ -81,8 +93,8 @@ const MainSlideshow = ({ slides }) => {
             </SlideContent>
           </Slide>
         ))}
-      </Slider>
-    </section>
+      </SliderStyled>
+    </SlideshowWrapper>
   )
 }
 
