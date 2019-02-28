@@ -36,7 +36,7 @@ const InnerContent = styled.div`
     color: white;
     transition: color 0.5s ease;
   }
-  ${media.lg`border: 1px solid white;`}
+  ${media.md`border: 1px solid white;`}
 `
 const LinkTitle = styled.h3`
   ${tw`font-bold text-2xl mb-4 mt-4 text-white`};
