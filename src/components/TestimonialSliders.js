@@ -54,9 +54,33 @@ const TextSlider = styled(Slider)`
       }
     }
   }
+  .slick-dots {
+    ${tw`list-reset text-center`};
+
+    li {
+      ${tw`relative inline-block  m-1 rounded-full leading-none`};
+      top: -4rem;
+      font-size: 1px;
+      background-color: ${props => props.theme.secondaryColorLight};
+      border: 1px solid ${props => props.theme.primaryColor};
+      transition: background-color 0.5s ease;
+
+      &:hover {
+        background-color: ${props => props.theme.primaryColorLight};
+      }
+
+      &.slick-active {
+        background-color: ${props => props.theme.primaryColor};
+      }
+
+      button {
+        ${tw`p-2 focus:outline-none`};
+      }
+    }
+  }
 `
 const TextSlide = styled.div`
-  ${tw`px-6 pt-10`};
+  ${tw`px-6 pt-10 pb-12`};
   text-indent: 2.5rem;
   & > div {
     ${tw`italic`};
@@ -132,7 +156,7 @@ class TestimonialSliders extends React.Component {
     }
 
     const textSliderSettings = {
-      dots: false,
+      dots: true,
       infinite: true,
       autoplay: false,
       speed: 500,
