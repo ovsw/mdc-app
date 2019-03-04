@@ -7,6 +7,8 @@ class Megamenu extends React.Component {
   constructor(props) {
     super(props)
 
+    const { closeAllOverlays } = props
+
     this.toggleMegaMenu = () => {
       this.setState(state => ({ megaMenuVisible: !state.megaMenuVisible }))
     }
@@ -19,6 +21,7 @@ class Megamenu extends React.Component {
       this.menuTimeout = setTimeout(() => {
         this.setState({ megaMenuVisible: false })
       }, 50)
+      closeAllOverlays()
     }
 
     this.state = {

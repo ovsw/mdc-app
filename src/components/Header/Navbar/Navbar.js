@@ -57,6 +57,7 @@ const navbar = props => (
                     aboutNav={data.site.siteMetadata.aboutNav}
                     familiesNav={data.site.siteMetadata.familiesNav}
                     staffNav={data.site.siteMetadata.staffNav}
+                    closeAllOverlays={closeAllOverlays}
                   />
                 </div>
 

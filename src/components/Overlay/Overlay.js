@@ -39,35 +39,35 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Children's Classes"
           linkSubtitle="Dates & Rates"
-          linkUrl="/school-year-programs/childrens-classes-dates-and-rates"
+          linkUrl="/school-year-programs/childrens-classes"
           label="scNew"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Weekly Events"
           linkSubtitle="Dates & Rates"
-          linkUrl="/school-year-programs/kids-weekly-events-dates-and-rates"
+          linkUrl="/school-year-programs/kids-weekly-events-listing"
           label="scNew"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Preschool"
           linkSubtitle="Dates & Rates"
-          linkUrl="/school-year-programs/preschool-dates-and-rates"
+          linkUrl="/school-year-programs/preschool-program"
           label="scNew"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="After-School"
           linkSubtitle="Dates & Rates"
-          linkUrl="/school-year-programs/after-school-dates-and-rates"
+          linkUrl="/school-year-programs/after-school-program"
           label="scNew"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Vacation Program"
           linkSubtitle="Dates & Rates"
-          linkUrl="/school-year-programs/vacation-program-dates-and-rates"
+          linkUrl="/school-year-programs/vacation-program"
           label="scNew"
           click={closeAllOverlays}
         />
@@ -94,14 +94,14 @@ const Overlay = ({
         <OverlayLink
           linkTitle="New Campers"
           linkSubtitle="Enroll Now"
-          linkUrl="#"
+          linkUrl="https://maplewood.campintouch.com/v2/login/login.aspx?"
           label="scNew"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Returning Campers"
           linkSubtitle="Enroll Now"
-          linkUrl="#"
+          linkUrl="https://maplewood.campintouch.com/ui/forms/application/camper/App"
           label="scReturning"
           click={closeAllOverlays}
         />
@@ -110,23 +110,30 @@ const Overlay = ({
     {enrollSchoolOverlayVisible && (
       <>
         <OverlayLink
-          linkTitle="Pre & After School"
+          linkTitle="Preschool"
           linkSubtitle="Apply Now"
-          linkUrl="#"
-          label="syPreAfter"
+          linkUrl="/school-year-programs/preschool-program-application"
+          label="syPre"
+          click={closeAllOverlays}
+        />
+        <OverlayLink
+          linkTitle="After-School"
+          linkSubtitle="Apply Now"
+          linkUrl="/school-year-programs/after-school-program-application"
+          label="syAfter"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Classes"
           linkSubtitle="Apply Now"
-          linkUrl="#"
+          linkUrl="/school-year-programs/childrens-classes"
           label="syClasses"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="Kid's Events"
-          linkSubtitle="Enroll Now"
-          linkUrl="#"
+          linkSubtitle="Register Now"
+          linkUrl="/school-year-programs/kids-weekly-events-listing"
           label="syEvents"
           click={closeAllOverlays}
         />
@@ -140,7 +147,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Vacation"
           linkSubtitle="Signup Now"
-          linkUrl="#"
+          linkUrl="/school-year-programs/vacation-program"
           label="syVacation"
           click={closeAllOverlays}
         />
