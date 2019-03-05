@@ -2,6 +2,7 @@ import React from 'react'
 
 import BannerImage from 'src/components/Content/BannerImage'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
+import NarrowContent from 'src/components/common/NarrowContent'
 import MainHeading from 'src/components/Content/MainHeading'
 import RichTextBlock from 'src/components/Content/RichTextBlock'
 import QuoteBlock from 'src/components/Content/QuoteBlock'
@@ -32,7 +33,9 @@ const BasicPageTemplate = ({
     <BannerImage image={bannerImage} />
 
     <MainContentWrapper className="rteWrapper">
-      <MainHeading>{title}</MainHeading>
+      <NarrowContent>
+        <MainHeading>{title}</MainHeading>
+      </NarrowContent>
 
       {body.map(block => (
         <div key={block.id}>
