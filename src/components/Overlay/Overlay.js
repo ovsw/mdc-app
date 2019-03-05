@@ -65,14 +65,14 @@ const Overlay = ({
           linkTitle="Preschool"
           linkSubtitle="See Dates & Rates"
           linkUrl="/school-year-programs/preschool-program"
-          label="scPre"
+          label="syPre"
           click={closeAllOverlays}
         />
         <OverlayLink
           linkTitle="After-School"
           linkSubtitle="See Dates & Rates"
           linkUrl="/school-year-programs/after-school-program"
-          label="scAfter"
+          label="syAfter"
           click={closeAllOverlays}
         />
         <OverlayLink
