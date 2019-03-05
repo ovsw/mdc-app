@@ -1,16 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import media from 'src/components/responsive'
 import { LinkButton } from 'src/components/common/Button'
 
 const linkStyles = css`
-  ${tw`relative w-full justify-center items-center text-center leading-none`};
+  ${tw`relative w-full justify-center items-center text-center leading-none px-4`};
   background-color: ${props => props.theme.secondaryColor};
+  font-family: ${props => props.theme.fontHeading};
   color: ${props => props.theme.primaryColor};
   display: ${props => (props.visible === 'true' ? 'flex' : 'none')};
 
-  ${media.xl`${tw`text-3xl flex-1`};`}
+  ${media.xl`${tw`text-2xl flex-1`};`}
 
   &:before {
     ${tw`absolute text-center`}

@@ -6,7 +6,7 @@ funstonTheme.baseFontSize = '20px' // was 20px.
 funstonTheme.googleFonts = [
   {
     name: 'Roboto Slab',
-    styles: ['400, 700'],
+    styles: ['300, 400, 700'],
   },
   {
     name: 'Cabin Condensed',
