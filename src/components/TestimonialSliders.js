@@ -28,7 +28,7 @@ const SlideImage = styled(Img)`
 const TextSlider = styled(Slider)`
   ${tw`relative`};
   ${media.lg`top: -3rem;`};
-  z-index: 20;
+  z-index: 8;
 
   .slick-track {
     display: flex !important;
