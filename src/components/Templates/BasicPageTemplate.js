@@ -63,12 +63,13 @@ const BasicPageTemplate = ({
         ))}
 
       {events && <KidsEvents events={events} />}
-
-      <div
-        dangerouslySetInnerHTML={{
-          __html: embedCodes,
-        }}
-      />
+      <NarrowContent>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: embedCodes,
+          }}
+        />
+      </NarrowContent>
     </MainContentWrapper>
     {callToActionLink && (
       <CTAWrapper>
