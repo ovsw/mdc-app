@@ -19,7 +19,7 @@ const TextWrapper = styled.div`
   ${tw`w-2/3 pl-4`};
 `
 const NewsTitle = styled.h3`
-  ${tw`mb-2 underline leading-normal underline text-base`};
+  ${tw`mb-2 underline leading-normal underline text-lg`};
   color: ${props => props.theme.primaryColor};
 `
 const Date = styled.p`

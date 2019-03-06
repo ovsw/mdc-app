@@ -165,7 +165,7 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }) {
+    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 3) {
       edges {
         node {
           title
