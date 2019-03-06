@@ -17,6 +17,8 @@ import KidsEvents from 'src/components/KidsEvents'
 const BasicPageTemplate = ({
   data: {
     title,
+    shortDate,
+    longDate,
     bannerImage,
     body,
     quickLinks,
@@ -35,6 +37,7 @@ const BasicPageTemplate = ({
     <MainContentWrapper className="rteWrapper">
       <NarrowContent>
         <MainHeading>{title}</MainHeading>
+        {longDate && <p className=" text-sm font-bold">{longDate}</p>}
       </NarrowContent>
 
       {body.map(block => (

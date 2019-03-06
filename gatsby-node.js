@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
     const summerCampPagetemplate = path.resolve(`./src/templates/summerCampPage.js`)
     const schoolYearPagetemplate = path.resolve(`./src/templates/schoolYearPage.js`)
     const staffPagetemplate = path.resolve(`./src/templates/staffPage.js`)
+    const newsArticletemplate = path.resolve(`./src/templates/newsPage.js`)
 
     // Query for markdown nodes to use in creating pages.
     resolve(
@@ -43,6 +44,13 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
           allDatoCmsStaffPage {
+            edges {
+              node {
+                slug
+              }
+            }
+          }
+          allDatoCmsNewsArticle {
             edges {
               node {
                 slug
@@ -104,6 +112,16 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
             path: `staff/${page.slug}`,
             component: staffPagetemplate,
+            context: {
+              slug: page.slug,
+            },
+          })
+        })
+
+        result.data.allDatoCmsNewsArticle.edges.forEach(({ node: page }) => {
+          createPage({
+            path: `news/${page.slug}`,
+            component: newsArticletemplate,
             context: {
               slug: page.slug,
             },
