@@ -10,6 +10,7 @@ import CtaBlock from 'src/components/Content/CtaBlock'
 import Countdown from 'src/components/Countdown'
 import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
 import TestimonialSliders from 'src/components/TestimonialSliders'
+import RecentNews from 'src/components/News/RecentNewsListing'
 import Accordion from 'src/components/Content/Accordion/Accordion'
 
 import { NavContext } from 'src/layouts'
@@ -71,6 +72,13 @@ const IndexPage = ({ data }) => {
             <MainHeading h2>What our families say:</MainHeading>
           </NarrowContent>
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
+        </PageSection>
+
+        <PageSection className="-mt-12">
+          <NarrowContent className="md:mb-0 lg:pb-2">
+            <MainHeading h2>Latest News:</MainHeading>
+            <RecentNews articles={data.allDatoCmsNewsArticle} />
+          </NarrowContent>
         </PageSection>
 
         {/* <Accordion panels={panels} /> */}
@@ -154,6 +162,26 @@ export const query = graphql`
           ) {
             ...GatsbyDatoCmsFluid
           }
+        }
+      }
+    }
+    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }) {
+      edges {
+        node {
+          title
+          slug
+          shortDate: date(formatString: "dddd, MMM Do")
+          bannerImage {
+            url
+            fluid(
+              maxWidth: 450
+              maxHeight: 450
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines", mono: "14FF5D00" }
+            ) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+          excerpt
         }
       }
     }

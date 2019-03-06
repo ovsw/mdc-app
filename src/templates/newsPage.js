@@ -12,17 +12,9 @@ export const query = graphql`
       title
       callToActionText
       callToActionLink
-      shortDate: date(formatString: "dddd, MMM Do")
       longDate: date(formatString: "dddd, MMMM Do, YYYY")
       bannerImage {
         url
-        cover: fluid(
-          maxWidth: 450
-          maxHeight: 450
-          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
-        ) {
-          ...GatsbyDatoCmsFluid
-        }
         portrait: fluid(
           maxWidth: 1200
           maxHeight: 769
