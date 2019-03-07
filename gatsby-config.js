@@ -189,7 +189,7 @@ module.exports = {
       [
         {
           title: ' ',
-          url: ' ',
+          url: '',
           children: [],
         },
       ],
@@ -213,7 +213,7 @@ module.exports = {
         },
         {
           title: 'Hired Summer Staff',
-          url: 'staff/hired-summer-staff',
+          url: '/staff/hired-summer-staff',
           children: [],
         },
       ],
