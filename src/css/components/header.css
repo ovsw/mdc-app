@@ -1,4 +1,0 @@
-.mainHeader {
-  @apply fixed pin-x pin-t w-full z-10;
-  box-shadow: 0 5px 10px rgba(51, 50, 10, 0.1);
-}
