@@ -57,19 +57,20 @@ const LinkTitle = styled.span`
   font-weight: 400;
 `
 const LinkButton = styled(FakeButton)`
-  ${tw`text-base block px-2 mx-auto`};
+  ${tw`text-base block px-2 mx-auto lg:px-4`};
 `
-const SubHeading = styled.span`
-  ${tw`text-base pt-2 block border-t-2 border-white md:text-xl md:pt-4 lg:mx-4 xl:text-2xl`};
+const IconWrapper = styled.span`
+  ${tw`pr-1 lg:pr-2`};
 `
 
-export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, ofTwo }) => (
+export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, ofTwo, icon }) => (
   <MainLink label={label} ofTwo={ofTwo}>
     {linkUrl.indexOf('https') !== 0 ? (
       <Link to={linkUrl} onClick={click}>
         <TextWrapper>
           {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
           <LinkButton primary light>
+            {icon && <IconWrapper>{icon}</IconWrapper>}
             {linkSubtitle}
           </LinkButton>
         </TextWrapper>
@@ -79,6 +80,7 @@ export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, of
         <TextWrapper>
           {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
           <LinkButton primary light>
+            {icon && <IconWrapper>{icon}</IconWrapper>}
             {linkSubtitle}
           </LinkButton>
         </TextWrapper>
@@ -87,12 +89,13 @@ export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, of
   </MainLink>
 )
 
-export const IntOverlayLink = ({ linkTitle, linkSubtitle, label, click, ofTwo }) => (
+export const IntOverlayLink = ({ linkTitle, linkSubtitle, label, click, ofTwo, icon }) => (
   <MainLink label={label} ofTwo={ofTwo}>
     <a href="#" onClick={click}>
       <TextWrapper>
         {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
         <LinkButton primary light>
+          {icon && <IconWrapper>{icon}</IconWrapper>}
           {linkSubtitle}
         </LinkButton>
       </TextWrapper>

@@ -1,6 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import {
+  faSun,
+  faGraduationCap,
+  faStar,
+  faChild,
+  faBellSchool,
+  faClock,
+  faBellSchoolSlash,
+  faBirthdayCake,
+  faPenNib,
+  faPaperPlane,
+  faComments,
+  faCalendarStar,
+  faCalendarCheck,
+} from '@fortawesome/pro-light-svg-icons'
+
 import { OverlayLink, IntOverlayLink } from './OverlayLink'
 
 const OverlayWrapper = styled.div`
@@ -32,6 +50,7 @@ const Overlay = ({
           linkTitle="Summer Camp"
           linkSubtitle="See Dates & Rates"
           linkUrl="/summer-camp/dates-and-rates"
+          icon={<FontAwesomeIcon icon={faSun} />}
           label="scDatesRates"
           click={closeAllOverlays}
           ofTwo
@@ -39,6 +58,7 @@ const Overlay = ({
         <IntOverlayLink
           linkTitle="School Year"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faBellSchool} />}
           click={toggleDatesRatesSchoolOverlay}
           label="syDatesRates"
           ofTwo
@@ -50,6 +70,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Children's Classes"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faGraduationCap} />}
           linkUrl="/school-year-programs/childrens-classes"
           label="syClasses"
           click={closeAllOverlays}
@@ -57,6 +78,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Kid's Events"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faStar} />}
           linkUrl="/school-year-programs/kids-weekly-events-listing"
           label="syEvents"
           click={closeAllOverlays}
@@ -64,6 +86,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Preschool"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faChild} />}
           linkUrl="/school-year-programs/preschool-program"
           label="syPre"
           click={closeAllOverlays}
@@ -71,6 +94,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="After-School"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faClock} />}
           linkUrl="/school-year-programs/after-school-program"
           label="syAfter"
           click={closeAllOverlays}
@@ -78,8 +102,17 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Vacation Program"
           linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faBellSchoolSlash} />}
           linkUrl="/school-year-programs/vacation-program"
           label="syVacation"
+          click={closeAllOverlays}
+        />
+        <OverlayLink
+          linkTitle="Birthday Parties"
+          linkSubtitle="See Dates & Rates"
+          icon={<FontAwesomeIcon icon={faBirthdayCake} />}
+          linkUrl="#"
+          label="syBirthdays"
           click={closeAllOverlays}
         />
       </OverlayWrapper>
@@ -89,6 +122,7 @@ const Overlay = ({
         <IntOverlayLink
           linkTitle="Summer Camp"
           linkSubtitle="Enroll Now"
+          icon={<FontAwesomeIcon icon={faSun} />}
           click={toggleEnrollCampOverlay}
           label="scEnroll"
           ofTwo
@@ -96,6 +130,7 @@ const Overlay = ({
         <IntOverlayLink
           linkTitle="School Year"
           linkSubtitle="Enroll Now"
+          icon={<FontAwesomeIcon icon={faBellSchool} />}
           click={toggleEnrollSchoolOverlay}
           label="syEnroll"
           ofTwo
@@ -107,6 +142,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="New Campers"
           linkSubtitle="Enroll Now"
+          icon={<FontAwesomeIcon icon={faPenNib} />}
           linkUrl="https://maplewood.campintouch.com/v2/login/login.aspx?"
           label="scNew"
           click={closeAllOverlays}
@@ -114,6 +150,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Returning Campers"
           linkSubtitle="Enroll Now"
+          icon={<FontAwesomeIcon icon={faPenNib} />}
           linkUrl="https://maplewood.campintouch.com/ui/forms/application/camper/App"
           label="scReturning"
           click={closeAllOverlays}
@@ -125,6 +162,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Classes"
           linkSubtitle="Apply Now"
+          icon={<FontAwesomeIcon icon={faGraduationCap} />}
           linkUrl="/school-year-programs/childrens-classes"
           label="syClasses"
           click={closeAllOverlays}
@@ -132,6 +170,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Kid's Events"
           linkSubtitle="Register Now"
+          icon={<FontAwesomeIcon icon={faStar} />}
           linkUrl="/school-year-programs/kids-weekly-events-listing"
           label="syEvents"
           click={closeAllOverlays}
@@ -139,6 +178,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Preschool"
           linkSubtitle="Apply Now"
+          icon={<FontAwesomeIcon icon={faChild} />}
           linkUrl="/school-year-programs/preschool-program-application"
           label="syPre"
           click={closeAllOverlays}
@@ -146,6 +186,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="After-School"
           linkSubtitle="Apply Now"
+          icon={<FontAwesomeIcon icon={faClock} />}
           linkUrl="/school-year-programs/after-school-program-application"
           label="syAfter"
           click={closeAllOverlays}
@@ -153,6 +194,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Vacation Program"
           linkSubtitle="Signup Now"
+          icon={<FontAwesomeIcon icon={faBellSchoolSlash} />}
           linkUrl="/school-year-programs/vacation-program"
           label="syVacation"
           click={closeAllOverlays}
@@ -160,6 +202,7 @@ const Overlay = ({
         <OverlayLink
           linkTitle="Birthday Parties"
           linkSubtitle="Schedule Now"
+          icon={<FontAwesomeIcon icon={faBirthdayCake} />}
           linkUrl="#"
           label="syBirthdays"
           click={closeAllOverlays}
@@ -169,27 +212,37 @@ const Overlay = ({
     {requestInfoOverlayVisible && (
       <OverlayWrapper>
         <OverlayLink
-          linkTitle=""
-          linkSubtitle="Schedule A Tour"
-          linkUrl="#"
+          linkTitle="Take a Tour"
+          linkSubtitle="Schedule Now"
+          icon={<FontAwesomeIcon icon={faCalendarStar} />}
+          linkUrl="/schedule-a-tour"
           label="infoTour"
           click={closeAllOverlays}
         />
         <OverlayLink
-          linkTitle=""
-          linkSubtitle="Attend An Event"
+          linkTitle="Attend An Event"
+          icon={<FontAwesomeIcon icon={faCalendarCheck} />}
+          linkSubtitle="View Schedule"
           linkUrl="#"
           label="infoEvent"
           click={closeAllOverlays}
         />
         <OverlayLink
-          linkTitle=""
-          linkSubtitle="Speak With a Director"
+          linkTitle="Speak with a Director"
+          linkSubtitle="Chat Now"
+          icon={<FontAwesomeIcon icon={faComments} />}
           linkUrl="#"
           label="infoSpeak"
           click={closeAllOverlays}
         />
-        <OverlayLink linkTitle="" linkSubtitle="Contact Us" linkUrl="#" label="infoContact" click={closeAllOverlays} />
+        <OverlayLink
+          linkTitle="Email & Phone"
+          linkSubtitle="Contact Us"
+          icon={<FontAwesomeIcon icon={faPaperPlane} />}
+          linkUrl="/contact-us"
+          label="infoContact"
+          click={closeAllOverlays}
+        />
       </OverlayWrapper>
     )}
   </>
