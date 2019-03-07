@@ -6,19 +6,21 @@ const MainHeadingStyled = styled.h1`
   ${tw`mt-10 mb-0`};
   color: ${props => props.theme.primaryColor};
   ${media.md`${tw`mt-16 mb-10`};`};
+  ${props => (props.centered ? 'text-align:center' : '')}
 `
 const SubHeadingStyled = styled.h2`
   ${tw`mt-10 mb-6`};
   color: ${props => props.theme.primaryColor};
-  ${media.md`${tw`text-center mt-16 mb-10`};`};
+  ${media.md`${tw`mt-16 mb-10`};`};
+  ${props => (props.centered ? 'text-align:center' : '')}
 `
 
-const MainContent = ({ children, h2 }) => {
+const MainContent = ({ h2, children, ...otherProps }) => {
   let out = ''
   if (h2 === true) {
-    out = <SubHeadingStyled className="mainHeading">{children}</SubHeadingStyled>
+    out = <SubHeadingStyled {...otherProps}>{children}</SubHeadingStyled>
   } else {
-    out = <MainHeadingStyled className="mainHeading">{children}</MainHeadingStyled>
+    out = <MainHeadingStyled {...otherProps}>{children}</MainHeadingStyled>
   }
 
   return out
