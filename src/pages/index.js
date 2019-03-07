@@ -69,14 +69,18 @@ const IndexPage = ({ data }) => {
 
         <PageSection>
           <NarrowContent className="md:mb-0 lg:pb-2">
-            <MainHeading h2>What our families say:</MainHeading>
+            <MainHeading h2 centered>
+              What our families say:
+            </MainHeading>
           </NarrowContent>
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
         </PageSection>
 
         <PageSection className="-mt-12">
           <NarrowContent className="md:mb-0 lg:pb-2">
-            <MainHeading h2>Latest News:</MainHeading>
+            <MainHeading h2 centered>
+              Latest News:
+            </MainHeading>
             <RecentNews articles={data.allDatoCmsNewsArticle} />
           </NarrowContent>
         </PageSection>
