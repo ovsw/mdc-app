@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 
 const NewsItemWrapper = styled(Link)`
-  ${tw`mb-12 flex items-stretch no-underline`};
+  ${tw`mb-12 flex items-stretch no-underline px-2`};
   &:hover {
     color: inherit;
   }

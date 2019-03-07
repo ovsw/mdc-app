@@ -2,7 +2,12 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const NewsPage = ({ data }) => <BasicPageTemplate data={data.datoCmsNewsArticle} />
+const NewsPage = ({ data }) => {
+  data.datoCmsNewsArticle.callToActionText2 = '< More News'
+  data.datoCmsNewsArticle.callToActionLink2 = '/news'
+  console.log(data)
+  return <BasicPageTemplate data={data.datoCmsNewsArticle} />
+}
 
 export default NewsPage
 

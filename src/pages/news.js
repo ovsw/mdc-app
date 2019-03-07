@@ -1,16 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
+import NewsListingPageTemplate from 'src/components/Templates/NewsListingPageTemplate'
 
-const NewsPage = ({ data }) => {
-  console.log('test')
-
-  return (
-    <>
-      <BasicPageTemplate data={data.datoCmsNewsListing} />
-    </>
-  )
-}
+const NewsPage = ({ data }) => (
+  <NewsListingPageTemplate data={data.datoCmsNewsListing} articles={data.allDatoCmsNewsArticle} />
+)
 
 export default NewsPage
 
@@ -25,6 +19,26 @@ export const query = graphql`
           imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
         ) {
           ...GatsbyDatoCmsFluid
+        }
+      }
+    }
+    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 3) {
+      edges {
+        node {
+          title
+          slug
+          shortDate: date(formatString: "dddd, MMM Do")
+          bannerImage {
+            url
+            fluid(
+              maxWidth: 450
+              maxHeight: 450
+              imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,lines", mono: "14FF5D00" }
+            ) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+          excerpt
         }
       }
     }

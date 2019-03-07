@@ -30,57 +30,60 @@ const BasicPageTemplate = ({
     embedCodes,
     events,
   },
-}) => (
-  <>
-    <BannerImage image={bannerImage} />
+}) => {
+  console.log(callToActionText2)
+  return (
+    <>
+      <BannerImage image={bannerImage} />
 
-    <MainContentWrapper className="rteWrapper">
-      <NarrowContent>
-        <MainHeading>{title}</MainHeading>
-        {longDate && <p className=" text-sm font-bold">{longDate}</p>}
-      </NarrowContent>
+      <MainContentWrapper className="rteWrapper">
+        <NarrowContent>
+          <MainHeading>{title}</MainHeading>
+          {longDate && <p className=" text-sm font-bold">{longDate}</p>}
+        </NarrowContent>
 
-      {body.map(block => (
-        <div key={block.id}>
-          {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
-
-          {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
-
-          {block.model.apiKey === 'image' && <ImageBlock block={block} />}
-        </div>
-      ))}
-
-      {quickLinks && <BlockLink items={quickLinks} />}
-
-      {bodyContinued &&
-        bodyContinued.map(block => (
+        {body.map(block => (
           <div key={block.id}>
             {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
 
-            {block.model.apiKey === 'big_link' && (
-              <CtaBlock>
-                <BigLinkBlock block={block} />
-              </CtaBlock>
-            )}
+            {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
+
+            {block.model.apiKey === 'image' && <ImageBlock block={block} />}
           </div>
         ))}
 
-      {events && <KidsEvents events={events} />}
-      <NarrowContent>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: embedCodes,
-          }}
-        />
-      </NarrowContent>
-    </MainContentWrapper>
-    {callToActionLink && (
-      <CTAWrapper>
-        <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>
-        {callToActionText2 && <CTAMobileBtn to={callToActionLink2}>{callToActionText2}</CTAMobileBtn>}
-      </CTAWrapper>
-    )}
-  </>
-)
+        {quickLinks && <BlockLink items={quickLinks} />}
+
+        {bodyContinued &&
+          bodyContinued.map(block => (
+            <div key={block.id}>
+              {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
+
+              {block.model.apiKey === 'big_link' && (
+                <CtaBlock>
+                  <BigLinkBlock block={block} />
+                </CtaBlock>
+              )}
+            </div>
+          ))}
+
+        {events && <KidsEvents events={events} />}
+        <NarrowContent>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: embedCodes,
+            }}
+          />
+        </NarrowContent>
+      </MainContentWrapper>
+      {(callToActionLink || callToActionLink2) && (
+        <CTAWrapper>
+          {callToActionText && <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>}
+          {callToActionText2 && <CTAMobileBtn to={callToActionLink2}>{callToActionText2}</CTAMobileBtn>}
+        </CTAWrapper>
+      )}
+    </>
+  )
+}
 
 export default BasicPageTemplate
