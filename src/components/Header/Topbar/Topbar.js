@@ -29,15 +29,15 @@ const Topbar = props => (
             </div>
             <div>
               <Link
-                to="/"
+                to="/news"
                 className={`${styles.link} text-yellow-brand-light hover:text-white`}
                 style={{ marginRight: '1rem' }}
               >
-                <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Blog
+                <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> News
               </Link>
-              <Link to="/" className={styles.link}>
-                <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Parent Login
-              </Link>
+              <a href="https://maplewood.campintouch.com/v2/login/login.aspx?" className={styles.link}>
+                <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Summer Login
+              </a>
             </div>
           </div>
 
