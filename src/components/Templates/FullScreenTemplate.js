@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import InteractiveMap from 'src/components/Map/InteractiveMap'
 
 const MapFrame = styled.iframe`
   ${tw`mb-0`};
@@ -27,13 +28,16 @@ class FullScreenTemplate extends React.Component {
 
   render() {
     return (
-      <MapFrame
-        title="interactive map"
-        width="100%"
-        height="900"
-        src="https://maphub.net/embed/50364?panel=1"
-        frameBorder="0"
-      />
+      <>
+        <InteractiveMap />
+        {/* <MapFrame
+          title="interactive map"
+          width="100%"
+          height="900"
+          src="https://maphub.net/embed/50364?panel=1"
+          frameBorder="0"
+        /> */}
+      </>
     )
   }
 }

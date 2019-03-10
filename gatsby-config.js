@@ -220,6 +220,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-react-leaflet`,
     'gatsby-plugin-tailwindcss',
     'gatsby-plugin-styled-components',
     `gatsby-plugin-root-import`,
