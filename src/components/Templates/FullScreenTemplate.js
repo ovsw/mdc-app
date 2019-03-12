@@ -27,9 +27,10 @@ class FullScreenTemplate extends React.Component {
   }
 
   render() {
+    const { locations } = this.props
     return (
       <>
-        <InteractiveMap />
+        <InteractiveMap locations={locations} />
         {/* <MapFrame
           title="interactive map"
           width="100%"
