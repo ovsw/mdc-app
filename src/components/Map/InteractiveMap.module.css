@@ -1,0 +1,8 @@
+.map {
+  height: 1000px;
+  z-index: 9;
+  background: white !important;
+}
+/* .leaflet-tooltip {
+      pointer-events: auto !important;
+    } */

@@ -8,24 +8,19 @@ import mapimage from 'src/images/new-mapdesign-2.jpg'
 
 import icon from 'leaflet/dist/images/marker-icon.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+import styles from './InteractiveMap.module.css'
 import MapLightBox from './LightBox'
 
-delete L.Icon.Default.prototype._getIconUrl
+if (typeof window !== 'undefined') {
+  delete L.Icon.Default.prototype._getIconUrl
 
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: icon,
-  // iconUrl: icon,
-  // shadowUrl: iconShadow,
-})
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl: icon,
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+  })
+}
 
-const StyledMap = styled(Map)`
-  height: 1000px;
-  z-index: 9;
-  background: white !important;
-  .leaflet-tooltip {
-    pointer-events: auto !important;
-  }
-`
 export default class InteractiveMap extends Component {
   constructor(props) {
     super(props)
@@ -74,7 +69,7 @@ export default class InteractiveMap extends Component {
       return (
         <>
           {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={this.closeLightBox} />}
-          <StyledMap crs={L.CRS.Simple} bounds={[[0, 0], [1260, 1920]]} minZoom={-0.7} maxZoom={1}>
+          <Map className={styles.map} crs={L.CRS.Simple} bounds={[[0, 0], [1260, 1920]]} minZoom={-0.7} maxZoom={1}>
             <ImageOverlay url={mapimage} bounds={[[0, 0], [1260, 1920]]} />
             {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
@@ -104,7 +99,7 @@ export default class InteractiveMap extends Component {
               Easily customizable.
             </Popup>
           </Marker> */}
-          </StyledMap>
+          </Map>
         </>
       )
     }
