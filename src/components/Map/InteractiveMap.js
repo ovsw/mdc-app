@@ -30,8 +30,13 @@ export default class InteractiveMap extends Component {
         center: [51.505, -0.09],
         zoom: 13,
       },
+      width: 0,
+      height: 0,
       currLightboxItem: null,
     }
+
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+
     this.markerClick = this.markerClick.bind(this)
 
     this.escFunction = event => {
@@ -42,34 +47,49 @@ export default class InteractiveMap extends Component {
     }
   }
 
-  markerClick = (title, index) => {
-    // console.log(this.props.locations.edges[index])
-    // console.log(`click on: ${title}`)
-    // console.log(`click on: ${title}`, this.props.locations.edges[index].node.title)
-    this.setState({ currLightboxItem: this.props.locations.edges[index].node })
+  componentDidMount() {
+    document.addEventListener('keydown', this.escFunction, false)
+    this.updateWindowDimensions()
+    window.addEventListener('resize', this.updateWindowDimensions)
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.escFunction, false)
+    window.removeEventListener('resize', this.updateWindowDimensions)
+  }
+
+  markerClick = index => {
+    const {
+      locations: { edges },
+    } = this.props
+    this.setState({ currLightboxItem: edges[index].node })
   }
 
   closeLightBox = () => {
     this.setState({ currLightboxItem: null })
   }
 
-  componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false)
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.escFunction, false)
+  updateWindowDimensions() {
+    console.log(window.innerWidth, window.innerHeight)
+    this.setState({ width: window.innerWidth, height: window.innerHeight })
   }
 
   render() {
-    const { mapOptions, currLightboxItem } = this.state
+    const { mapOptions, currLightboxItem, height } = this.state
     const { locations } = this.props
 
     if (typeof window !== 'undefined') {
       return (
         <>
           {currLightboxItem && <MapLightBox content={currLightboxItem} closeLightBox={this.closeLightBox} />}
-          <Map className={styles.map} crs={L.CRS.Simple} bounds={[[0, 0], [1260, 1920]]} minZoom={-0.7} maxZoom={1}>
+          <Map
+            className={styles.map}
+            crs={L.CRS.Simple}
+            bounds={[[0, 0], [1260, 1920]]}
+            minZoom={-0.7}
+            maxZoom={1}
+            style={{ height: `${(height - 86).toString()}px` }}
+          >
             <ImageOverlay url={mapimage} bounds={[[0, 0], [1260, 1920]]} />
             {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
@@ -80,7 +100,7 @@ export default class InteractiveMap extends Component {
               // console.log(this.MarkerClick)
               const latLong = [node.lat, node.long]
               return (
-                <Marker key={index} position={latLong} onClick={() => this.markerClick(node.title, index)}>
+                <Marker key={index} position={latLong} onClick={() => this.markerClick(index)}>
                   <Tooltip permanent interactive direction="top" offset={[0, 20]}>
                     {node.title}
                   </Tooltip>
