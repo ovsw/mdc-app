@@ -27,7 +27,7 @@ module.exports = {
         },
         {
           title: 'Location',
-          url: '/location',
+          url: '/interactive-map',
           children: [],
         },
         {
