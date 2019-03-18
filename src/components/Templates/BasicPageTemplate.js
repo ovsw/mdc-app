@@ -13,6 +13,7 @@ import BlockLink from 'src/components/Content/BlockLinks/BlockLinks'
 import CTAWrapper from 'src/components/CTAWrapper'
 import CTAMobileBtn from 'src/components/CTAMobileBtn'
 import KidsEvents from 'src/components/KidsEvents'
+import VideoBlock from 'src/components/Content/VideoBlock'
 
 const BasicPageTemplate = ({
   data: {
@@ -31,7 +32,7 @@ const BasicPageTemplate = ({
     events,
   },
 }) => {
-  console.log(callToActionText2)
+  console.log('test')
   return (
     <>
       <BannerImage image={bannerImage} />
@@ -45,10 +46,9 @@ const BasicPageTemplate = ({
         {body.map(block => (
           <div key={block.id}>
             {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
-
             {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
-
             {block.model.apiKey === 'image' && <ImageBlock block={block} />}
+            {block.model.apiKey === 'video' && <VideoBlock block={block} />}
           </div>
         ))}
 
