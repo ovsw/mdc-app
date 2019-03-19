@@ -39,6 +39,13 @@ export const query = graphql`
           }
           text
         }
+        ... on DatoCmsVideo {
+          id
+          videoUrl
+          model {
+            apiKey
+          }
+        }
         ... on DatoCmsImage {
           id
           model {
