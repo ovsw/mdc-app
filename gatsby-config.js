@@ -45,15 +45,15 @@ module.exports = {
           url: '/giving-back',
           children: [],
         },
+        {
+          title: 'Testimonials',
+          url: '/testimonials',
+          children: [],
+        },
       ],
       [
         {
           title: 'Summer Camp',
-          url: '/summer-camp',
-          children: [],
-        },
-        {
-          title: 'Programs',
           url: '/summer-camp/',
           children: [
             {
@@ -77,7 +77,16 @@ module.exports = {
         {
           title: 'Activities',
           url: '/summer-camp/activities',
-          children: [],
+          children: [
+            {
+              title: 'Swimming & Boating ',
+              url: '/summer-camp/activities/swimming-and-boating',
+            },
+            {
+              title: 'Club Day - Electives',
+              url: '/summer-camp/activities/club-day-electives',
+            },
+          ],
         },
         {
           title: 'Bus Transportation',
@@ -87,11 +96,6 @@ module.exports = {
         {
           title: 'Smart Lunches',
           url: '/summer-camp/smart-lunches',
-          children: [],
-        },
-        {
-          title: 'Testimonials',
-          url: '/summer-camp/testimonials',
           children: [],
         },
       ],
@@ -138,11 +142,6 @@ module.exports = {
         {
           title: 'Birthday Parties',
           url: '/school-year-programs/birthday-parties',
-          children: [],
-        },
-        {
-          title: 'Testimonials',
-          url: '/school-year-programs/testimonials',
           children: [],
         },
       ],
