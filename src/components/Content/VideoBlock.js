@@ -20,6 +20,10 @@ const VideoBlock = ({ block }) => {
     videoId = videoId.substring(0, ampersandPosition)
   }
 
+  const Container = styled.div`
+    ${tw`container mx-auto mb-8 px-4`};
+  `
+
   const opts = {
     height: '390',
     width: '640',
@@ -31,11 +35,11 @@ const VideoBlock = ({ block }) => {
     },
   }
   return (
-    <div className="container mx-auto px-2">
+    <Container>
       <VideoWrapper>
         <YouTube videoId={videoId} opts={opts} />
       </VideoWrapper>
-    </div>
+    </Container>
   )
 }
 
