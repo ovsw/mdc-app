@@ -58,19 +58,19 @@ module.exports = {
           children: [
             {
               title: 'Preschool & Kindergarten',
-              url: '/summer-camp/programs/preschool-and-kindergarten',
+              url: '/summer-camp/preschool-and-kindergarten',
             },
             {
               title: '1st-7th Grade',
-              url: '/summer-camp/programs/1st-7th-grade',
+              url: '/summer-camp/1st-7th-grade',
             },
             {
               title: 'Teen Leadership (C.I.T.)',
-              url: '/summer-camp/programs/teen-leadership-cit',
+              url: '/summer-camp/teen-leadership-cit',
             },
             {
               title: 'Additional Programs',
-              url: '/summer-camp/programs/additional-programs',
+              url: '/summer-camp/additional-programs',
             },
           ],
         },
