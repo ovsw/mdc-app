@@ -12,7 +12,7 @@ const InnerContent = styled.div`
   ${tw`absolute pin py-1 px-2`};
   ${tw`flex items-center flex-col justify-center`};
   ${tw`text-white text-center`};
-  background-color: rgba(0, 102, 0, 0.8);
+  background-color: rgba(0, 102, 0, 0.7);
   &:before {
     ${tw`border absolute`};
     content: '';
@@ -24,7 +24,7 @@ const InnerContent = styled.div`
     transition: border-color 0.2s ease;
   }
   :hover {
-    background-color: rgba(0, 102, 0, 0.6);
+    background-color: rgba(0, 102, 0, 0.5);
     h3 {
       color: ${props => props.theme.secondaryColor};
     }
