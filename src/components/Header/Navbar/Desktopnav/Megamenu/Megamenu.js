@@ -54,7 +54,7 @@ class Megamenu extends React.Component {
             this._megaMenuWrapper = megaMenuWrapper
           }}
         >
-          <div className="container mx-auto flex justify-center">
+          <div className="container mx-auto flex justify-start">
             {menuModel.map((column, index) => (
               <ul className={`${styles.menuColumn}`} key={index}>
                 {column.map((item, key) => (
