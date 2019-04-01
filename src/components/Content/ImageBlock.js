@@ -1,16 +1,18 @@
 import React from 'react'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 
+const ImageContainer = styled.div`
+  ${tw`container mx-auto md:px-8 xl:px-16`};
+`
+
 const ImageBlock = ({ block }) => (
-  <div
-    className="container mx-auto md:px-8 xl:px-16"
-    style={block.image.width < block.image.height ? { paddingLeft: '8rem', paddingRight: '8rem' } : {}}
-  >
+  <ImageContainer style={block.image.width < block.image.height ? { maxWidth: '600px' } : { maxWidth: '800px' }}>
     <figure className="contentImage">
       <Img fluid={block.image.fluid} />
       <figcaption>{block.caption}</figcaption>
     </figure>
-  </div>
+  </ImageContainer>
 )
 
 export default ImageBlock
