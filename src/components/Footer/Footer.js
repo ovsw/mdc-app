@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faTwitterSquare, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import acaLogo from 'src/images/aca-logo.png'
 
 const FooterStyled = styled.footer`
   ${tw`px-2 py-4 mt-0 bg-green-brand text-white`};
@@ -62,6 +63,10 @@ const Footer = () => (
         <a href="mailto:info@maplewoodyearround.com">info@maplewoodyearround.com</a> <br />
         150 Foundry Street, <br />
         South Easton, MA, 02375 United States
+        <SeoText>
+          Serving Greater Boston area and Rhode Island and located near the following towns: Easton, Sharon, Mansfield,
+          Norton, Canton, Stoughton, Bridgewater, Raynham, Taunton, Foxboro, Brockton, Walpole, Middleboro.
+        </SeoText>
       </LeftColumn>
       <RightColumn>
         <Icons>
@@ -82,12 +87,10 @@ const Footer = () => (
             <FontAwesomeIcon icon={faTwitterSquare} />
           </SocialIcon>
         </Icons>
+        <img src={acaLogo} alt="American Camp Association Logo" />
       </RightColumn>
     </Wrapper>
-    <SeoText>
-      Serving Greater Boston area and Rhode Island and located near the following towns: Easton, Sharon, Mansfield,
-      Norton, Canton, Stoughton, Bridgewater, Raynham, Taunton, Foxboro, Brockton, Walpole, Middleboro.
-    </SeoText>
+
     <CopyRight>
       copyright &copy;2013-{new Date().getFullYear()} Maplewood Country Day Camp & Enrichment Center | website by{' '}
       <a href="https://ovswebsites.com/" target="_blank" rel="noopener noreferrer">
