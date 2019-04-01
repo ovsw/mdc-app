@@ -15,6 +15,7 @@ export const query = graphql`
           lat
           long
           desc
+          labelDirection
           images {
             url
             large: fluid(

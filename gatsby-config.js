@@ -21,13 +21,13 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Facilities',
-          url: '/facilities',
+          title: 'Interactive Map',
+          url: '/interactive-map',
           children: [],
         },
         {
-          title: 'Location',
-          url: '/interactive-map',
+          title: 'Directions',
+          url: '/directions',
           children: [],
         },
         {

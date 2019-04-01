@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
-import mapimage from 'src/images/new-mapdesign-2.jpg'
+import mapimage from 'src/images/mdc-map.jpg'
 
 import icon from 'leaflet/dist/images/marker-icon.png'
 import iconShadow from 'leaflet/dist/images/marker-shadow.png'
@@ -15,9 +15,9 @@ if (typeof window !== 'undefined') {
   delete L.Icon.Default.prototype._getIconUrl
 
   L.Icon.Default.mergeOptions({
-    iconRetinaUrl: icon,
-    iconUrl: icon,
-    shadowUrl: iconShadow,
+    // iconRetinaUrl: icon,
+    // iconUrl: icon,
+    // shadowUrl: iconShadow,
   })
 }
 
@@ -48,8 +48,8 @@ export default class InteractiveMap extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.escFunction, false)
     this.updateWindowDimensions()
+    document.addEventListener('keydown', this.escFunction, false)
     window.addEventListener('resize', this.updateWindowDimensions)
   }
 
@@ -63,6 +63,21 @@ export default class InteractiveMap extends Component {
       locations: { edges },
     } = this.props
     this.setState({ currLightboxItem: edges[index].node })
+  }
+
+  calcLabelOffset = labelDir => {
+    switch (labelDir) {
+      case 'top':
+        return [0, 25]
+      case 'bottom':
+        return [0, -5]
+      case 'left':
+        return [20, 20]
+      case 'right':
+        return [-20, 25]
+      default:
+        return [0, 25]
+    }
   }
 
   closeLightBox = () => {
@@ -85,12 +100,13 @@ export default class InteractiveMap extends Component {
           <Map
             className={styles.map}
             crs={L.CRS.Simple}
-            bounds={[[0, 0], [1260, 1920]]}
-            minZoom={-0.7}
+            bounds={[[0, 0], [1063, 1920]]}
+            minZoom={0}
             maxZoom={1}
+            center={[650, 900]}
             style={{ height: `${(height - 86).toString()}px` }}
           >
-            <ImageOverlay url={mapimage} bounds={[[0, 0], [1260, 1920]]} />
+            <ImageOverlay url={mapimage} bounds={[[0, 0], [1063, 1920]]} />
             {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
             color="blue"
@@ -99,9 +115,11 @@ export default class InteractiveMap extends Component {
             {locations.edges.map(({ node }, index) => {
               // console.log(this.MarkerClick)
               const latLong = [node.lat, node.long]
+              const currOffset = this.calcLabelOffset(node.labelDirection)
+
               return (
                 <Marker key={index} position={latLong} onClick={() => this.markerClick(index)}>
-                  <Tooltip permanent interactive direction="top" offset={[0, 20]}>
+                  <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
                     {node.title}
                   </Tooltip>
                 </Marker>
