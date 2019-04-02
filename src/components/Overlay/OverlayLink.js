@@ -4,49 +4,25 @@ import { FakeButton } from 'src/components/common/Button'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
 
-const MainLink = styled.div`
-  ${tw`flex-grow flex items-center text-white text-sm items-stretch text-center`};
-  ${tw`border-white border-t-2 border-r-2 `};
-  background-position: center center;
-  background-size: cover;
-  width: ${props => (props.ofTwo ? 'auto' : '50%')};
-  ${media.lg`width: w-1/2`};
+import MapImage from 'src/images/mdc-map.jpg'
+import PaperTexture from 'src/images/paper-texture.png'
 
-  background-image: ${props => {
-    switch (props.label) {
-      case 'scDatesRates':
-        return "url('https://www.datocms-assets.com/9361/1548756509-dsc1067.jpg?auto=compress,enhance')"
-      case 'syDatesRates':
-        return "url('https://www.datocms-assets.com/9361/1548757569-friends.jpg?auto=compress,enhance')"
-      case 'scEnroll':
-        return "url('https://www.datocms-assets.com/9361/1548167096-groupswim.jpg?auto=compress,enhance')"
-      case 'syEnroll':
-        return "url('https://www.datocms-assets.com/9361/1548757424-comcasthappyfriends.jpg?auto=compress,enhance')"
-      case 'syClasses':
-        return "url('https://www.datocms-assets.com/9361/1549518531-campbus.jpg?auto=compress,enhance&w=450&h=250&fit=crop&crop=faces,entropy')"
-      case 'syEvents':
-        return "url('https://www.datocms-assets.com/9361/1548096297-42930620101567348511791584770250631833190400n.jpg?auto=compress,enhance&fit=facearea&w=850&h=450&facepad=10')"
-      case 'syPre':
-        return "url('https://www.datocms-assets.com/9361/1549534145-preshcool-and-kindergarten-bannner.jpg?auto=compress,enhance&w=450&h=250&fit=crop&crop=faces,entropy')"
-      case 'syAfter':
-        return "url('https://www.datocms-assets.com/9361/1548167265-img7465.jpg?auto=compress,enhance&w=450&h=250&fit=crop&crop=faces,entropy')"
-      case 'syVacation':
-        return "url('https://www.datocms-assets.com/9361/1549535582-summer-camp-grades-1-7-boys-group.jpg?auto=compress,enhance&fit=facearea&w=850&h=450&facepad=10')"
-      default:
-        return "url('https://www.datocms-assets.com/9361/1548756509-dsc1067.jpg?auto=compress,enhance')"
-    }
-  }};
+import scDatesRatesImg from 'src/images/overlayBgs/scDatesRates.jpg'
+import syDatesRatesImg from 'src/images/overlayBgs/syDatesRates.jpg'
+import scEnrollNewImg from 'src/images/overlayBgs/scEnrollNew.jpg'
+import syEnrollReturnImg from 'src/images/overlayBgs/scEnrollReturn.jpg'
+import syClassesImg from 'src/images/overlayBgs/syClasses.jpg'
+import syEventsImg from 'src/images/overlayBgs/syEvents.jpg'
+import syPreImg from 'src/images/overlayBgs/syPre.jpg'
+import syAfterImg from 'src/images/overlayBgs/syAfter.jpg'
+import syVacationImg from 'src/images/overlayBgs/syVacation.jpg'
+import syBirthdaysImg from 'src/images/overlayBgs/syBirthdays1.jpg'
+import infoTourImg from 'src/images/overlayBgs/infoTour.jpg'
+import infoEventImg from 'src/images/overlayBgs/infoEvent.jpg'
+import infoSpeakImg from 'src/images/overlayBgs/infoSpeak.jpg'
+import infoContactImg from 'src/images/overlayBgs/infoContact.jpg'
+import MainLink from './MainLink'
 
-  a {
-    ${tw`flex flex-1 items-center text-center justify-center no-underline`};
-    background-color: rgba(0, 102, 0, 0.7);
-
-    &:hover {
-      color: yellow;
-      background-color: rgba(0, 102, 0, 0.6);
-    }
-  }
-`
 const TextWrapper = styled.span`
   ${tw`text-xl md:text-2xl xl:text-3xl xl:mx-4`};
   line-height: 1;
@@ -63,8 +39,27 @@ const IconWrapper = styled.span`
   ${tw`pr-1 lg:pr-2`};
 `
 
+const bgImages = {
+  scDatesRates: scDatesRatesImg,
+  syDatesRates: syDatesRatesImg,
+  scEnroll: scDatesRatesImg,
+  scNew: scEnrollNewImg,
+  scReturning: syEnrollReturnImg,
+  syEnroll: syDatesRatesImg,
+  syClasses: syClassesImg,
+  syEvents: syEventsImg,
+  syPre: syPreImg,
+  syAfter: syAfterImg,
+  syVacation: syVacationImg,
+  syBirthdays: syBirthdaysImg,
+  infoTour: infoTourImg,
+  infoEvent: infoEventImg,
+  infoSpeak: infoSpeakImg,
+  infoContact: infoContactImg,
+}
+
 export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, ofTwo, icon }) => (
-  <MainLink label={label} ofTwo={ofTwo}>
+  <MainLink ofTwo={ofTwo} bgImage={bgImages[label]} style={{ backgroundImage: `${MapImage}` }}>
     {linkUrl.indexOf('https') !== 0 ? (
       <Link to={linkUrl} onClick={click}>
         <TextWrapper>
@@ -90,7 +85,7 @@ export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, of
 )
 
 export const IntOverlayLink = ({ linkTitle, linkSubtitle, label, click, ofTwo, icon }) => (
-  <MainLink label={label} ofTwo={ofTwo}>
+  <MainLink ofTwo={ofTwo} bgImage={bgImages[label]} style={{ backgroundImage: MapImage }}>
     <a href="#" onClick={click}>
       <TextWrapper>
         {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
