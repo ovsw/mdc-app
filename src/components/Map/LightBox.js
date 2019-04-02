@@ -1,26 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from 'src/components/responsive'
 import Img from 'gatsby-image'
 
-const ContentWrapper = styled.div`
-  ${tw`bg-white rounded flex w-2/3 relative p-4`};
-  z-index: 12;
-`
-const CurrentImage = styled(Img)`
-  ${tw`w-1/2`};
-`
-const RightColumn = styled.div`
-  ${tw`w-1/2 p-4`};
-`
-const ThumbnailWrapper = styled.div`
-  ${tw`flex`};
-`
-const ThumbImage = styled(Img)`
-  ${tw` w-16 h-16`};
-`
 const LightBoxWrapper = styled.div`
   ${tw`fixed pin flex items-center justify-center`};
   z-index: 11;
+  padding-top: 127px;
+`
+const ContentWrapper = styled.div`
+  ${tw`bg-white rounded flex relative p-4`};
+  ${tw` flex-col md:flex-row`};
+  max-height: 90%;
+  overflow: auto;
+  width: 95%;
+  ${media.md`width: 700px;`};
+  ${media.lg`width: 800px;`};
+  ${media.xl`width: 1000px;`}
+  z-index: 12;
+`
+const CurrentImage = styled(Img)`
+  ${tw` w-full md:w-1/2`};
+`
+const RightColumn = styled.div`
+  ${tw`md:w-1/2 p-4 text-sm`};
+`
+const ThumbnailWrapper = styled.div`
+  ${tw`flex flex-wrap`};
+`
+const ThumbImage = styled(Img)`
+  ${tw`w-12 xl:w-16 m-px cursor-pointer`};
 `
 const LightBoxBg = styled.div`
   ${tw`absolute pin`};
@@ -63,6 +72,7 @@ class LightBox extends React.Component {
           <RightColumn>
             <h2>{title}</h2>
             <div
+              className="hidden md:block"
               dangerouslySetInnerHTML={{
                 __html: desc,
               }}
