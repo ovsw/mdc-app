@@ -228,7 +228,7 @@ const Overlay = ({
           click={closeAllOverlays}
         />
         <OverlayLink
-          linkTitle="Speak with a Director"
+          linkTitle="Chat with us"
           linkSubtitle="Chat Now"
           icon={<FontAwesomeIcon icon={faComments} />}
           linkUrl="#"
