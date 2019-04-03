@@ -220,7 +220,7 @@ const Overlay = ({
           click={closeAllOverlays}
         />
         <OverlayLink
-          linkTitle="Attend An Event"
+          linkTitle="Attend  Info Session"
           icon={<FontAwesomeIcon icon={faCalendarCheck} />}
           linkSubtitle="View Schedule"
           linkUrl="#"
