@@ -10,7 +10,7 @@
 }
 
 .menuColumn {
-  @apply list-reset py-4 px-16 m-0 border-grey border-r border-solid;
+  @apply list-reset pt-2 pb-4 px-8 m-0 border-grey border-r border-solid;
 }
 .menuColumn:last-child {
   @apply  border-none ;
@@ -24,13 +24,23 @@
 .menuColumn ul {
   @apply my-1 ml-4;
 }
-.menuColumn ul li:first-child a{
+.menuColumn>li:first-child>a{
   @apply text-white text-sm font-normal;
 }
 .menuColumn li a {
-  @apply no-underline text-sm;
+  @apply block pr-6 pl-2 pb-2 pt-1 no-underline text-sm;
+  border-bottom: 1px solid #77a777;
 }
-
+.menuColumn li ul {
+  list-style-type: disc;
+  @apply pl-8 ml-0 pb-2;
+  border-bottom: 1px solid #77a777;
+}
+.menuColumn li ul li a {
+  border-bottom: none;
+  @apply py-0 my-0;
+  
+}
 .menuColumn li a:hover {
-  @apply text-yellow-light underline;
+  @apply text-yellow-light ;
 }
