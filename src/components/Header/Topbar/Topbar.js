@@ -35,7 +35,12 @@ const Topbar = props => (
               >
                 <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> News
               </Link>
-              <a href="https://maplewood.campintouch.com/v2/login/login.aspx?" className={styles.link}>
+              <a
+                href="https://maplewood.campintouch.com/v2/login/login.aspx?"
+                className={styles.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Summer Login
               </a>
             </div>
