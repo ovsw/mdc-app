@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
 import Img from 'gatsby-image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 const LightBoxWrapper = styled.div`
   ${tw`fixed pin flex items-center justify-center`};
@@ -12,7 +14,6 @@ const ContentWrapper = styled.div`
   ${tw`bg-white rounded flex relative p-4`};
   ${tw` flex-col md:flex-row`};
   max-height: 90%;
-  overflow: auto;
   width: 95%;
   ${media.md`width: 700px;`};
   ${media.lg`width: 800px;`};
@@ -35,6 +36,13 @@ const LightBoxBg = styled.div`
   ${tw`absolute pin`};
   background: rgba(15, 31, 5, 0.62);
   z-index: 11;
+`
+const CloseIcon = styled(FontAwesomeIcon)`
+  ${tw`absolute cursor-pointer`};
+  color: ${props => props.theme.primaryColor};
+  bottom: 1rem;
+  right: 0.75rem;
+  ${media.md`top: 1rem;`};
 `
 
 class LightBox extends React.Component {
@@ -68,6 +76,7 @@ class LightBox extends React.Component {
       <LightBoxWrapper>
         <LightBoxBg onClick={closeLightBox} />
         <ContentWrapper>
+          <CloseIcon icon={faTimesCircle} fixedWidth size="2x" onClick={closeLightBox} />
           <CurrentImage fluid={images[activeImage].large} />
           <RightColumn>
             <h2>{title}</h2>
