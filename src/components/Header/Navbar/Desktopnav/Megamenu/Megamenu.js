@@ -21,6 +21,10 @@ class Megamenu extends React.Component {
       this.menuTimeout = setTimeout(() => {
         this.setState({ megaMenuVisible: false })
       }, 50)
+    }
+
+    this.onNavClick = () => {
+      this.hideMenu()
       closeAllOverlays()
     }
 
@@ -40,7 +44,6 @@ class Megamenu extends React.Component {
           onTouchStart={this.toggleMegaMenu}
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}
-          onKeyUp={this.handleKeyUp}
           role="link"
           tabIndex="-1"
         >
@@ -60,11 +63,11 @@ class Megamenu extends React.Component {
                 {column.map((item, key) => (
                   <li key={key}>
                     {item.url.indexOf('https') !== 0 ? (
-                      <Link to={item.url} onClick={this.hideMenu}>
+                      <Link to={item.url} onClick={this.onNavClick}>
                         {item.title}
                       </Link>
                     ) : (
-                      <a href={item.url} onClick={this.hideMenu} rel="noopener noreferrer" target="_blank">
+                      <a href={item.url} onClick={this.onNavClick} rel="noopener noreferrer" target="_blank">
                         {item.title}
                       </a>
                     )}
@@ -72,7 +75,7 @@ class Megamenu extends React.Component {
                       <ul className="list-reset">
                         {item.children.map((child, key) => (
                           <li key={key}>
-                            <Link to={child.url} onClick={this.hideMenu}>
+                            <Link to={child.url} onClick={this.onNavClick}>
                               {child.title}
                             </Link>
                           </li>
