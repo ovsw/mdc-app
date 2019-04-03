@@ -32,10 +32,10 @@ const BasicPageTemplate = ({
     events,
   },
 }) => {
-  console.log('test')
+  console.log('')
   return (
     <>
-      <BannerImage image={bannerImage} />
+      <BannerImage image={bannerImage} quickLinks={callToActionText} />
 
       <MainContentWrapper className="rteWrapper">
         <NarrowContent>

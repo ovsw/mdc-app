@@ -7,8 +7,8 @@ const BannerImageStyled = styled(Img)`
   ${tw`xl:h-full`};
 `
 
-const BannerImage = ({ image }) => (
-  <MainBannerWrapper>
+const BannerImage = ({ image, quickLinks }) => (
+  <MainBannerWrapper withQuickLinks={quickLinks}>
     {/* <img src={`${data.datoCmsAboutPage.bannerImage.url}?auto=compress&fit=facearea&h=400&w=1200`} /> */}
     {image && <BannerImageStyled fluid={image.portrait} />}
   </MainBannerWrapper>
