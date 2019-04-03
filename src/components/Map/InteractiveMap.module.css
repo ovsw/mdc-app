@@ -1,6 +1,6 @@
 .map {
   height: 900px;
-  z-index: 9;
+  z-index: 1;
   background: white !important;
 }
 /* .leaflet-tooltip {
