@@ -1,7 +1,15 @@
 import React from 'react'
+import styled from 'styled-components'
+import media from 'src/components/responsive'
 import { Link } from 'gatsby'
 
 import styles from './Megamenu.module.css'
+
+const ColumnsContainer = styled.div`
+  ${tw`mx-auto flex`};
+  ${media.lg`max-width: 1200px`};
+  justify-content: ${props => (props.menuTitle === 'Staff' ? 'flex-end' : 'flex-start')};
+`
 
 class Megamenu extends React.Component {
   constructor(props) {
@@ -53,11 +61,8 @@ class Megamenu extends React.Component {
           onMouseEnter={this.showMenu}
           onMouseLeave={this.hideMenu}
           className={megaMenuVisible ? styles.megaMenu : `hidden`}
-          ref={megaMenuWrapper => {
-            this._megaMenuWrapper = megaMenuWrapper
-          }}
         >
-          <div className="container mx-auto flex justify-start">
+          <ColumnsContainer menuTitle={menuTitle}>
             {menuModel.map((column, index) => (
               <ul className={`${styles.menuColumn}`} key={index}>
                 {column.map((item, key) => (
@@ -86,7 +91,7 @@ class Megamenu extends React.Component {
                 ))}
               </ul>
             ))}
-          </div>
+          </ColumnsContainer>
         </div>
       </li>
     )
