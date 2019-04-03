@@ -48,13 +48,10 @@ const MainLinkStyled = styled.div`
   }
 `
 
-const MainLink = props => {
-  console.log(props)
-  return (
-    <MainLinkStyled bgImage={props.bgImage} ofTwo={props.ofTwo}>
-      {props.children}
-    </MainLinkStyled>
-  )
-}
+const MainLink = ({ bgImage, ofTwo, children }) => (
+  <MainLinkStyled bgImage={bgImage} ofTwo={ofTwo}>
+    {children}
+  </MainLinkStyled>
+)
 
 export default MainLink
