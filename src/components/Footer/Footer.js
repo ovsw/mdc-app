@@ -86,7 +86,7 @@ const Footer = () => (
             <FontAwesomeIcon icon={faFacebookSquare} />
           </SocialIcon>
           <SocialIcon
-            href="/https://www.instagram.com/maplewood_country_day_camp/"
+            href="https://www.instagram.com/maplewood_country_day_camp/"
             target="_blank"
             rel="noopener noreferrer"
           >
