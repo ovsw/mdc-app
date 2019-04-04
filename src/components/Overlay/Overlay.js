@@ -111,7 +111,7 @@ const Overlay = ({
           linkTitle="Birthday Parties"
           linkSubtitle="See Dates & Rates"
           icon={<FontAwesomeIcon icon={faBirthdayCake} />}
-          linkUrl="#"
+          linkUrl="/school-year-programs/birthday-parties"
           label="syBirthdays"
           click={closeAllOverlays}
         />
@@ -203,7 +203,7 @@ const Overlay = ({
           linkTitle="Birthday Parties"
           linkSubtitle="Schedule Now"
           icon={<FontAwesomeIcon icon={faBirthdayCake} />}
-          linkUrl="#"
+          linkUrl="/school-year-programs/birthday-parties-dates-and-rates"
           label="syBirthdays"
           click={closeAllOverlays}
         />
