@@ -62,8 +62,8 @@ const FooterTitle = styled.h4`
 
 const AffiliateLogo = styled.img`
   ${tw`block mx-auto mt-4 `};
-  max-width: 250px;
-  ${media.md`max-width:200px`};
+  max-width: 200px;
+  ${media.md`max-width:125px`};
 `
 
 const Footer = () => (
