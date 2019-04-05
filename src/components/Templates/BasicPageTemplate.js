@@ -1,4 +1,5 @@
 import React from 'react'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import BannerImage from 'src/components/Content/BannerImage'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
@@ -18,6 +19,7 @@ import VideoBlock from 'src/components/Content/VideoBlock'
 const BasicPageTemplate = ({
   data: {
     title,
+    seoSettings,
     shortDate,
     longDate,
     bannerImage,
@@ -35,6 +37,12 @@ const BasicPageTemplate = ({
   console.log('')
   return (
     <>
+      {seoSettings && (
+        <HelmetDatoCms>
+          {seoSettings.title && <title>{seoSettings.title}</title>}
+          {seoSettings.description && <meta name="description" content={seoSettings.description} />}
+        </HelmetDatoCms>
+      )}
       <BannerImage image={bannerImage} quickLinks={callToActionText} />
 
       <MainContentWrapper className="rteWrapper">

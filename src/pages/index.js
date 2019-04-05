@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
+
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
@@ -28,6 +30,10 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <HelmetDatoCms>
+        <title>{data.datoCmsHome.seoSettings.title}</title>
+        <meta name="description" content={data.datoCmsHome.seoSettings.description} />
+      </HelmetDatoCms>
       <MainBannerWrapper>
         <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
       </MainBannerWrapper>
@@ -124,6 +130,11 @@ export default IndexPage
 export const query = graphql`
   query IndexQuery {
     datoCmsHome {
+      seoSettings {
+        title
+        description
+        twitterCard
+      }
       introText
       heroSlideshow {
         slideTitle

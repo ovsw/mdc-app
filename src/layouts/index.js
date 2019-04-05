@@ -164,6 +164,11 @@ class Layout extends React.Component {
             datoCmsSite {
               globalSeo {
                 siteName
+                fallbackSeo {
+                  title
+                  description
+                  twitterCard
+                }
               }
               faviconMetaTags {
                 ...GatsbyDatoCmsFaviconMetaTags
@@ -175,6 +180,8 @@ class Layout extends React.Component {
           <ThemeProvider theme={MdcTheme}>
             <>
               <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags}>
+                <title>{data.datoCmsSite.globalSeo.fallbackSeo.title}</title>
+                <meta name="description" content={data.datoCmsSite.globalSeo.fallbackSeo.description} />
                 <link
                   rel="stylesheet"
                   href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
