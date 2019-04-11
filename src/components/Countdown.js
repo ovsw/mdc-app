@@ -1,5 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import { FakeButton } from 'src/components/common/Button'
+
+const CountdownWrapper = styled.div`
+  ${tw`flex flex-col md:flex-row justify-between align-middle`};
+`
+const CountdownContent = styled.div`
+  ${tw`flex flex-auto align-middle lg:justify-center mb-6  md:mb-0`};
+`
 
 class Countdown extends React.Component {
   calculateCountdown(endDate) {
@@ -60,8 +69,8 @@ class Countdown extends React.Component {
 
     return (
       <>
-        <div className="flex flex-col md:flex-row justify-between align-middle">
-          <div className="flex flex-auto align-middle lg:justify-center mb-6  md:mb-0">
+        <CountdownWrapper>
+          <CountdownContent>
             <span className="mr-2 text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
               {days} {days === 1 ? 'Day ' : 'Days '}
             </span>{' '}
@@ -70,13 +79,13 @@ class Countdown extends React.Component {
                 to <span className="text-yellow-brand-light">Summer Camp</span> Opening
               </span>
             </span>
-          </div>
+          </CountdownContent>
           <div className="flex-auto flex justify-center">
             <FakeButton primary light onClick={toggleDatesRatesOverlay}>
               Enroll Now!
             </FakeButton>
           </div>
-        </div>
+        </CountdownWrapper>
       </>
     )
   }
