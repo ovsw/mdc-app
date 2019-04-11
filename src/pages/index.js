@@ -55,16 +55,14 @@ const IndexPage = ({ data }) => {
         </PageSection>
 
         <NavContext.Consumer>
-          {({ toggleDatesRatesOverlay }) => (
-            <PageSection>
-              <CtaBlock>
-                <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleDatesRatesOverlay} />
-              </CtaBlock>
-            </PageSection>
+          {({ toggleEnrollNowOverlay }) => (
+            <CtaBlock>
+              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
+            </CtaBlock>
           )}
         </NavContext.Consumer>
 
-        <PageSection>
+        <PageSection alternate>
           <NarrowContent>
             <MainHeading h2>The fun doesn't end with the summer</MainHeading>
             <p>At Maplewood we offer both summer camp and School Year programs!</p>
@@ -73,7 +71,7 @@ const IndexPage = ({ data }) => {
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
         </PageSection>
 
-        <PageSection>
+        <PageSection bordered>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               What our families say:
@@ -82,7 +80,7 @@ const IndexPage = ({ data }) => {
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
         </PageSection>
 
-        <PageSection className="-mt-12">
+        <PageSection bordered alternate className="-mt-20">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               Latest News:
