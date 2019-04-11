@@ -6,17 +6,17 @@ import media from 'src/components/responsive'
 import { FakeButton } from 'src/components/common/Button'
 
 const BlockLinkWrapper = styled.div`
-  ${tw`relative w-full md:w-1/2 mb-1 md:mb-0`};
+  ${tw`relative w-full md:w-1/2 mb-1 md:mb-0 md:px-2`};
 `
 const InnerContent = styled.div`
-  ${tw`absolute pin py-1 px-2`};
+  ${tw`absolute pin py-1 px-2 mx-2`};
   ${tw`flex items-center flex-col justify-center`};
   ${tw`text-white text-center`};
   background-color: rgba(0, 102, 0, 0.7);
   &:before {
     ${tw`border absolute`};
     content: '';
-    border-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0.6);
     top: 10px;
     bottom: 10px;
     left: 10px;
@@ -39,7 +39,7 @@ const InnerContent = styled.div`
   ${media.md`border: 1px solid white;`}
 `
 const LinkTitle = styled.h3`
-  ${tw`text-2xl mb-4 mt-4 text-white font-light`};
+  ${tw`text-xl mb-4 mt-4 text-white font-light`};
   color: white;
 `
 
