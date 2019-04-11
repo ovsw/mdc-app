@@ -77,7 +77,8 @@ const Footer = () => (
         South Easton, MA, 02375 United States
         <SeoText>
           Serving Greater Boston area and Rhode Island and located near the following towns: Easton, Sharon, Mansfield,
-          Norton, Canton, Stoughton, Bridgewater, Raynham, Taunton, Foxboro, Brockton, Walpole, Middleboro.
+          Norton, Canton, Stoughton, Bridgewater, Raynham, Taunton, Foxboro, Brockton, Walpole, Middleboro, Franklin,
+          Wrentham, and Plainville.
         </SeoText>
       </LeftColumn>
       <RightColumn>
