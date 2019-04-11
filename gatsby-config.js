@@ -257,5 +257,12 @@ module.exports = {
         purgeOnly: ['src/css/style.css'], // Purge only tailwind
       },
     },
+    {
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: '5a2692ed5d3202175d9b673b',
+        // get this from the tawk script widget
+      },
+    },
   ],
 }

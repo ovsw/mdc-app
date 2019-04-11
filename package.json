@@ -17,6 +17,7 @@
     "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-styled-components": "^3.0.5",
     "gatsby-plugin-tailwindcss": "^1.0.3",
+    "gatsby-plugin-tawk": "^1.0.0",
     "gatsby-plugin-typography": "^2.2.5",
     "gatsby-source-datocms": "^2.0.0",
     "gatsby-source-filesystem": "^2.0.1",
