@@ -8,7 +8,7 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import Arrow from 'src/components/common/Arrow'
 
 const SlidersWrapper = styled.div`
-  ${tw`mb-8`};
+  ${tw`mt-16`};
 `
 const ImageSlider = styled(Slider)`
   display: none !important;
