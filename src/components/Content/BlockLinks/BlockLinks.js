@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BlockLink from './BlockLink'
 
 const BlockLinksWrapper = styled.div`
-  ${tw`flex flex-col md:flex-row md:flex-wrap px-2 mb-2`};
+  ${tw`flex flex-col md:flex-row md:flex-wrap px-1 md:px-0 mb-2`};
 `
 
 const BlockLinks = ({ items }) => (
