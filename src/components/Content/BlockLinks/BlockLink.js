@@ -6,7 +6,7 @@ import media from 'src/components/responsive'
 import { FakeButton } from 'src/components/common/Button'
 
 const BlockLinkWrapper = styled.div`
-  ${tw`relative w-full md:w-1/2 mb-1 md:mb-0 md:px-2`};
+  ${tw`relative w-full px-2 mb-4 md:w-1/2 md:mb-0 `};
 `
 const InnerContent = styled.div`
   ${tw`absolute pin py-1 px-2 mx-2`};
