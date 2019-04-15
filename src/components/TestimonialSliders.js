@@ -8,40 +8,47 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import Arrow from 'src/components/common/Arrow'
 
 const SlidersWrapper = styled.div`
-  ${tw`mt-16`};
+  ${tw`mt-8`};
+  margin-bottom: 2rem!important;
 `
 const ImageSlider = styled(Slider)`
   display: none !important;
-  ${media.lg`display:block!important`};
+  ${media.md`display:block!important`};
 `
 const ImageSlide = styled.div`
   ${tw`w-full`};
-  border-bottom: 3px solid ${props => props.theme.primaryColor};
-  border-top: 6px solid ${props => props.theme.primaryColor};
+  border-top: 5px solid ${props => props.theme.primaryColor};
+  border-bottom: 5px solid ${props => props.theme.primaryColor};
 `
 const SlideImage = styled(Img)`
   min-height: 500px;
   img {
     ${tw`w-full mb-0`};
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
   }
 `
 const TextSlider = styled(Slider)`
   ${tw`relative`};
-  ${media.lg`top: -3rem;`};
-  z-index: 8;
+  ${media.md`top: -3rem;`};
+  z-index: 1;
+
+  .slick-list {
+  box-sizing: initial;
+  ${tw`py-2`};
+  }
 
   .slick-track {
     display: flex !important;
     align-items: stretch !important;
 
     .slick-slide {
-      ${tw`relative md:mx-12 rounded-lg`};
+      ${tw`relative mx-4 md:mx-16 rounded-lg text-sm pl-6 pr-10 py-8 shadow-md`};
       display: flex !important;
       height: auto !important;
       align-items: center !important;
       justify-content: center !important;
-      background-color: ${props => props.theme.secondaryColorLight};
-      color: ${props => props.theme.primaryColor};
+      background-color: white;
 
       &:before {
         content: '';
@@ -59,9 +66,10 @@ const TextSlider = styled(Slider)`
 
     li {
       ${tw`relative inline-block  m-1 rounded-full leading-none`};
-      top: -4rem;
+      top: 0.5rem;
+      ${media.md`top: 1rem;`};
       font-size: 1px;
-      background-color: ${props => props.theme.secondaryColorLight};
+      background-color: white;
       border: 1px solid ${props => props.theme.primaryColor};
       transition: background-color 0.5s ease;
 
@@ -80,7 +88,7 @@ const TextSlider = styled(Slider)`
   }
 `
 const TextSlide = styled.div`
-  ${tw`px-6 pt-10 pb-12`};
+  ${tw`px-2 pt-2 pb-0`};
   text-indent: 2.5rem;
   & > div {
     ${tw`italic`};
@@ -93,13 +101,20 @@ const TextSlide = styled.div`
     float: left;
     height: 45px;
     margin-top: -3rem;
-    padding-top: 0rem;
+    padding-top: 0.5rem;
     margin-bottom: -50px;
     font-size: 700%;
 
     margin-left: -2.5rem;
   }
 `
+
+const Signature = styled.div`
+  ${tw`  text-sm float-right mt-4`};
+  color: ${props => props.theme.primaryColor};
+  text-indent: 0;
+`
+
 
 function NextArrow(props) {
   const { onClick, dark } = props
@@ -189,7 +204,7 @@ class TestimonialSliders extends React.Component {
                 }}
               />
 
-              <p>-{slide.author}</p>
+              <Signature>-{slide.author}</Signature>
             </TextSlide>
           ))}
         </TextSlider>
