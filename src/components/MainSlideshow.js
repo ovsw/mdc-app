@@ -9,7 +9,6 @@ import { LinkButton } from 'src/components/common/Button'
 import Arrow from 'src/components/common/Arrow'
 
 import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
 
 const SlideshowWrapper = styled.section`
   ${tw`m-0 p-0 lg:h-full`};
@@ -41,8 +40,15 @@ const SlideContent = styled.div`
   p {
     ${tw`text-2xl text-white font-primary`};
     ${tw`md:text-3xl xl:text-4xl font-bold`};
+    text-shadow: 3px 3px 20px black;
+    
   }
 `
+
+const CTAButton = styled(LinkButton)`
+  ${tw` shadow-lg`}; 
+`
+
 
 function NextArrow(props) {
   const { className, style, onClick } = props
@@ -86,9 +92,9 @@ const MainSlideshow = ({ slides }) => {
             <SlideContent>
               <div>
                 <p>{slide.slideTitle}</p>
-                <LinkButton primary="true" dark="true" to={slide.buttonLinkUrl}>
+                <CTAButton primary="true"  to={slide.buttonLinkUrl}>
                   {slide.buttonText}
-                </LinkButton>
+                </CTAButton>
               </div>
             </SlideContent>
           </Slide>
