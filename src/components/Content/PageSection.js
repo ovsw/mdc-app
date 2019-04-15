@@ -3,9 +3,8 @@ import styled from 'styled-components'
 
 const PageSectionStyled = styled.div`
   ${tw`py-10 md:py-16 pb-20 mb-0`};
-  background-color: ${props => (props.alternate ? '#fdf3e5' : 'transparent')};
-
-  border-top: ${props => (props.bordered ? '5px solid green' : 'none')};
+  background-color: ${props => (props.alternate ? props.theme.lightColorAlt : props.theme.lightColor)};
+  border-top: ${props => (props.bordered ? '1px solid #006600' : 'none')};
 
   *:first-child {
     margin-top: 0;
