@@ -3,7 +3,10 @@ import { Link } from 'gatsby'
 
 const ButtonPrimary = css`
   ${tw`relative px-6`};
+  color: ${props => props.theme.primaryColor};
+  background-color: ${props => props.theme.secondaryColor};
   transition: all 0.5s ease;
+
   &:before {
     content: '';
     position: absolute;
@@ -13,7 +16,15 @@ const ButtonPrimary = css`
     left: 0;
     margin: 3px;
     border-radius: inherit;
-    border: 1px solid white;
+    border: 1px solid ${props => props.theme.primaryColor};
+  }
+
+  &:hover {
+    color: ${props => props.theme.lightColor};
+    background-color: ${props => props.theme.primaryColor}!important;
+    &:before {
+      border-color: ${props => props.theme.lightColor};
+    }
   }
 `
 
@@ -35,7 +46,11 @@ const ButtonLight = css`
     border-color: ${props => props.theme.primaryColor};
   }
   &:hover {
+    color: ${props => props.theme.primaryColor};
     background-color: ${props => props.theme.secondaryColor}!important;
+    &:before {
+      border-color: ${props => props.theme.primaryColor};
+    }
   }
 `
 
