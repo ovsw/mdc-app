@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const PageSectionStyled = styled.div`
   ${tw`py-16 pb-20 mb-0`};
-  background-color: ${props => (props.alternate ? '#fffedf' : 'transparent')};
+  background-color: ${props => (props.alternate ? '#fdf3e5' : 'transparent')};
 
   border-top: ${props => (props.bordered ? '2px solid green' : 'none')};
 
