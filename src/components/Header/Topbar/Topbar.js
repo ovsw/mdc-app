@@ -1,11 +1,18 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { rhythm } from 'src/utils/typography'
+import styled from 'styled-components'
 import { NavContext } from 'src/layouts'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faSignInAlt, faNewspaper } from '@fortawesome/free-solid-svg-icons'
 import styles from './Topbar.module.css'
+
+const TopBarStyled = styled.div`
+  ${tw`px-2`};
+  background-color: ${props => props.theme.primaryColor};
+`
+
 
 const Topbar = props => (
   <NavContext.Consumer>
@@ -19,7 +26,7 @@ const Topbar = props => (
       closeAllOverlays,
     }) => (
       <>
-        <div className="gradient-green px-2">
+        <TopBarStyled>
           {/* DESKTOP  */}
           <div className="hidden lg:flex container mx-auto px-1 justify-between">
             <div>
@@ -67,7 +74,7 @@ const Topbar = props => (
             )}
           </div>
           {/* END DESKTOP */}
-        </div>
+        </TopBarStyled>
       </>
     )}
   </NavContext.Consumer>
