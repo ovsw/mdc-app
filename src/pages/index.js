@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
           )}
         </NavContext.Consumer>
 
-        <PageSection alternate>
+        <PageSection >
           <NarrowContent>
             <MainHeading h2>The fun doesn't end with the summer</MainHeading>
             <p>At Maplewood we offer both summer camp and School Year programs!</p>
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
         </PageSection>
 
-        <PageSection bordered>
+        <PageSection bordered alternate>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               What our families say:
@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
         </PageSection>
 
-        <PageSection bordered alternate className="-mt-20">
+        <PageSection bordered  className="-mt-20">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               Latest News:
