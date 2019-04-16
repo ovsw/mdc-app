@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
       </MainBannerWrapper>
 
       <MainContentWrapper>
-        <PageSection>
+        <PageSection bottomTexture>
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
           <NarrowContent>
             <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
@@ -62,7 +62,7 @@ const IndexPage = ({ data }) => {
           )}
         </NavContext.Consumer>
 
-        <PageSection >
+        <PageSection topTexture bottomTexture>
           <NarrowContent>
             <MainHeading h2>The fun doesn't end with the summer</MainHeading>
             <p>At Maplewood we offer both summer camp and School Year programs!</p>
@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
         </PageSection>
 
-        <PageSection bordered alternate>
+        <PageSection  alternate>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               What our families say:
@@ -80,7 +80,7 @@ const IndexPage = ({ data }) => {
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
         </PageSection>
 
-        <PageSection bordered  className="-mt-20">
+        <PageSection topTexture bottomTexture className="-mt-16">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
               Latest News:

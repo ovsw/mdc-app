@@ -1,10 +1,43 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import LightTexture from 'src/images/paint-border-texture-light.png'
+import LightTextureBotom from 'src/images/paint-border-texture-light-bottom.png'
+import LightTextureTop from 'src/images/paint-border-texture-light-top.png'
+
 const PageSectionStyled = styled.div`
-  ${tw`py-10 md:py-16 pb-20 mb-0`};
+  ${tw`relative py-10 md:py-10 md:py-16  mb-0`};
   background-color: ${props => (props.alternate ? props.theme.lightColorAlt : props.theme.lightColor)};
   border-top: ${props => (props.bordered ? '1px solid #006600' : 'none')};
+
+  /* background-image: ${props => props.divider ? 'url('+LightTexture+')' : 'none' }; */
+  
+  &::after {
+    ${tw`absolute w-full`};
+    background-size: 1000px auto;
+    z-index: 1;
+    height: 50px;
+    background-repeat: repeat-x;
+    background-position: bottom right;
+    background-image: url(${LightTextureBotom});
+    bottom: -22px;
+    left: 0;
+  }
+
+  &::before {
+    ${tw`absolute w-full`};
+    background-size: 1000px auto;
+    height: 50px;
+    background-repeat: repeat-x;
+    background-position: bottom right;
+    background-image: url(${LightTextureTop});
+    top: -22px;
+    left: 0;
+  }
+  
+  ${props => props.bottomTexture ? "&::after{content: ''}" : ''};
+  ${props => props.topTexture ? "&::before{content: ''}" : ''};
+
 
   *:first-child {
     margin-top: 0;
