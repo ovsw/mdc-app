@@ -21,7 +21,7 @@ const PageSectionStyled = styled.div`
     background-repeat: repeat-x;
     background-position: bottom right;
     background-image: url(${LightTextureBotom});
-    bottom: -22px;
+    bottom: -32px;
     left: 0;
   }
 
