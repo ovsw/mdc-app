@@ -10,13 +10,13 @@ const ButtonPrimary = css`
   &:before {
     content: '';
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    left: 3px;
     margin: 3px;
     border-radius: inherit;
-    border: 1px solid ${props => props.theme.primaryColor};
+    border: 2px solid ${props => props.theme.primaryColor};
   }
 
   &:hover {
