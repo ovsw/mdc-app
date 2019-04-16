@@ -6,9 +6,10 @@ import LightTextureBotom from 'src/images/paint-border-texture-light-bottom.png'
 import LightTextureTop from 'src/images/paint-border-texture-light-top.png'
 
 const PageSectionStyled = styled.div`
-  ${tw`relative py-10 md:py-10 md:py-16  mb-0`};
+  ${tw`relative py-10 md:py-16  mb-0`};
   background-color: ${props => (props.alternate ? props.theme.lightColorAlt : props.theme.lightColor)};
   border-top: ${props => (props.bordered ? '1px solid #006600' : 'none')};
+  ${props => props.topTexture ? 'padding-top: 3rem!important;': ''};
 
   /* background-image: ${props => props.divider ? 'url('+LightTexture+')' : 'none' }; */
   
@@ -31,7 +32,7 @@ const PageSectionStyled = styled.div`
     background-repeat: repeat-x;
     background-position: bottom right;
     background-image: url(${LightTextureTop});
-    top: -22px;
+    top: -35px;
     left: 0;
   }
   
