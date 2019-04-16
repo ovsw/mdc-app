@@ -34,7 +34,7 @@ const RightColumn = styled.div`
   ${tw`flex-1 md:pt-4`};
 `
 const Icons = styled.div`
-  ${tw`flex justify-center md:justify-end px-10 md:px-0`};
+  ${tw`flex justify-center md:justify-end md:pt-2 px-10 md:px-0`};
 `
 
 const SocialIcon = styled.a`
@@ -61,7 +61,7 @@ const FooterTitle = styled.h4`
 `
 
 const AffiliateLogo = styled.img`
-  ${tw`block mx-auto mt-4 `};
+  ${tw`block mx-auto mt-4 md:mt-4`};
   max-width: 200px;
   ${media.md`max-width:125px`};
 `
