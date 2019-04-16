@@ -2,6 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart, faSun, faStar, faNewspaper } from '@fortawesome/free-solid-svg-icons'
+
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
@@ -17,6 +20,7 @@ import Accordion from 'src/components/Content/Accordion/Accordion'
 
 import { NavContext } from 'src/layouts'
 
+import LeeSignature from 'src/images/lee-pinstein-signature.png'
 import IconUkulele from 'src/icons/ukulele'
 
 const IndexPage = ({ data }) => {
@@ -51,6 +55,9 @@ const IndexPage = ({ data }) => {
                 __html: data.datoCmsHome.introText,
               }}
             />
+           <div className="h-px relative">
+            <img className="absolute" style={{top: '-2rem', right: '2rem'}} src={LeeSignature} alt="Lee Pinstein Signature" />
+            </div>
           </NarrowContent>
         </PageSection>
 
@@ -64,8 +71,8 @@ const IndexPage = ({ data }) => {
 
         <PageSection topTexture bottomTexture>
           <NarrowContent>
-            <MainHeading h2>The fun doesn't end with the summer</MainHeading>
-            <p>At Maplewood we offer both summer camp and School Year programs!</p>
+            <MainHeading h2 centered><FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer</MainHeading>
+            <p className="text-center">At Maplewood we offer both summer camp and School Year programs!</p>
           </NarrowContent>
 
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
@@ -74,7 +81,7 @@ const IndexPage = ({ data }) => {
         <PageSection  alternate>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
-              What our families say:
+            <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
             </MainHeading>
           </NarrowContent>
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
@@ -83,7 +90,7 @@ const IndexPage = ({ data }) => {
         <PageSection topTexture bottomTexture className="-mt-16">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
-              Latest News:
+            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
             </MainHeading>
             <RecentNews articles={data.allDatoCmsNewsArticle} />
           </NarrowContent>
