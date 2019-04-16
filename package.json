@@ -8,6 +8,7 @@
     "babel-plugin-styled-components": "^1.10.0",
     "dotenv": "^6.0.0",
     "gatsby": "^2.0.91",
+    "gatsby-background-image": "^0.3.3",
     "gatsby-image": "^2.0.26",
     "gatsby-plugin-layout": "^1.0.11",
     "gatsby-plugin-postcss": "^2.0.2",

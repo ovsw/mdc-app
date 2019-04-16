@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 
 import { FakeButton } from 'src/components/common/Button'
@@ -82,7 +84,7 @@ class Countdown extends React.Component {
           </CountdownContent>
           <div className="flex-auto flex justify-center">
             <FakeButton primary light onClick={toggleDatesRatesOverlay}>
-              Enroll Now!
+            <FontAwesomeIcon icon={faClock} fixedWidth size="1x" /> Enroll Now!
             </FakeButton>
           </div>
         </CountdownWrapper>
