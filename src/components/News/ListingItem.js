@@ -2,43 +2,89 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import media from 'src/components/responsive'
 
 const NewsItemWrapper = styled(Link)`
-  ${tw`mb-12 flex items-stretch no-underline px-2`};
+  ${tw`mb-8 md:mb-8 flex items-stretch no-underline`};
   &:hover {
     color: inherit;
   }
 `
+const ImageContainer = styled.div`
+  ${tw`m-0  w-1/2 md:h-auto md:w-2/5 relative `};
+`
+
 const CoverImage = styled(Img)`
-  ${tw`m-0 w-1/3`};
+  border: 1px solid ${props => props.theme.lightColor};
+  ${tw`h-full`};
   img {
     ${tw`mb-0`};
   }
+
+  &::after {
+    ${tw`absolute`};
+    content: '';
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border: 1px solid white;
+  }
 `
+const ImgBg = styled.div`
+  background-color: ${props => props.theme.primaryColor};
+  ${tw`absolute hidden md:block w-full h-full`};
+  top:-10px;
+  left: -10px;
+`
+
 const TextWrapper = styled.div`
-  ${tw`w-2/3 pl-4`};
+  ${tw` w-1/2 md:w-3/5 pl-4 text-grey-darkest`};
 `
 const NewsTitle = styled.h3`
-  ${tw`mb-2 underline leading-normal underline text-lg`};
+  ${tw`mb-2 leading-normal underline text-lg`};
+  text-decoration: none;
   color: ${props => props.theme.primaryColor};
+  &::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: ${props => props.theme.primaryColor};
+    ${tw`mx-auto mt-2`};
+    ${media.md`width: 50%; margin-left:0;`};
+  }
 `
 const Date = styled.p`
-  ${tw`text-sm mb-4`};
+  ${tw`text-sm mb-2`};
   color: ${props => props.theme.primaryColor};
+  color: gray;
 `
+const ReadMore = styled.div`
+  ${tw`mb-0 mt-2`};
+  color: gray;
+`
+const NewsExcerpt = styled.div`
+  ${tw` text-sm md:text-base`};
+`
+
+
 
 const ListingItem = ({ newsArticle: { title, slug, shortDate, excerpt, bannerImage } }) => (
   <NewsItemWrapper to={`/news/${slug}`}>
-    <CoverImage fluid={bannerImage.fluid} />
+    <ImageContainer>
+      <ImgBg/>
+      <CoverImage fluid={bannerImage.fluid} />
+    </ImageContainer>
     <TextWrapper>
       <NewsTitle>{title}</NewsTitle>
       <Date>{shortDate}</Date>
-      <div
+      <NewsExcerpt
         dangerouslySetInnerHTML={{
           __html: excerpt,
         }}
       />
-      <p className="mb-0 mt-4 text-green-darker">read more...</p>
+      <ReadMore>read more...</ReadMore>
     </TextWrapper>
   </NewsItemWrapper>
 )
