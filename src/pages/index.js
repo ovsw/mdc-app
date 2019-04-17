@@ -8,7 +8,7 @@ import { faHeart, faSun, faStar, faNewspaper } from '@fortawesome/free-solid-svg
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
-import PageSection from 'src/components/Content/PageSection'
+import HomePageSection from 'src/components/Content/HomePageSection'
 import NarrowContent from 'src/components/common/NarrowContent'
 import MainHeading from 'src/components/Content/MainHeading'
 import CtaBlock from 'src/components/Content/CtaBlock'
@@ -20,7 +20,6 @@ import Accordion from 'src/components/Content/Accordion/Accordion'
 
 import { NavContext } from 'src/layouts'
 
-import LeeSignature from 'src/images/lee-pinstein-signature.png'
 import IconUkulele from 'src/icons/ukulele'
 
 const IndexPage = ({ data }) => {
@@ -43,7 +42,7 @@ const IndexPage = ({ data }) => {
       </MainBannerWrapper>
 
       <MainContentWrapper>
-        <PageSection bottomTexture>
+        <HomePageSection bottomTexture>
           {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
           <NarrowContent>
             <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
@@ -55,11 +54,8 @@ const IndexPage = ({ data }) => {
                 __html: data.datoCmsHome.introText,
               }}
             />
-           <div className="h-px relative">
-            <img className="absolute" style={{top: '-2rem', right: '2rem'}} src={LeeSignature} alt="Lee Pinstein Signature" />
-            </div>
           </NarrowContent>
-        </PageSection>
+        </HomePageSection>
 
         <NavContext.Consumer>
           {({ toggleEnrollNowOverlay }) => (
@@ -69,32 +65,32 @@ const IndexPage = ({ data }) => {
           )}
         </NavContext.Consumer>
 
-        <PageSection topTexture bottomTexture>
+        <HomePageSection topTexture bottomTexture>
           <NarrowContent>
             <MainHeading h2 centered><FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer</MainHeading>
             <p className="text-center">At Maplewood we offer both summer camp and School Year programs!</p>
           </NarrowContent>
 
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
-        </PageSection>
+        </HomePageSection>
 
-        <PageSection  alternate>
+        <HomePageSection  alternate>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
             <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
             </MainHeading>
           </NarrowContent>
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
-        </PageSection>
+        </HomePageSection>
 
-        <PageSection topTexture bottomTexture className="-mt-16">
+        <HomePageSection topTexture bottomTexture className="-mt-16">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
             <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
             </MainHeading>
             <RecentNews articles={data.allDatoCmsNewsArticle} />
           </NarrowContent>
-        </PageSection>
+        </HomePageSection>
 
         {/* <Accordion panels={panels} /> */}
       </MainContentWrapper>

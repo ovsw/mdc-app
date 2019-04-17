@@ -38,15 +38,6 @@ const PageSectionStyled = styled.div`
   
   ${props => props.bottomTexture ? "&::after{content: ''}" : ''};
   ${props => props.topTexture ? "&::before{content: ''}" : ''};
-
-
-  *:first-child {
-    margin-top: 0;
-  }
-
-  *:last-child {
-    margin-bottom: 0;
-  }
 `
 
 const PageSection = props => <PageSectionStyled {...props}>{props.children}</PageSectionStyled>

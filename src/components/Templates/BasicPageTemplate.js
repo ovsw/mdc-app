@@ -1,5 +1,7 @@
 import React from 'react'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
+import styled from 'styled-components'
+import PageSection from 'src/components/Content/PageSection'
 
 import BannerImage from 'src/components/Content/BannerImage'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
@@ -15,6 +17,14 @@ import CTAWrapper from 'src/components/CTAWrapper'
 import CTAMobileBtn from 'src/components/CTAMobileBtn'
 import KidsEvents from 'src/components/KidsEvents'
 import VideoBlock from 'src/components/Content/VideoBlock'
+
+const BasicPageContentSection = styled(PageSection)`
+  ${tw`pt-px pb-px`};
+  & p:last-child {
+    margin-bottom: 0!important;
+  }
+`
+
 
 const BasicPageTemplate = ({
   data: {
@@ -45,7 +55,8 @@ const BasicPageTemplate = ({
       )}
       <BannerImage image={bannerImage} quickLinks={callToActionText} />
 
-      <MainContentWrapper className="rteWrapper">
+      <MainContentWrapper>
+      <BasicPageContentSection bottomTexture>
         <NarrowContent>
           <MainHeading>{title}</MainHeading>
           {longDate && <p className=" text-sm font-bold">{longDate}</p>}
@@ -83,6 +94,7 @@ const BasicPageTemplate = ({
             }}
           />
         </NarrowContent>
+        </BasicPageContentSection>
       </MainContentWrapper>
       {(callToActionLink || callToActionLink2) && (
         <CTAWrapper>
