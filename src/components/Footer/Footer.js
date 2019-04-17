@@ -12,7 +12,7 @@ import {
 import acaLogo from 'src/images/aca-logo.png'
 
 const FooterStyled = styled.footer`
-  ${tw`px-2 py-4 mt-0 bg-green-brand text-white`};
+  ${tw`px-2 pt-10 pb-8 mt-0 bg-green-brand text-white`};
   ${tw`xl:w-1/2 xl:mr-auto md:px-4`};
   box-shadow: inset -5px 0 10px rgba(51, 50, 15, 0.23);
 
@@ -34,7 +34,7 @@ const RightColumn = styled.div`
   ${tw`flex-1 md:pt-4`};
 `
 const Icons = styled.div`
-  ${tw`flex justify-center md:justify-end md:pt-2 px-10 md:px-0`};
+  ${tw`flex justify-center md:justify-end  px-10 md:px-0`};
 `
 
 const SocialIcon = styled.a`
@@ -46,7 +46,7 @@ const SocialIcon = styled.a`
   }
 `
 const SeoText = styled.p`
-  ${tw`container mt-4 text-xs`};
+  ${tw`container mt-6 md:mt-4 text-xs`};
   color: #a2c5a6;
 `
 const CopyRight = styled.div`
@@ -56,8 +56,8 @@ const CopyRight = styled.div`
 const FooterTitle = styled.h4`
   ${tw`border-b-2`};
   ${tw`text-2xl md:text-base`};
-  ${tw`border-yellow-brand-light md:border-0`};
-  ${tw` pb-4`};
+  ${tw`md:border-0`};
+  ${tw`pb-4 md:pb-0`};
 `
 
 const AffiliateLogo = styled.img`
