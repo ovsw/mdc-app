@@ -10,6 +10,7 @@ const BannerImageStyled = styled(Img)`
   background-image: url('${LoaderImage}');
   background-position: 50% 40%;
   background-repeat: no-repeat;
+  background-color: #0066003b;
 `
 
 const BannerImage = ({ image, quickLinks }) => (
