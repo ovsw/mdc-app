@@ -1,83 +1,142 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { rhythm } from 'src/utils/typography'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { NavContext } from 'src/layouts'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faSignInAlt, faNewspaper } from '@fortawesome/free-solid-svg-icons'
-import styles from './Topbar.module.css'
+import { faPhone, faComments, faMap, faNewspaper, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
 
-const TopBarStyled = styled.div`
-  ${tw`px-2`};
-  background-color: ${props => props.theme.primaryColor};
+import WhitewoodTexture from 'src/images/whitewood-texture-4.png'
+
+
+const MobileOnlyTopBar = styled.div`
+  ${tw``};
+  background-image: url('${WhitewoodTexture}');
 `
 
 
-const Topbar = props => (
-  <NavContext.Consumer>
-    {({
-      datesRatesOverlayVisible,
-      enrollNowOverlayVisible,
-      enrollCampOverlayVisible,
-      enrollSchoolOverlayVisible,
-      toggleDatesRatesOverlay,
-      toggleEnrollNowOverlay,
-      closeAllOverlays,
-    }) => (
-      <>
-        <TopBarStyled>
-          {/* DESKTOP  */}
-          <div className="hidden lg:flex container mx-auto px-1 justify-between">
-            <div>
-              <a href="tel:1-508-238-2387" className={`${styles.link} ml-4`}>
-                Call Us (508)-238-2387 <FontAwesomeIcon icon={faPhone} fixedWidth size="1x" />
-              </a>
-            </div>
-            <div>
-              <Link
-                to="/news"
-                className={`${styles.link} text-yellow-brand-light hover:text-white`}
-                style={{ marginRight: '1rem' }}
-              >
-                <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> News
-              </Link>
-              <a
-                href="https://maplewood.campintouch.com/v2/login/login.aspx?"
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Summer Login
-              </a>
-            </div>
-          </div>
+const TopBarStyled = styled.div`
+  ${tw`px-0 md:px-2`};
+  background-color: ${props => props.theme.primaryColor};
+`
+const LinkStyles = css`
+  ${tw`inline-block py-2 no-underline text-xs font-bold uppercase`};
+  background-color: transparent;
+`
+const ExternalLink = styled.a`
+  ${() => LinkStyles}
+  color: ${props => (props.emphasized ? props.theme.secondaryColor : 'white')}!important;
+  &:hover {
+  color: ${props => (props.emphasized ? 'white' : props.theme.secondaryColor)}!important;
+  }
+`
+const InternalLink = styled(Link)`
+  ${() => LinkStyles}
+  color: ${props => (props.emphasized ? props.theme.secondaryColor : 'white')}!important;
+  &:hover {
+  color: ${props => (props.emphasized ? 'white' : props.theme.secondaryColor)}!important;
+  }
+`
+const MobileBarWrapper = styled.div`
+  ${tw`lg:hidden container mx-auto px-0 flex justify-between`};
+`
 
-          <div className="lg:hidden container mx-auto px-1 flex justify-between">
-            {!datesRatesOverlayVisible ? (
-              <button type="button" onClick={toggleDatesRatesOverlay} className={styles.link}>
-                <span>Dates &amp; Rates</span>
-              </button>
-            ) : (
-              <button type="button" onClick={closeAllOverlays} className={styles.linkActive}>
-                <span>Close</span>
-              </button>
-            )}
-            {enrollNowOverlayVisible || enrollCampOverlayVisible || enrollSchoolOverlayVisible ? (
-              <button type="button" onClick={closeAllOverlays} className={styles.linkActive}>
-                <span>Close</span>
-              </button>
-            ) : (
-              <button type="button" onClick={toggleEnrollNowOverlay} className={styles.link}>
-                <span>Enroll Now</span>
-              </button>
-            )}
-          </div>
-          {/* END DESKTOP */}
-        </TopBarStyled>
-      </>
-    )}
-  </NavContext.Consumer>
-)
+const ButtonLink = styled.button`
+  ${tw`p-2`};
+  width: 6.5rem;
+  background-color: ${props => props.active ? props.theme.secondaryColor : props.theme.primaryColor};
+  color: ${props => props.active ? props.theme.primaryColor : props.theme.secondaryColor };
+`
+
+
+
+
+class Topbar extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.triggerChat = () => {
+      window.Tawk_API.toggle()
+    }
+  }
+
+  render() {
+
+    return (
+      <NavContext.Consumer>
+          {({
+            datesRatesOverlayVisible,
+            enrollNowOverlayVisible,
+            enrollCampOverlayVisible,
+            enrollSchoolOverlayVisible,
+            toggleDatesRatesOverlay,
+            toggleEnrollNowOverlay,
+            closeAllOverlays,
+          }) => (
+            <>
+              {/* <MobileOnlyTopBar>
+                <button type="button" onClick={this.triggerChat}><FontAwesomeIcon icon={faComments} fixedWidth size="1x" /> Chat Now</button>
+                <a href="tel:4123213">Call Now</a>
+              </MobileOnlyTopBar> */}
+              <TopBarStyled>
+                {/* DESKTOP  */}
+                <div className="hidden lg:flex container mx-auto px-1 justify-between">
+                  <div>
+                    <ExternalLink  href="tel:1-508-238-2387" className="ml-6">
+                      <FontAwesomeIcon icon={faPhone} fixedWidth size="1x" /> Call Us (508)-238-2387 
+                    </ExternalLink>
+                    <InternalLink emphasized to="/interactive-map" className="ml-4">
+                      <FontAwesomeIcon icon={faMap} fixedWidth size="1x" /> Interactive Map 
+                    </InternalLink>
+                  </div>
+                  <div>
+                    <InternalLink emphasized
+                      to="/news"
+                      className="mr-6"
+                    >
+                      <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> News
+                    </InternalLink>
+                    <ExternalLink
+                      href="https://maplewood.campintouch.com/v2/login/login.aspx?"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Summer Login
+                    </ExternalLink>
+                  </div>
+                </div>
+                {/* END DESKTOP */}
+
+                {/* MOBILE */}
+                <MobileBarWrapper>
+                  {!datesRatesOverlayVisible ? (
+                    <ButtonLink type="button" onClick={toggleDatesRatesOverlay}>
+                      <span>Dates &amp; Rates</span>
+                    </ButtonLink>
+                  ) : (
+                    <ButtonLink active type="button" onClick={closeAllOverlays}>
+                      Close
+                    </ButtonLink>
+                  )}
+                  {enrollNowOverlayVisible || enrollCampOverlayVisible || enrollSchoolOverlayVisible ? (
+                    <ButtonLink type="button" onClick={closeAllOverlays}>
+                      Close
+                    </ButtonLink>
+                  ) : (
+                    <ButtonLink type="button" onClick={toggleEnrollNowOverlay}>
+                      Enroll Now
+                    </ButtonLink>
+                  )}
+                </MobileBarWrapper>
+                {/* END MOBILE */}
+              </TopBarStyled>
+            </>
+          )}
+        </NavContext.Consumer>
+    )
+  }
+}
+
 
 export default Topbar
