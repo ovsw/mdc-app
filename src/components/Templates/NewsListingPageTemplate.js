@@ -2,6 +2,7 @@ import React from 'react'
 
 import BannerImage from 'src/components/Content/BannerImage'
 import MainContentWrapper from 'src/components/Content/MainContentWrapper'
+import PageSection from 'src/components/Content/PageSection'
 import NarrowContent from 'src/components/common/NarrowContent'
 import MainHeading from 'src/components/Content/MainHeading'
 import RecentNews from 'src/components/News/RecentNewsListing'
@@ -16,10 +17,12 @@ const NewsListingPageTemplate = ({
     <BannerImage image={bannerImage} />
 
     <MainContentWrapper>
-      <NarrowContent>
-        <MainHeading centered>Maplewood News</MainHeading>
-      </NarrowContent>
-      <RecentNews articles={articles} />
+      <PageSection bottomTexture>
+          <MainHeading centered style={{marginTop:'0', paddingTop: '1px'}}>Maplewood News</MainHeading>
+        <NarrowContent>
+          <RecentNews articles={articles} />
+        </NarrowContent>
+      </PageSection>
     </MainContentWrapper>
 
     <CTAWrapper>
