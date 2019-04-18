@@ -103,6 +103,7 @@ export default class InteractiveMap extends Component {
             bounds={[[0, 0], [1063, 1920]]}
             minZoom={-0.5}
             maxZoom={1}
+            zoomSnap={0.1}
             center={[650, 900]}
             style={{ height: `${(height - 86).toString()}px` }}
           >
