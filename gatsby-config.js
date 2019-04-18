@@ -12,7 +12,7 @@ module.exports = {
         },
         {
           title: 'Directors',
-          url: '/driving-directors',
+          url: '/directors',
           children: [],
         },
         {
@@ -27,7 +27,7 @@ module.exports = {
         },
         {
           title: 'Directions',
-          url: '/directions',
+          url: '/driving-directions',
           children: [],
         },
         {
