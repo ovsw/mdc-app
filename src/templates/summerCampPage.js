@@ -10,6 +10,10 @@ export const query = graphql`
   query SummerCampPageQuery($slug: String!) {
     datoCmsSummerCampPage(slug: { eq: $slug }) {
       title
+      seoSettings {
+        title
+        description
+      }
       callToActionText
       callToActionLink
       callToActionText2

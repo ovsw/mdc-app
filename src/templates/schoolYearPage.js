@@ -10,6 +10,10 @@ export const query = graphql`
   query SchoolYearPageQuery($slug: String!) {
     datoCmsSchoolYearPage(slug: { eq: $slug }) {
       title
+      seoSettings {
+        title
+        description
+      }
       callToActionText
       callToActionLink
       embedCodes
@@ -76,24 +80,6 @@ export const query = graphql`
           ) {
             ...GatsbyDatoCmsFluid
           }
-        }
-      }
-      bodyContinued {
-        ... on DatoCmsRichText {
-          id
-          model {
-            apiKey
-          }
-          text
-        }
-        ... on DatoCmsBigLink {
-          id
-          model {
-            apiKey
-          }
-          text
-          buttonText
-          buttonLink
         }
       }
     }
