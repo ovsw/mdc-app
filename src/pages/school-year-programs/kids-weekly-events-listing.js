@@ -17,6 +17,10 @@ export default KidsEventsPage
 export const query = graphql`
   query KidsWeeklyEventsQuery {
     datoCmsKidsEventsListing {
+      seoSettings {
+        title
+        description
+      }
       bannerImage {
         url
         portrait: fluid(
