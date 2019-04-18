@@ -1,8 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
+import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import { NavContext } from 'src/layouts'
 
@@ -11,9 +10,26 @@ import DesktopNav from 'src/components/Header/Navbar/Desktopnav/Desktopnav'
 import SideDrawer from 'src/components/SideDrawer/SideDrawer'
 import BarButton from 'src/components/SideDrawer/BarButton/BarButton'
 
-import styles from './Navbar.module.css'
+import WhitewoodTexture from 'src/images/whitewood-texture-4.png'
 
-const navbar = props => (
+const NavWrapper = styled.nav`
+  background-image: url('${WhitewoodTexture}');
+`
+
+const DesktopNavWrapper = styled.div`
+  ${tw`hidden mx-auto lg:block`};
+`
+const MobileNavWrapper = styled.div`
+  ${tw`flex mx-auto lg:hidden h-12 items-center pr-6 md:px-10`};
+`
+const MobileNavButton = styled.button`
+  ${tw`ml-1 p-2 md:pl-0 text-white`};
+  background-color: ${props => props.active ? props.theme.secondaryColor : props.theme.primaryColor};
+  color: ${props => props.active ? props.theme.primaryColor : 'white'};
+`
+
+
+const navbar = () => (
   <StaticQuery
     query={graphql`
       query SiteQuery {
@@ -51,36 +67,37 @@ const navbar = props => (
         }) => (
           <>
             <div className="relative">
-              <nav className={styles.navBg}>
-                <div className="container hidden mx-auto lg:block">
+              <NavWrapper>
+                {/* DESKTOP */}
+                <DesktopNavWrapper className="container">
                   <DesktopNav
                     aboutNav={data.site.siteMetadata.aboutNav}
                     familiesNav={data.site.siteMetadata.familiesNav}
                     staffNav={data.site.siteMetadata.staffNav}
                     closeAllOverlays={closeAllOverlays}
                   />
-                </div>
+                </DesktopNavWrapper>
+                {/* END DESKTOP */}
 
                 {/* MOBILE */}
-                <div className="flex container mx-auto  lg:hidden h-12 items-center pr-6 md:px-10">
+                <MobileNavWrapper className="container">
                   {!requestInfoOverlayVisible ? (
-                    <button
+                    <MobileNavButton 
                       type="button"
                       onClick={toggleRequestInfoOverlay}
-                      className="ml-1 p-2 md:pl-0 text-green-brand"
                     >
                       <span>
                         Request <br className="only-vsmall" /> Info
                       </span>
-                    </button>
+                    </MobileNavButton>
                   ) : (
-                    <button
+                    <MobileNavButton active
                       type="button"
                       onClick={closeAllOverlays}
-                      className="ml-4 py-2 px-4 text-green-brand bg-yellow-brand-light"
+                      className="ml-4 py-2 px-6"
                     >
                       <span>Close</span>
-                    </button>
+                    </MobileNavButton>
                   )}
 
                   <div className="flex-1" />
@@ -97,9 +114,9 @@ const navbar = props => (
                     />
                   </div>
                   {/* END SideDrawer */}
-                </div>
+                </MobileNavWrapper>
                 {/* END MOBILE */}
-              </nav>
+              </NavWrapper>
             </div>
 
             <CSSTransition
