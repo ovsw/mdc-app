@@ -10,6 +10,7 @@ export const query = graphql`
   query SchoolYearPageQuery($slug: String!) {
     datoCmsSchoolYearPage(slug: { eq: $slug }) {
       title
+      titleContinued
       seoSettings {
         title
         description

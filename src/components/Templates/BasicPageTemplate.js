@@ -29,6 +29,7 @@ const BasicPageContentSection = styled(PageSection)`
 const BasicPageTemplate = ({
   data: {
     title,
+    titleContinued,
     seoSettings,
     shortDate,
     longDate,
@@ -58,7 +59,7 @@ const BasicPageTemplate = ({
       <MainContentWrapper>
       <BasicPageContentSection bottomTexture>
         <NarrowContent>
-          <MainHeading>{title}</MainHeading>
+          <MainHeading>{title}{titleContinued && <br/>}{titleContinued}</MainHeading>
           {longDate && <p className=" text-sm font-bold">{longDate}</p>}
         </NarrowContent>
 
