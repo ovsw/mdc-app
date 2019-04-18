@@ -6,7 +6,7 @@ const RichTextBlockStyled = styled.div`
   h2,
   h3 {
     margin-top: 20px;
-    color: #119443;
+    color: ${props => props.theme.primaryColor};;
   }
 `
 
