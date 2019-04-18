@@ -12,7 +12,7 @@ module.exports = {
         },
         {
           title: 'Directors',
-          url: '/directors',
+          url: '/driving-directors',
           children: [],
         },
         {
@@ -154,8 +154,8 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Events',
-          url: '/events',
+          title: 'Camp Schedules',
+          url: '/summer-camp/camper-schedules',
           children: [],
         },
       ],
@@ -168,18 +168,6 @@ module.exports = {
         {
           title: 'School Year Login',
           url: 'https://shop.maplewoodyearround.com/shop/',
-          children: [],
-        },
-      ],
-      [
-        {
-          title: 'Camp Calendars',
-          url: '/summer-camp/calendars',
-          children: [],
-        },
-        {
-          title: 'Camp Photos',
-          url: 'https://waldophotos.com/camps/',
           children: [],
         },
       ],
