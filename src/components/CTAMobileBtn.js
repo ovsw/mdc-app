@@ -4,7 +4,7 @@ import media from 'src/components/responsive'
 import { LinkButton } from 'src/components/common/Button'
 
 const linkStyles = css`
-  ${tw`relative w-full justify-center items-center text-center leading-none px-4`};
+  ${tw` text-xs md:text-base relative w-full justify-center items-center text-center leading-none px-2 md:px-4`};
   background-color: ${props => props.theme.secondaryColor};
   font-family: ${props => props.theme.fontHeading};
   color: ${props => props.theme.primaryColor};
