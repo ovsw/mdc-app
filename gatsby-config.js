@@ -26,7 +26,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Directions',
+          title: 'Driving Directions',
           url: '/driving-directions',
           children: [],
         },
