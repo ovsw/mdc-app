@@ -15,7 +15,7 @@ const MobileNav = ({ aboutNav, familiesNav, staffNav, toggleMobileNav }) => (
 
       <MobileNavDropDown
         menuTitle="Maplewood Families"
-        menuModel={[...familiesNav[0], ...familiesNav[1], ...familiesNav[2]]}
+        menuModel={[...familiesNav[0], ...familiesNav[1]]}
         toggleMobileNav={toggleMobileNav}
       />
 
