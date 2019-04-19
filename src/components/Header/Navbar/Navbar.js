@@ -23,7 +23,7 @@ const MobileNavWrapper = styled.div`
   ${tw`flex mx-auto lg:hidden h-12 items-center pr-6 md:px-10`};
 `
 const MobileNavButton = styled.button`
-  ${tw`ml-1 p-2 md:pl-0 text-white`};
+  ${tw`ml-1 p-2  text-white`};
   background-color: ${props => props.active ? props.theme.secondaryColor : props.theme.primaryColor};
   color: ${props => props.active ? props.theme.primaryColor : 'white'};
 `
