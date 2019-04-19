@@ -1,18 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
-import media from 'src/components/responsive'
+import NarrowContent from 'src/components/common/NarrowContent'
 import KidsEvent from 'src/components/KidsEvent'
 
-const KidsEventsWrapper = styled.div`
-  ${tw`mb-8`};
-`
 
 const KidsEvents = ({ events }) => (
-  <KidsEventsWrapper>
+
+  <NarrowContent>
     {events.map(event => (
       <KidsEvent key={event.title} event={event} />
     ))}
-  </KidsEventsWrapper>
+  </NarrowContent>
 )
 
 export default KidsEvents

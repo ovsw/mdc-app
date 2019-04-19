@@ -17,6 +17,7 @@ export default KidsEventsPage
 export const query = graphql`
   query KidsWeeklyEventsQuery {
     datoCmsKidsEventsListing {
+      title
       seoSettings {
         title
         description
@@ -39,19 +40,14 @@ export const query = graphql`
           }
           text
         }
-        ... on DatoCmsQuote {
-          id
-          model {
-            apiKey
-          }
-          text
-        }
       }
       events {
         title
-        date(formatString: "dddd, MMM Do")
+        date1(formatString: "dddd, MMM Do")
+        date2(formatString: "dddd, MMM Do")
         shortDescription
-        signUpLink
+        signUpLink1
+        signUpLink2
         coverImage {
           url
           fluid(
