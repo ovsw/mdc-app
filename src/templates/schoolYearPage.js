@@ -17,6 +17,8 @@ export const query = graphql`
       }
       callToActionText
       callToActionLink
+      callToActionText2
+      callToActionLink2
       embedCodes
       bannerImage {
         url
