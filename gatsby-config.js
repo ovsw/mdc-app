@@ -154,8 +154,8 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Camp Schedules',
-          url: '/summer-camp/camper-schedules',
+          title: 'Summer Group Schedules',
+          url: '/summer-camp/summer-group-schedules',
           children: [],
         },
       ],
