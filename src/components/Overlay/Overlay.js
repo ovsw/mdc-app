@@ -233,10 +233,10 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Attend  Info Session"
+              linkTitle="Attend Info Session"
               icon={<FontAwesomeIcon icon={faCalendarCheck} />}
               linkSubtitle="View Schedule"
-              linkUrl="#"
+              linkUrl="upcoming-info-sessions"
               label="infoEvent"
               click={closeAllOverlays}
             />
