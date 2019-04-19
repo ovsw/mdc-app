@@ -33,7 +33,7 @@ const LinkTitle = styled.span`
   font-weight: 400;
 `
 const LinkButton = styled(FakeButton)`
-  ${tw`text-base block px-2 mx-auto lg:px-4`};
+  ${tw`text-sm md:tex-base font-normal block px-4 mx-auto lg:px-4`};
 `
 const IconWrapper = styled.span`
   ${tw`pr-1 lg:pr-2`};

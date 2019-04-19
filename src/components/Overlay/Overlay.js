@@ -61,7 +61,7 @@ class Overlay extends React.Component {
           <OverlayWrapper vertical>
             <OverlayLink
               linkTitle="Summer Camp"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               linkUrl="/summer-camp/dates-and-rates"
               icon={<FontAwesomeIcon icon={faSun} />}
               label="scDatesRates"
@@ -70,7 +70,7 @@ class Overlay extends React.Component {
             />
             <IntOverlayLink
               linkTitle="School Year"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faBellSchool} />}
               click={toggleDatesRatesSchoolOverlay}
               label="syDatesRates"
@@ -82,7 +82,7 @@ class Overlay extends React.Component {
           <OverlayWrapper>
             <OverlayLink
               linkTitle="Children's Classes"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
               linkUrl="/school-year-programs/childrens-classes"
               label="syClasses"
@@ -90,7 +90,7 @@ class Overlay extends React.Component {
             />
             <OverlayLink
               linkTitle="Kid's Events"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faStar} />}
               linkUrl="/school-year-programs/kids-weekly-events-listing"
               label="syEvents"
@@ -98,7 +98,7 @@ class Overlay extends React.Component {
             />
             <OverlayLink
               linkTitle="Preschool"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faChild} />}
               linkUrl="/school-year-programs/preschool-program"
               label="syPre"
@@ -106,7 +106,7 @@ class Overlay extends React.Component {
             />
             <OverlayLink
               linkTitle="After-School"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faClock} />}
               linkUrl="/school-year-programs/after-school-program"
               label="syAfter"
@@ -114,7 +114,7 @@ class Overlay extends React.Component {
             />
             <OverlayLink
               linkTitle="Vacation Program"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faBellSchoolSlash} />}
               linkUrl="/school-year-programs/vacation-program"
               label="syVacation"
@@ -122,7 +122,7 @@ class Overlay extends React.Component {
             />
             <OverlayLink
               linkTitle="Birthday Parties"
-              linkSubtitle="See Dates & Rates"
+              linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faBirthdayCake} />}
               linkUrl="/school-year-programs/birthday-parties"
               label="syBirthdays"
