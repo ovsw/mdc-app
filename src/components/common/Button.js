@@ -16,7 +16,7 @@ const ButtonPrimary = css`
     left: 3px;
     margin: 3px;
     border-radius: inherit;
-    border: 2px solid ${props => props.theme.primaryColor};
+    border: 1px solid ${props => props.theme.primaryColor};
   }
 
   &:hover {
@@ -31,6 +31,9 @@ const ButtonPrimary = css`
 const ButtonDark = css`
   background-color: ${props => props.theme.primaryColor};
   color: white;
+  &:before {
+      border-color: white;
+    }
   &:hover {
     color: ${props => props.theme.primaryColor};
     background-color: ${props => props.theme.secondaryColor}!important;
@@ -55,7 +58,7 @@ const ButtonLight = css`
 `
 
 const ButtonStyles = css`
-  ${tw`bg-grey-dark text-black font-bold py-3 px-5 cursor-pointer no-underline inline-block`};
+  ${tw`bg-grey-dark text-black py-3 px-5 cursor-pointer no-underline inline-block`};
   
   ${props => (props.primary ? ButtonPrimary : ``)}
 
