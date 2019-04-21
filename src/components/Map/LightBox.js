@@ -53,12 +53,14 @@ class LightBox extends React.Component {
       activeImage: 0,
     }
 
+    const { activeImage } = this.state
+
     this.getCurrImage = (e, index) => {
       e.preventDefault()
       console.log('index', index)
-      console.log('before', this.state.activeImage)
-      this.setState({ activeImage: index }, function() {
-        console.log('after', this.state.activeImage)
+      console.log('before', activeImage)
+      this.setState({ activeImage: index }, () => {
+        console.log('after', activeImage)
       })
     }
   }
@@ -88,7 +90,13 @@ class LightBox extends React.Component {
             />
             <ThumbnailWrapper>
               {images.map((image, index) => (
-                <a url={image.url} key={image.url} onClick={e => this.getCurrImage(e, index)}>
+                <a
+                  url={image.url}
+                  key={image.url}
+                  role="button"
+                  tabIndex={0}
+                  onClick={e => this.getCurrImage(e, index)}
+                >
                   <ThumbImage fluid={image.thumb} />
                 </a>
               ))}
