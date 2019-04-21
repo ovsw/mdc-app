@@ -10,10 +10,10 @@ const PageSectionStyled = styled.div`
   ${tw`relative py-10 md:py-16`};
   background-color: ${props => (props.alternate ? props.theme.lightColorAlt : props.theme.lightColor)};
   border-top: ${props => (props.bordered ? '1px solid #006600' : 'none')};
-  ${props => props.topTexture ? 'padding-top: 3rem!important;': ''};
+  ${props => (props.topTexture ? 'padding-top: 3rem!important;' : '')};
   padding-bottom: 1rem!important;
   ${media.md`padding-bottom: 3rem!important;`};
-  /* background-image: ${props => props.divider ? 'url('+LightTexture+')' : 'none' }; */
+  /* background-image: ${props => (props.divider ? `url(${LightTexture})` : 'none')}; */
   
   &::after {
     ${tw`absolute w-full`};
@@ -38,10 +38,13 @@ const PageSectionStyled = styled.div`
     left: 0;
   }
   
-  ${props => props.bottomTexture ? "&::after{content: ''}" : ''};
-  ${props => props.topTexture ? "&::before{content: ''}" : ''};
+  ${props => (props.bottomTexture ? "&::after{content: ''}" : '')};
+  ${props => (props.topTexture ? "&::before{content: ''}" : '')};
 `
 
-const PageSection = props => <PageSectionStyled {...props}>{props.children}</PageSectionStyled>
+const PageSection = props => {
+  const { children } = props
+  return <PageSectionStyled {...props}>{children}</PageSectionStyled>
+}
 
 export default PageSection
