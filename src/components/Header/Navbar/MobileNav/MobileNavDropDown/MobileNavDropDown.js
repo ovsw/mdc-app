@@ -33,8 +33,8 @@ class MobileNavDropDown extends React.Component {
         </a>
 
         <ul className={subMenuVisible ? styles.subMenu : `hidden`}>
-          {menuModel.map((item, key) => (
-            <li key={key}>
+          {menuModel.map(item => (
+            <li key={item.url}>
               {item.url.indexOf('https') !== 0 ? (
                 <Link to={item.url} onClick={toggleMobileNav}>
                   {item.title}
@@ -44,10 +44,10 @@ class MobileNavDropDown extends React.Component {
                   {item.title}
                 </a>
               )}
-              {item.children != undefined && item.children.length > 0 && (
+              {item.children !== undefined && item.children.length > 0 && (
                 <ul className="list-reset">
-                  {item.children.map((child, key) => (
-                    <li key={key}>
+                  {item.children.map(child => (
+                    <li key={child.url}>
                       <Link to={child.url} onClick={toggleMobileNav}>
                         {child.title}
                       </Link>
