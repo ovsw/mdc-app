@@ -4,8 +4,8 @@ import media from 'src/components/responsive'
 
 const CTAWrapperStyled = styled.div`
   ${tw`flex relative fixed pin-b pin-l pin-r h-12 w-full`}
-  ${media.xl`${tw`w-1/2 pin-none pin-r pin-b h-32`}; padding-left: 3px;`}
-  z-index:9;
+  ${media.xl`${tw`w-1/2 pin-none pin-r pin-b h-32`}; padding-left: 3px;`};
+  z-index: 9;
 `
 
 const CTAWrapper = ({ children }) => <CTAWrapperStyled>{children}</CTAWrapperStyled>
