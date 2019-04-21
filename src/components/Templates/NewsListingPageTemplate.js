@@ -18,7 +18,9 @@ const NewsListingPageTemplate = ({
 
     <MainContentWrapper>
       <PageSection bottomTexture>
-          <MainHeading centered style={{marginTop:'0', paddingTop: '1px'}}>Maplewood News</MainHeading>
+        <MainHeading centered style={{ marginTop: '0', paddingTop: '1px' }}>
+          Maplewood News
+        </MainHeading>
         <NarrowContent>
           <RecentNews articles={articles} />
         </NarrowContent>
