@@ -41,43 +41,14 @@ class Layout extends React.Component {
   constructor(props) {
     super(props)
 
-    // State also contains the updater function so it will
-    // be passed down into the context provider
-    this.state = {
-      mobileNavVisible: false,
-      datesRatesOverlayVisible: false,
-      datesRatesSchoolOverlayVisible: false,
-      enrollNowOverlayVisible: false,
-      enrollCampOverlayVisible: false,
-      enrollSchoolOverlayVisible: false,
-      requestInfoOverlayVisible: false,
-      toggleMobileNav: this.toggleMobileNav,
-      toggleDatesRatesOverlay: this.toggleDatesRatesOverlay,
-      toggleDatesRatesSchoolOverlay: this.toggleDatesRatesSchoolOverlay,
-      toggleEnrollNowOverlay: this.toggleEnrollNowOverlay,
-      toggleEnrollCampOverlay: this.toggleEnrollCampOverlay,
-      toggleEnrollSchoolOverlay: this.toggleEnrollSchoolOverlay,
-      toggleRequestInfoOverlay: this.toggleRequestInfoOverlay, // we pass a refference to the method used for toggling the mobile nav in the state, because we're going to pass the state via Context further down, and so we can access the method on the Context Consumer
-      closeAllOverlays: this.closeAllOverlays,
-    }
-
-    const {
-      datesRatesOverlayVisible,
-      datesRatesSchoolOverlayVisible,
-      enrollNowOverlayVisible,
-      enrollCampOverlayVisible,
-      enrollSchoolOverlayVisible,
-      requestInfoOverlayVisible,
-    } = this.state
-
     this.toggleMobileNav = () => {
       if (
-        datesRatesOverlayVisible ||
-        datesRatesSchoolOverlayVisible ||
-        enrollNowOverlayVisible ||
-        enrollCampOverlayVisible ||
-        enrollSchoolOverlayVisible ||
-        requestInfoOverlayVisible
+        this.state.datesRatesOverlayVisible ||
+        this.state.datesRatesSchoolOverlayVisible ||
+        this.state.enrollNowOverlayVisible ||
+        this.state.enrollCampOverlayVisible ||
+        this.state.enrollSchoolOverlayVisible ||
+        this.state.requestInfoOverlayVisible
       ) {
         this.closeAllOverlays()
       }
@@ -136,6 +107,26 @@ class Layout extends React.Component {
       this.setState(state => ({
         requestInfoOverlayVisible: !state.requestInfoOverlayVisible,
       }))
+    }
+
+    // State also contains the updater function so it will
+    // be passed down into the context provider
+    this.state = {
+      mobileNavVisible: false,
+      datesRatesOverlayVisible: false,
+      datesRatesSchoolOverlayVisible: false,
+      enrollNowOverlayVisible: false,
+      enrollCampOverlayVisible: false,
+      enrollSchoolOverlayVisible: false,
+      requestInfoOverlayVisible: false,
+      toggleMobileNav: this.toggleMobileNav,
+      toggleDatesRatesOverlay: this.toggleDatesRatesOverlay,
+      toggleDatesRatesSchoolOverlay: this.toggleDatesRatesSchoolOverlay,
+      toggleEnrollNowOverlay: this.toggleEnrollNowOverlay,
+      toggleEnrollCampOverlay: this.toggleEnrollCampOverlay,
+      toggleEnrollSchoolOverlay: this.toggleEnrollSchoolOverlay,
+      toggleRequestInfoOverlay: this.toggleRequestInfoOverlay, // we pass a refference to the method used for toggling the mobile nav in the state, because we're going to pass the state via Context further down, and so we can access the method on the Context Consumer
+      closeAllOverlays: this.closeAllOverlays,
     }
   }
 
