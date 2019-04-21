@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import { CSSTransition } from 'react-transition-group'
 
@@ -24,10 +24,9 @@ const MobileNavWrapper = styled.div`
 `
 const MobileNavButton = styled.button`
   ${tw`ml-1 p-2  text-white`};
-  background-color: ${props => props.active ? props.theme.secondaryColor : props.theme.primaryColor};
-  color: ${props => props.active ? props.theme.primaryColor : 'white'};
+  background-color: ${props => (props.active ? props.theme.secondaryColor : props.theme.primaryColor)};
+  color: ${props => (props.active ? props.theme.primaryColor : 'white')};
 `
-
 
 const navbar = () => (
   <StaticQuery
@@ -82,20 +81,13 @@ const navbar = () => (
                 {/* MOBILE */}
                 <MobileNavWrapper className="container">
                   {!requestInfoOverlayVisible ? (
-                    <MobileNavButton 
-                      type="button"
-                      onClick={toggleRequestInfoOverlay}
-                    >
+                    <MobileNavButton type="button" onClick={toggleRequestInfoOverlay}>
                       <span>
                         Request <br className="only-vsmall" /> Info
                       </span>
                     </MobileNavButton>
                   ) : (
-                    <MobileNavButton active
-                      type="button"
-                      onClick={closeAllOverlays}
-                      className="ml-4 py-2 px-6"
-                    >
+                    <MobileNavButton active type="button" onClick={closeAllOverlays} className="ml-4 py-2 px-6">
                       <span>Close</span>
                     </MobileNavButton>
                   )}
