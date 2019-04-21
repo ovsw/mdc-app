@@ -41,14 +41,23 @@ class Layout extends React.Component {
   constructor(props) {
     super(props)
 
+    const {
+      datesRatesOverlayVisible,
+      datesRatesSchoolOverlayVisible,
+      enrollNowOverlayVisible,
+      enrollCampOverlayVisible,
+      enrollSchoolOverlayVisible,
+      requestInfoOverlayVisible,
+    } = this.state
+
     this.toggleMobileNav = () => {
       if (
-        this.state.datesRatesOverlayVisible ||
-        this.state.datesRatesSchoolOverlayVisible ||
-        this.state.enrollNowOverlayVisible ||
-        this.state.enrollCampOverlayVisible ||
-        this.state.enrollSchoolOverlayVisible ||
-        this.state.requestInfoOverlayVisible
+        datesRatesOverlayVisible ||
+        datesRatesSchoolOverlayVisible ||
+        enrollNowOverlayVisible ||
+        enrollCampOverlayVisible ||
+        enrollSchoolOverlayVisible ||
+        requestInfoOverlayVisible
       ) {
         this.closeAllOverlays()
       }
