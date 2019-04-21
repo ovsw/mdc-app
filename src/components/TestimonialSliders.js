@@ -9,7 +9,7 @@ import Arrow from 'src/components/common/Arrow'
 
 const SlidersWrapper = styled.div`
   ${tw`mt-6 md:mt-10`};
-  margin-bottom: 4rem!important;
+  margin-bottom: 4rem !important;
   ${media.md`margin-bottom: 2rem!important;`};
 `
 const ImageSlider = styled(Slider)`
@@ -35,8 +35,8 @@ const TextSlider = styled(Slider)`
   z-index: 1;
 
   .slick-list {
-  box-sizing: initial;
-  ${tw`py-2`};
+    box-sizing: initial;
+    ${tw`py-2`};
   }
 
   .slick-track {
@@ -115,7 +115,6 @@ const Signature = styled.div`
   color: ${props => props.theme.primaryColor};
   text-indent: 0;
 `
-
 
 function NextArrow(props) {
   const { onClick, dark } = props
