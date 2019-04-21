@@ -3,9 +3,6 @@ import Img from 'gatsby-image'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
 
-import { LinkButton } from 'src/components/common/Button'
-
-
 const EventWrapper = styled.div`
   ${tw`flex flex-col mt-4 pt-4 md:mt-6 md:pt-6`};
   ${media.md`${tw`flex-row`};`};
@@ -22,23 +19,12 @@ const EventTitle = styled.h4`
   ${tw`mb-1 pb-1`};
   color: ${props => props.theme.primaryColor};
 `
-const EventDate = styled.div`
-  ${tw`inline-block text-sm mb-4 pt-1`};
-  border-top: 1px solid green;
-`
 const ShortDescription = styled.div`
   ${tw` text-sm`};
 `
 const DatesTable = styled.table`
   ${tw`mb-2`};
 `
-const RegisterLink = styled.a`
-  ${tw``};
-  background-color: ${props => props.theme.primaryColor};
-  color: white;
-`
-
-
 
 const KidsEvent = ({ event: { title, date1, date2, shortDescription, signUpLink1, signUpLink2, coverImage } }) => (
   <EventWrapper>
@@ -48,13 +34,23 @@ const KidsEvent = ({ event: { title, date1, date2, shortDescription, signUpLink1
       {/* <EventDate>{date1}</EventDate> */}
       <DatesTable>
         <tr>
-          <td>{date1} - <a href={signUpLink1} target="_blank" rel="noopener noreferrer">Register Now</a></td>
+          <td>
+            {date1} -{' '}
+            <a href={signUpLink1} target="_blank" rel="noopener noreferrer">
+              Register Now
+            </a>
+          </td>
         </tr>
-        {date2 && signUpLink2 && 
-        <tr>
-          <td>{date2} - <a href={signUpLink2} target="_blank" rel="noopener noreferrer">Register Now</a></td>
-        </tr>
-        }
+        {date2 && signUpLink2 && (
+          <tr>
+            <td>
+              {date2} -{' '}
+              <a href={signUpLink2} target="_blank" rel="noopener noreferrer">
+                Register Now
+              </a>
+            </td>
+          </tr>
+        )}
       </DatesTable>
       <ShortDescription dangerouslySetInnerHTML={{ __html: shortDescription }} />
       {/* <LinkButton primary dark href={signUpLink1}>
