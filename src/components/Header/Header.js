@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
-import { rhythm } from 'src/utils/typography'
 
 import Logoimage from 'src/components/Logoimage/Logoimage'
 import Topbar from './Topbar/Topbar'
@@ -14,18 +13,11 @@ const MainHeader = styled.header`
   box-shadow: 0 5px 10px rgba(51, 50, 10, 0.1);
 `
 
-const Header = props => (
+const Header = () => (
   <>
     <Logoimage />
 
-    <MainHeader
-      style={
-        {
-          // paddingTop: rhythm(1),
-          // paddingBottom: rhythm(1),
-        }
-      }
-    >
+    <MainHeader>
       <Topbar />
       <Navbar />
     </MainHeader>
