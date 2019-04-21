@@ -1,11 +1,13 @@
 
 .quickLink {
-  @apply  flex-1 m-0 border-t-2 border-l-2 border-b-2 border-solid border-green-dark flex content-center;
+  @apply  flex-1 m-0 border-t-2 border-l-2 border-b-2 border-solid flex content-center;
   box-sizing: border-box;
+  border-color: #006600;
 }
 
 .quickLinkActive {
-  @apply  m-0 border-t-2 border-l border-b-2 border-solid border-green-dark flex content-center;
+  @apply  m-0 border-t-2 border-l border-b-2 border-solid flex content-center;
+  border-color: #006600;
 }
 
 
@@ -13,6 +15,7 @@
   @apply block py-2 px-3 w-full;
   @apply uppercase no-underline text-xs font-bold bg-yellow-light;
   min-width: 90px;
+  color: #006600;
 }
 
 .quickLink button:selected {
