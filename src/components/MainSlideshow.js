@@ -28,6 +28,7 @@ const Slide = styled.div`
 const SlideImage = styled(Img)`
   ${tw`lg:h-full`};
   min-height: 400px;
+  background-color: ${props => props.theme.primaryColor};
   img {
     ${tw`w-full mb-0 lg:h-full`};
   }
