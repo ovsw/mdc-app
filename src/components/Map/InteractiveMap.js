@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import { Map, Marker, Popup, TileLayer, LayerGroup, ImageOverlay, Tooltip, Polygon } from 'react-leaflet'
-import styled from 'styled-components'
+import { Map, Marker, ImageOverlay, Tooltip } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
 import mapimage from 'src/images/mdc-map.jpg'
 
-import icon from 'leaflet/dist/images/marker-icon.png'
-import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+// import icon from 'leaflet/dist/images/marker-icon.png'
+// import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import styles from './InteractiveMap.module.css'
 import MapLightBox from './LightBox'
 
@@ -26,11 +25,6 @@ export default class InteractiveMap extends Component {
     super(props)
 
     this.state = {
-      mapOptions: {
-        center: [51.505, -0.09],
-        zoom: 13,
-      },
-      width: 0,
       height: 0,
       currLightboxItem: null,
     }
@@ -85,12 +79,12 @@ export default class InteractiveMap extends Component {
   }
 
   updateWindowDimensions() {
-    console.log(window.innerWidth, window.innerHeight)
-    this.setState({ width: window.innerWidth, height: window.innerHeight })
+    // console.log(window.innerWidth, window.innerHeight)
+    this.setState({ height: window.innerHeight })
   }
 
   render() {
-    const { mapOptions, currLightboxItem, height } = this.state
+    const { currLightboxItem, height } = this.state
     const { locations } = this.props
 
     if (typeof window !== 'undefined') {
@@ -119,25 +113,13 @@ export default class InteractiveMap extends Component {
               const currOffset = this.calcLabelOffset(node.labelDirection)
 
               return (
-                <Marker key={index} position={latLong} onClick={() => this.markerClick(index)}>
+                <Marker key={latLong} position={latLong} onClick={() => this.markerClick(index)}>
                   <Tooltip permanent interactive direction={node.labelDirection} offset={currOffset}>
                     {node.title}
                   </Tooltip>
                 </Marker>
               )
             })}
-
-            {/* <TileLayer
-            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"
-          /> */}
-            {/* <Marker position={mapOptions.center}>
-            <Popup>
-              A pretty CSS3 popup.
-              <br />
-              Easily customizable.
-            </Popup>
-          </Marker> */}
           </Map>
         </>
       )
