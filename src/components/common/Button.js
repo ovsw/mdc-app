@@ -32,8 +32,8 @@ const ButtonDark = css`
   background-color: ${props => props.theme.primaryColor};
   color: white;
   &:before {
-      border-color: white;
-    }
+    border-color: white;
+  }
   &:hover {
     color: ${props => props.theme.primaryColor};
     background-color: ${props => props.theme.secondaryColor}!important;
