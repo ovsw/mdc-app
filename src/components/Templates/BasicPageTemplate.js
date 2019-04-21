@@ -28,7 +28,6 @@ const BasicPageTemplate = ({
     title,
     titleContinued,
     seoSettings,
-    shortDate,
     longDate,
     bannerImage,
     body,
