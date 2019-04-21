@@ -10,7 +10,7 @@ const linkStyles = css`
   color: ${props => props.theme.primaryColor};
   display: ${props => (props.visible === 'true' ? 'flex' : 'none')};
 
-  ${media.xl`${tw`text-2xl flex-1`};`}
+  ${media.xl`${tw`text-xl flex-1`};`}
 
   &:before {
     ${tw`absolute text-center`}
@@ -20,6 +20,12 @@ const linkStyles = css`
     left: 5px;
     right: 5px;
     border: 1px solid ${props => props.theme.primaryColor};
+    ${media.lg`
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    `};
   }
 
   &:hover {
