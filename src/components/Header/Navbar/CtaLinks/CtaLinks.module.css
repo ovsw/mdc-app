@@ -27,7 +27,8 @@
 }
 
 .quickLink button:hover {
-  @apply text-green-dark bg-yellow-light;
+  background-color: #006600;
+  color: #ffe433;
 }
 
 .quickLink:last-child{
