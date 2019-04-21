@@ -41,14 +41,12 @@ const SlideContent = styled.div`
     ${tw`text-2xl text-white font-primary`};
     ${tw`md:text-3xl xl:text-4xl font-bold`};
     text-shadow: 3px 3px 20px black;
-    
   }
 `
 
 const CTAButton = styled(LinkButton)`
-  ${tw`shadow-lg `}; 
+  ${tw`shadow-lg `};
 `
-
 
 function NextArrow(props) {
   const { className, style, onClick } = props
@@ -92,7 +90,7 @@ const MainSlideshow = ({ slides }) => {
             <SlideContent>
               <div>
                 <p>{slide.slideTitle}</p>
-                <CTAButton primary="true"  to={slide.buttonLinkUrl}>
+                <CTAButton primary="true" to={slide.buttonLinkUrl}>
                   {slide.buttonText}
                 </CTAButton>
               </div>
