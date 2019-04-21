@@ -63,10 +63,10 @@ class Megamenu extends React.Component {
           className={megaMenuVisible ? styles.megaMenu : `hidden`}
         >
           <ColumnsContainer menuTitle={menuTitle}>
-            {menuModel.map((column, index) => (
-              <ul className={`${styles.menuColumn}`} key={index}>
-                {column.map((item, key) => (
-                  <li key={key}>
+            {menuModel.map(column => (
+              <ul className={`${styles.menuColumn}`} key={column.title}>
+                {column.map(item => (
+                  <li key={item.url}>
                     {item.url.indexOf('https') !== 0 ? (
                       <Link to={item.url} onClick={this.onNavClick}>
                         {item.title}
@@ -76,10 +76,10 @@ class Megamenu extends React.Component {
                         {item.title}
                       </a>
                     )}
-                    {item.children != undefined && item.children.length > 0 && (
+                    {item.children !== undefined && item.children.length > 0 && (
                       <ul className="list-reset">
-                        {item.children.map((child, key) => (
-                          <li key={key}>
+                        {item.children.map(child => (
+                          <li key={child.url}>
                             <Link to={child.url} onClick={this.onNavClick}>
                               {child.title}
                             </Link>
