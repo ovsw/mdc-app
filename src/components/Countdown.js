@@ -84,7 +84,7 @@ class Countdown extends React.Component {
           </CountdownContent>
           <div className="flex-auto flex justify-center">
             <FakeButton primary light onClick={toggleDatesRatesOverlay}>
-            <FontAwesomeIcon icon={faClock} fixedWidth size="1x" /> Enroll Now!
+              <FontAwesomeIcon icon={faClock} fixedWidth size="1x" /> Enroll Now!
             </FakeButton>
           </div>
         </CountdownWrapper>
