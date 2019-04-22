@@ -3,6 +3,7 @@ require('dotenv').config()
 module.exports = {
   siteMetadata: {
     title: `Maplewood Day Camp`,
+    siteUrl: `https://www.maplewoodyearround.com`,
     aboutNav: [
       [
         {
@@ -252,5 +253,6 @@ module.exports = {
         // get this from the tawk script widget
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
