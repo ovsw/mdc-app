@@ -47,11 +47,11 @@ const SocialIcon = styled.a`
 `
 const SeoText = styled.p`
   ${tw`container mt-6 md:mt-4 text-xs`};
-  color: #a2c5a6;
+  color: #c8d4bc;
 `
 const CopyRight = styled.div`
   ${tw`text-center text-xs`};
-  color: #a2c5a6;
+  color: #c8d4bc;
 `
 const FooterTitle = styled.h4`
   ${tw`border-b-2`};
