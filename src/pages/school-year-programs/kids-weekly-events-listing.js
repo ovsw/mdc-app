@@ -2,15 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 
-const KidsEventsPage = ({ data }) => {
-  console.log('test')
-
-  return (
-    <>
-      <BasicPageTemplate data={data.datoCmsKidsEventsListing} />
-    </>
-  )
-}
+const KidsEventsPage = ({ data }) => (
+  <>
+    <BasicPageTemplate data={data.datoCmsKidsEventsListing} />
+  </>
+)
 
 export default KidsEventsPage
 
