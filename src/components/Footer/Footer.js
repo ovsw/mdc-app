@@ -83,23 +83,49 @@ const Footer = () => (
       </LeftColumn>
       <RightColumn>
         <Icons>
-          <SocialIcon href="https://www.facebook.com/MaplewoodKids/" target="_blank" rel="noopener noreferrer">
+          <SocialIcon
+            name="Maplewood Facebook Page"
+            aria-label="visit the Maplewood Facebook Page"
+            href="https://www.facebook.com/MaplewoodKids/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faFacebookSquare} />
           </SocialIcon>
           <SocialIcon
+            name="Maplewood Instagram Page"
+            aria-label="visit the Maplewood Instagram Page"
             href="https://www.instagram.com/maplewood_country_day_camp/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faInstagram} />
           </SocialIcon>
-          <SocialIcon href="https://www.youtube.com/user/MaplewoodKids" target="_blank" rel="noopener noreferrer">
+          <SocialIcon
+            name="Maplewood Youtube Channel"
+            aria-label="visit the Maplewood Youtube Channel Page"
+            href="https://www.youtube.com/user/MaplewoodKids"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faYoutube} />
           </SocialIcon>
-          <SocialIcon href="https://twitter.com/maplewoodkids" target="_blank" rel="noopener noreferrer">
+          <SocialIcon
+            name="Maplewood Twitter Page"
+            aria-label="visit the Maplewood Twitter Page"
+            href="https://twitter.com/maplewoodkids"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faTwitterSquare} />
           </SocialIcon>
-          <SocialIcon href="https://www.pinterest.com/maplewoodday/pins/" target="_blank" rel="noopener noreferrer">
+          <SocialIcon
+            name="Maplewood Pinterest Page"
+            aria-label="visit the Maplewood Pinterest Page"
+            href="https://www.pinterest.com/maplewoodday/pins/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={faPinterestSquare} />
           </SocialIcon>
         </Icons>
