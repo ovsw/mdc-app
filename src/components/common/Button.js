@@ -77,3 +77,7 @@ export const FakeButton = styled.button`
 export const LinkButton = styled(Link)`
   ${() => ButtonStyles}
 `
+
+export const AnchorButton = styled.a`
+  ${() => ButtonStyles}
+`

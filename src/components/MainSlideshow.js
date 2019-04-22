@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Slider from 'react-slick'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { LinkButton } from 'src/components/common/Button'
+import { AnchorButton } from 'src/components/common/Button'
 import Arrow from 'src/components/common/Arrow'
 
 import 'slick-carousel/slick/slick.css'
@@ -45,7 +45,7 @@ const SlideContent = styled.div`
   }
 `
 
-const CTAButton = styled(LinkButton)`
+const CTAButton = styled(AnchorButton)`
   ${tw`shadow-lg `};
 `
 
@@ -91,7 +91,7 @@ const MainSlideshow = ({ slides }) => {
             <SlideContent>
               <div>
                 <p>{slide.slideTitle}</p>
-                <CTAButton primary="true" to={slide.buttonLinkUrl}>
+                <CTAButton primary="true" href={slide.buttonLinkUrl}>
                   {slide.buttonText}
                 </CTAButton>
               </div>
