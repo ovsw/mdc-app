@@ -33,12 +33,15 @@
 }
 .menuColumn li ul {
   list-style-type: disc;
-  @apply pl-8 ml-0 pb-2;
+  @apply pb-1 m-0 pl-8;
   border-bottom: 1px solid #77a777;
+}
+.menuColumn li ul li {
+  @apply m-0 p-0;
 }
 .menuColumn li ul li a {
   border-bottom: none;
-  @apply py-0 my-0;
+  @apply py-1 my-0;
   
 }
 .menuColumn li a:hover {
