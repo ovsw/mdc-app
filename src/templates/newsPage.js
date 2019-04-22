@@ -5,7 +5,7 @@ import BasicPageTemplate from 'src/components/Templates/BasicPageTemplate'
 const NewsPage = ({ data }) => {
   data.datoCmsNewsArticle.callToActionText2 = '< More News'
   data.datoCmsNewsArticle.callToActionLink2 = '/news'
-  console.log(data)
+  // console.log(data)
   return <BasicPageTemplate data={data.datoCmsNewsArticle} />
 }
 
