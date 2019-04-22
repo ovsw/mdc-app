@@ -41,12 +41,12 @@ const Arrow = props => {
   return (
     <>
       {dir === 'left' && (
-        <ArrowLeft type="button" {...props}>
+        <ArrowLeft type="button" aria-label="slideshow left arrow" {...props}>
           {children}
         </ArrowLeft>
       )}
       {dir === 'right' && (
-        <ArrowRight type="button" {...props}>
+        <ArrowRight type="button" aria-label="slideshow right arrow" {...props}>
           {children}
         </ArrowRight>
       )}
