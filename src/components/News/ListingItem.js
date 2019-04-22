@@ -34,7 +34,7 @@ const CoverImage = styled(Img)`
 const ImgBg = styled.div`
   background-color: ${props => props.theme.primaryColor};
   ${tw`absolute hidden md:block w-full h-full`};
-  top:-10px;
+  top: -10px;
   left: -10px;
 `
 
@@ -58,22 +58,20 @@ const NewsTitle = styled.h3`
 const Date = styled.p`
   ${tw`text-sm mb-2`};
   color: ${props => props.theme.primaryColor};
-  color: gray;
+  color: #716f6f;
 `
 const ReadMore = styled.div`
   ${tw`mb-0 mt-2`};
-  color: gray;
+  color: #716f6f;
 `
 const NewsExcerpt = styled.div`
   ${tw` text-sm md:text-base`};
 `
 
-
-
 const ListingItem = ({ newsArticle: { title, slug, shortDate, excerpt, bannerImage } }) => (
   <NewsItemWrapper to={`/news/${slug}`}>
     <ImageContainer>
-      <ImgBg/>
+      <ImgBg />
       <CoverImage fluid={bannerImage.fluid} />
     </ImageContainer>
     <TextWrapper>
