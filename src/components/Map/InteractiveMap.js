@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Map, Marker, ImageOverlay, Tooltip } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
+// import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 
 import mapimage from 'src/images/mdc-map.jpg'
