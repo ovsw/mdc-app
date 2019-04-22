@@ -11,6 +11,13 @@ const CountdownWrapper = styled.div`
 const CountdownContent = styled.div`
   ${tw`flex flex-auto align-middle lg:justify-center mb-6  md:mb-0`};
 `
+const Days = styled.span`
+  ${tw`mr-2 text-3xl text-right leading-tight inline-block font-bold text-shadow-blurry-green`};
+  color: ${props => props.theme.secondaryColorLight};
+`
+const Highlighted = styled.span`
+  color: ${props => props.theme.secondaryColorLight};
+`
 
 class Countdown extends React.Component {
   calculateCountdown(endDate) {
@@ -73,12 +80,12 @@ class Countdown extends React.Component {
       <>
         <CountdownWrapper>
           <CountdownContent>
-            <span className="mr-2 text-3xl text-right leading-tight inline-block font-bold text-yellow-brand-light text-shadow-blurry-green">
+            <Days>
               {days} {days === 1 ? 'Day ' : 'Days '}
-            </span>{' '}
+            </Days>{' '}
             <span className="flex items-center text-xl pl-2 border-grey-lighter border-l-2 md:pt-0 lg:pb-1 text-shadow-blurry-green">
               <span>
-                to <span className="text-yellow-brand-light">Summer Camp</span> Opening
+                to <Highlighted>Summer Camp</Highlighted> Opening
               </span>
             </span>
           </CountdownContent>
