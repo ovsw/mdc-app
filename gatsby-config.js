@@ -268,6 +268,8 @@ module.exports = {
         theme_color: `#006600`,
         display: `standalone`,
         orientation: `portrait`,
+        icon: `src/images/icon.png`,
+        cache_busting_mode: `query`,
       },
     },
     `gatsby-plugin-offline`,
