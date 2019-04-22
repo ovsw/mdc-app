@@ -18,6 +18,7 @@ import VideoBlock from 'src/components/Content/VideoBlock'
 
 const BasicPageContentSection = styled(PageSection)`
   ${tw`pt-px pb-px`};
+  min-height: 800px;
   & p:last-child {
     margin-bottom: 0 !important;
   }
