@@ -9,17 +9,20 @@ module.exports = {
         {
           title: 'The Maplewood Family',
           url: '/the-maplewood-family',
-          children: [],
-        },
-        {
-          title: 'Directors',
-          url: '/directors',
-          children: [],
-        },
-        {
-          title: 'Teachers and Staff',
-          url: '/teachers-and-staff',
-          children: [],
+          children: [
+            {
+              title: 'Directors',
+              url: '/directors',
+            },
+            {
+              title: 'Teachers and Staff',
+              url: '/teachers-and-staff',
+            },
+            {
+              title: 'Our History',
+              url: '/our-history',
+            },
+          ],
         },
         {
           title: 'Interactive Map',
@@ -34,11 +37,6 @@ module.exports = {
         {
           title: 'FAQs',
           url: '/faqs',
-          children: [],
-        },
-        {
-          title: 'Our history',
-          url: '/our-history',
           children: [],
         },
         {
