@@ -254,5 +254,18 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Maplewood Day Camp`,
+        short_name: `Maplewood`,
+        start_url: `/`,
+        background_color: `#fffdfa`,
+        theme_color: `#006600`,
+        display: `standalone`,
+        orientation: `portrait`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
