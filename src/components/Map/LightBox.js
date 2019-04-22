@@ -4,6 +4,7 @@ import media from 'src/components/responsive'
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import LoaderImage from 'src/images/loader.gif'
 
 const LightBoxWrapper = styled.div`
   ${tw`fixed pin flex items-center justify-center`};
@@ -22,6 +23,10 @@ const ContentWrapper = styled.div`
 `
 const CurrentImage = styled(Img)`
   ${tw` w-full md:w-1/2`};
+  background-image: url('${LoaderImage}');
+  background-position: center center;
+  background-repeat: no-repeat;
+  border:1px solid #006600;
 `
 const RightColumn = styled.div`
   ${tw`md:w-1/2 p-4 text-sm`};
@@ -53,15 +58,9 @@ class LightBox extends React.Component {
       activeImage: 0,
     }
 
-    const { activeImage } = this.state
-
     this.getCurrImage = (e, index) => {
       e.preventDefault()
-      console.log('index', index)
-      console.log('before', activeImage)
-      this.setState({ activeImage: index }, () => {
-        console.log('after', activeImage)
-      })
+      this.setState({ activeImage: index }, () => {})
     }
   }
 
@@ -96,6 +95,7 @@ class LightBox extends React.Component {
                   role="button"
                   tabIndex={0}
                   onClick={e => this.getCurrImage(e, index)}
+                  onKeyUp={e => this.getCurrImage(e, index)}
                 >
                   <ThumbImage fluid={image.thumb} />
                 </a>
