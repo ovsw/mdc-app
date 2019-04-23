@@ -272,6 +272,7 @@ module.exports = {
         cache_busting_mode: `query`,
       },
     },
-    `gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }
