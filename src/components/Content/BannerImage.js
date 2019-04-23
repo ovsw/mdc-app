@@ -10,7 +10,6 @@ const BannerImageStyled = styled(Img)`
   ${tw`xl:h-full`};
   background-image: url('${LoaderImage}');
   background-position: 50% 50%;
-  ${media.md`background-position: 50% 40%;`};
   background-repeat: no-repeat;
   background-color: #0066003b;
 `
