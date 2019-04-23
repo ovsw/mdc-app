@@ -166,7 +166,7 @@ module.exports = {
         },
         {
           title: 'School Year Login',
-          url: 'https://shop.maplewoodyearround.com/shop/',
+          url: 'https://campscui.active.com/orgs/MaplewoodCountryDayCamp',
           children: [],
         },
       ],
