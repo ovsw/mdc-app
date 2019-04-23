@@ -77,7 +77,6 @@ const BasicPageTemplate = ({
           {events && <KidsEvents events={events} />}
           <NarrowContent>
             <div
-              className="hidden md:block"
               dangerouslySetInnerHTML={{
                 __html: embedCodes,
               }}
