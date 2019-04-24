@@ -10,6 +10,7 @@ export const query = graphql`
   query AboutPageQuery($slug: String!) {
     datoCmsAboutPage(slug: { eq: $slug }) {
       title
+      titleContinued
       seoSettings {
         title
         description

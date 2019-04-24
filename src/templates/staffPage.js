@@ -10,6 +10,7 @@ export const query = graphql`
   query StaffPageQuery($slug: String!) {
     datoCmsStaffPage(slug: { eq: $slug }) {
       title
+      titleContinued
       bannerImage {
         url
         portrait: fluid(
