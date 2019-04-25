@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from 'src/images/maplewood-web-logo4.png'
+import logo from 'src/images/maplewood-web-logo.png'
 
 import styles from './Logoimage.module.css'
 
