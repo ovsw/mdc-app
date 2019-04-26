@@ -156,7 +156,7 @@ class Overlay extends React.Component {
               linkTitle="New Campers"
               linkSubtitle="Enroll Now"
               icon={<FontAwesomeIcon icon={faPenNib} />}
-              linkUrl="https://maplewood.campintouch.com/v2/login/login.aspx?"
+              linkUrl="https://maplewood.campintouch.com/ui/forms/application/camper/App"
               label="scNew"
               click={closeAllOverlays}
             />
@@ -164,7 +164,7 @@ class Overlay extends React.Component {
               linkTitle="Returning Campers"
               linkSubtitle="Enroll Now"
               icon={<FontAwesomeIcon icon={faPenNib} />}
-              linkUrl="https://maplewood.campintouch.com/ui/forms/application/camper/App"
+              linkUrl="https://maplewood.campintouch.com/v2/login/login.aspx?"
               label="scReturning"
               click={closeAllOverlays}
             />
