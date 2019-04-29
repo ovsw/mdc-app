@@ -67,17 +67,19 @@ const IndexPage = ({ data }) => {
 
         <HomePageSection topTexture bottomTexture>
           <NarrowContent>
-            <MainHeading h2 centered><FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer</MainHeading>
-            <p className="text-center">At Maplewood we offer both summer camp and School Year programs!</p>
+            <MainHeading h2 centered>
+              <FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer
+            </MainHeading>
+            <p className="text-center">At Maplewood we offer both Summer Camp and School Year programs!</p>
           </NarrowContent>
 
           <BlockLinks items={data.datoCmsHome.sectionLinks} />
         </HomePageSection>
 
-        <HomePageSection  alternate>
+        <HomePageSection alternate>
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
-            <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
+              <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
             </MainHeading>
           </NarrowContent>
           <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
@@ -86,7 +88,7 @@ const IndexPage = ({ data }) => {
         <HomePageSection topTexture bottomTexture className="-mt-16">
           <NarrowContent className="md:mb-0 lg:pb-2">
             <MainHeading h2 centered>
-            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
+              <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
             </MainHeading>
             <RecentNews articles={data.allDatoCmsNewsArticle} />
           </NarrowContent>
