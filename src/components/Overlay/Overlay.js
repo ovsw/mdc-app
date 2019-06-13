@@ -249,7 +249,7 @@ class Overlay extends React.Component {
               click={this.triggerChat}
             />
             <OverlayLink
-              linkTitle="Email & Phone"
+              linkTitle="Request Info"
               linkSubtitle="Contact Us"
               icon={<FontAwesomeIcon icon={faPaperPlane} />}
               linkUrl="/contact-us"
