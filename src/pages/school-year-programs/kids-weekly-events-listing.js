@@ -37,24 +37,24 @@ export const query = graphql`
           text
         }
       }
-      events {
-        title
-        date1(formatString: "dddd, MMM Do")
-        date2(formatString: "dddd, MMM Do")
-        shortDescription
-        signUpLink1
-        signUpLink2
-        coverImage {
-          url
-          fluid(
-            maxWidth: 400
-            maxHeight: 400
-            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
-          ) {
-            ...GatsbyDatoCmsFluid
-          }
-        }
-      }
     }
   }
 `
+// events {
+//   title
+//   date1(formatString: "dddd, MMM Do")
+//   date2(formatString: "dddd, MMM Do")
+//   shortDescription
+//   signUpLink1
+//   signUpLink2
+//   coverImage {
+//     url
+//     fluid(
+//       maxWidth: 400
+//       maxHeight: 400
+//       imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+//     ) {
+//       ...GatsbyDatoCmsFluid
+//     }
+//   }
+// }
