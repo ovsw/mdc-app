@@ -46,7 +46,7 @@ const SlideContent = styled.div`
 `
 
 const CTAButton = styled(LinkButton)`
-  ${tw`shadow-lg `};
+  ${tw`shadow-lg mt-8`};
 `
 
 function NextArrow(props) {
