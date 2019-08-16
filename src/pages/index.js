@@ -22,83 +22,81 @@ import { NavContext } from 'src/layouts'
 
 import IconUkulele from 'src/icons/ukulele'
 
-const IndexPage = ({ data }) => {
-  const currentDate = new Date()
-  const year =
-    currentDate.getMonth() === 6 && currentDate.getDate() > 23
-      ? currentDate.getFullYear() + 1
-      : currentDate.getFullYear()
+const IndexPage = ({ data }) => (
+  // const currentDate = new Date()
+  // const year =
+  //   currentDate.getMonth() === 6 && currentDate.getDate() > 22
+  //     ? currentDate.getFullYear() + 1
+  //     : currentDate.getFullYear()
 
   // console.log(`${year}-06-24T00:00:00`)
 
-  return (
-    <>
-      <HelmetDatoCms>
-        <title>{data.datoCmsHome.seoSettings.title}</title>
-        <meta name="description" content={data.datoCmsHome.seoSettings.description} />
-      </HelmetDatoCms>
-      <MainBannerWrapper>
-        <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
-      </MainBannerWrapper>
+  <>
+    <HelmetDatoCms>
+      <title>{data.datoCmsHome.seoSettings.title}</title>
+      <meta name="description" content={data.datoCmsHome.seoSettings.description} />
+    </HelmetDatoCms>
+    <MainBannerWrapper>
+      <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
+    </MainBannerWrapper>
 
-      <MainContentWrapper>
-        <HomePageSection bottomTexture>
-          {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
-          <NarrowContent>
-            <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
-          </NarrowContent>
+    <MainContentWrapper>
+      <HomePageSection bottomTexture>
+        {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
+        <NarrowContent>
+          <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
+        </NarrowContent>
 
-          <NarrowContent className="md:mb-0 md:pb-0">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: data.datoCmsHome.introText,
-              }}
-            />
-          </NarrowContent>
-        </HomePageSection>
+        <NarrowContent className="md:mb-0 md:pb-0">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: data.datoCmsHome.introText,
+            }}
+          />
+        </NarrowContent>
+      </HomePageSection>
 
-        <NavContext.Consumer>
-          {({ toggleEnrollNowOverlay }) => (
-            <CtaBlock>
-              <Countdown date={`${year}-06-24T00:00:00`} toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
-            </CtaBlock>
-          )}
-        </NavContext.Consumer>
+      <NavContext.Consumer>
+        {({ toggleEnrollNowOverlay }) => (
+          <CtaBlock>
+            <Countdown date="2020-06-22T00:00:00" toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
+          </CtaBlock>
+        )}
+      </NavContext.Consumer>
 
-        <HomePageSection topTexture bottomTexture>
-          <NarrowContent>
-            <MainHeading h2 centered>
-              <FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer
-            </MainHeading>
-            <p className="text-center">At Maplewood we offer both Summer Camp and School Year programs!</p>
-          </NarrowContent>
+      <HomePageSection topTexture bottomTexture>
+        <NarrowContent>
+          <MainHeading h2 centered>
+            <FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer
+          </MainHeading>
+          <p className="text-center">At Maplewood we offer both Summer Camp and School Year programs!</p>
+        </NarrowContent>
 
-          <BlockLinks items={data.datoCmsHome.sectionLinks} />
-        </HomePageSection>
+        <BlockLinks items={data.datoCmsHome.sectionLinks} />
+      </HomePageSection>
 
-        <HomePageSection alternate>
-          <NarrowContent className="md:mb-0 lg:pb-2">
-            <MainHeading h2 centered>
-              <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
-            </MainHeading>
-          </NarrowContent>
-          <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
-        </HomePageSection>
+      <HomePageSection alternate>
+        <NarrowContent className="md:mb-0 lg:pb-2">
+          <MainHeading h2 centered>
+            <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
+          </MainHeading>
+        </NarrowContent>
+        <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
+      </HomePageSection>
 
-        <HomePageSection topTexture bottomTexture className="-mt-16">
-          <NarrowContent className="md:mb-0 lg:pb-2">
-            <MainHeading h2 centered>
-              <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
-            </MainHeading>
-            <RecentNews articles={data.allDatoCmsNewsArticle} />
-          </NarrowContent>
-        </HomePageSection>
+      <HomePageSection topTexture bottomTexture className="-mt-16">
+        <NarrowContent className="md:mb-0 lg:pb-2">
+          <MainHeading h2 centered>
+            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
+          </MainHeading>
+          <RecentNews articles={data.allDatoCmsNewsArticle} />
+        </NarrowContent>
+      </HomePageSection>
 
-        {/* <Accordion panels={panels} /> */}
-      </MainContentWrapper>
-    </>
-  )
-}
+      {/* <Accordion panels={panels} /> */}
+    </MainContentWrapper>
+  </>
+)
 
 const panels = [
   {
