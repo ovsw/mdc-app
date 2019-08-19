@@ -95,7 +95,7 @@ const Footer = () => (
           <SocialIcon
             name="Maplewood Instagram Page"
             aria-label="visit the Maplewood Instagram Page"
-            href="https://www.instagram.com/maplewood_country_day_camp/"
+            href="https://www.instagram.com/maplewoodcountrydaycamp/"
             target="_blank"
             rel="noopener noreferrer"
           >
