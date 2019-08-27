@@ -5,8 +5,11 @@ import NarrowContent from 'src/components/common/NarrowContent'
 const RichTextBlockStyled = styled.div`
   h2,
   h3 {
-    margin-top: 20px;
     color: ${props => props.theme.primaryColor};
+    ${tw`mb-4`};
+  }
+  p {
+    ${tw`mb-4`};
   }
 `
 
