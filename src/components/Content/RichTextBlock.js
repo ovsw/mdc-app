@@ -6,10 +6,14 @@ const RichTextBlockStyled = styled.div`
   h2,
   h3 {
     color: ${props => props.theme.primaryColor};
-    ${tw`mb-4`};
+    ${tw`mb-6 mt-6`};
   }
   p {
     ${tw`mb-4`};
+  }
+  ul,
+  ol {
+    ${tw`ml-6 mb-4`};
   }
 `
 
