@@ -148,8 +148,8 @@ module.exports = {
     familiesNav: [
       [
         {
-          title: 'New for 2019!',
-          url: '/summer-camp/new-for-2019',
+          title: 'New for 2020!',
+          url: '/summer-camp/new-for-2020',
           children: [],
         },
         {
