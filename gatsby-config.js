@@ -93,6 +93,11 @@ module.exports = {
           children: [],
         },
         {
+          title: 'Camper Photo App',
+          url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
+          children: [],
+        },
+        {
           title: 'Smart Lunches',
           url: '/summer-camp/smart-lunches',
           children: [],
@@ -150,6 +155,11 @@ module.exports = {
         {
           title: 'New for 2020!',
           url: '/summer-camp/new-for-2020',
+          children: [],
+        },
+        {
+          title: 'Camper Photo App',
+          url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
         {
