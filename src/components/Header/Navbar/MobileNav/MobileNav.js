@@ -6,7 +6,7 @@ import MobileNavDropDown from './MobileNavDropDown/MobileNavDropDown'
 
 const MobileNav = ({ aboutNav, familiesNav, staffNav, toggleMobileNav }) => (
   <div>
-    <div className="border-b border-white mb-6" style={{ height: '90px' }} />
+    <div className="border-b border-white mb-6" style={{ height: '120px' }} />
     <CtaLinks />
     <ul className="list-reset ml-0 mt-4">
       <MobileNavDropDown menuTitle="About Maplewood" menuModel={aboutNav[0]} toggleMobileNav={toggleMobileNav} />
