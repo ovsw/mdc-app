@@ -93,7 +93,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Camper Photo App',
+          title: 'Camper Daily Photos',
           url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
@@ -158,7 +158,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Camper Photo App',
+          title: 'Camper Daily Photos',
           url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
