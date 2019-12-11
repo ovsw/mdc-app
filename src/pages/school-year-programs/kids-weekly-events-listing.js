@@ -23,7 +23,13 @@ export const query = graphql`
         portrait: fluid(
           maxWidth: 1200
           maxHeight: 769
-          imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+          imgixParams: {
+            fm: "jpg"
+            auto: "enhance,compress"
+            fit: "crop"
+            crop: "faces,entropy"
+            monochrome: "14FF5D00"
+          }
         ) {
           ...GatsbyDatoCmsFluid
         }
@@ -49,7 +55,13 @@ export const query = graphql`
           fluid(
             maxWidth: 400
             maxHeight: 400
-            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy", mono: "14FF5D00" }
+            imgixParams: {
+              fm: "jpg"
+              auto: "enhance,compress"
+              fit: "crop"
+              crop: "faces,entropy"
+              monochrome: "14FF5D00"
+            }
           ) {
             ...GatsbyDatoCmsFluid
           }
