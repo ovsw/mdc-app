@@ -10,6 +10,12 @@ const NewsItemWrapper = styled(Link)`
     color: inherit;
   }
 `
+const NewsItemExternalWrapper = styled.a`
+  ${tw`mb-8 md:mb-8 flex items-stretch no-underline`};
+  &:hover {
+    color: inherit;
+  }
+`
 const ImageContainer = styled.div`
   ${tw`m-0  w-1/2 md:h-auto md:w-2/5 relative `};
 `
@@ -68,23 +74,44 @@ const NewsExcerpt = styled.div`
   ${tw` text-sm md:text-base`};
 `
 
-const ListingItem = ({ newsArticle: { title, slug, shortDate, excerpt, bannerImage } }) => (
-  <NewsItemWrapper to={`/news/${slug}`}>
-    <ImageContainer>
-      <ImgBg />
-      <CoverImage fluid={bannerImage.fluid} />
-    </ImageContainer>
-    <TextWrapper>
-      <NewsTitle>{title}</NewsTitle>
-      <Date>{shortDate}</Date>
-      <NewsExcerpt
-        dangerouslySetInnerHTML={{
-          __html: excerpt,
-        }}
-      />
-      <ReadMore>read more...</ReadMore>
-    </TextWrapper>
-  </NewsItemWrapper>
+const ListingItem = ({ newsArticle: { title, slug, externalPostUrl = '', shortDate, excerpt, bannerImage } }) => (
+  <>
+    {externalPostUrl === '' ? (
+      <NewsItemWrapper to={`/news/${slug}`}>
+        <ImageContainer>
+          <ImgBg />
+          <CoverImage fluid={bannerImage.fluid} />
+        </ImageContainer>
+        <TextWrapper>
+          <NewsTitle>{title}</NewsTitle>
+          <Date>{shortDate}</Date>
+          <NewsExcerpt
+            dangerouslySetInnerHTML={{
+              __html: excerpt,
+            }}
+          />
+          <ReadMore>read more...</ReadMore>
+        </TextWrapper>
+      </NewsItemWrapper>
+    ) : (
+      <NewsItemExternalWrapper href={externalPostUrl} target="_blank">
+        <ImageContainer>
+          <ImgBg />
+          <CoverImage fluid={bannerImage.fluid} />
+        </ImageContainer>
+        <TextWrapper>
+          <NewsTitle>{title}</NewsTitle>
+          <Date>{shortDate}</Date>
+          <NewsExcerpt
+            dangerouslySetInnerHTML={{
+              __html: excerpt,
+            }}
+          />
+          <ReadMore>read more...</ReadMore>
+        </TextWrapper>
+      </NewsItemExternalWrapper>
+    )}
+  </>
 )
 
 export default ListingItem

@@ -28,11 +28,12 @@ export const query = graphql`
         }
       }
     }
-    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 3) {
+    allDatoCmsNewsArticle(sort: { fields: [date], order: DESC }, limit: 20) {
       edges {
         node {
           title
           slug
+          externalPostUrl
           shortDate: date(formatString: "dddd, MMM Do")
           bannerImage {
             url

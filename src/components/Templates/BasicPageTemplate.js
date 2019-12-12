@@ -31,7 +31,7 @@ const BasicPageTemplate = ({
     seoSettings,
     longDate,
     bannerImage,
-    body,
+    body = [{ text: 'no content' }],
     quickLinks,
     callToActionText,
     callToActionLink,
@@ -41,7 +41,7 @@ const BasicPageTemplate = ({
     events,
   },
 }) => {
-  console.log('')
+  console.log(body)
   return (
     <>
       {seoSettings && (
