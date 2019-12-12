@@ -190,7 +190,7 @@ class TestimonialSliders extends React.Component {
         <ImageSlider {...imageSliderSettings} ref={slider => (this.slider1 = slider)} asNavFor={nav2}>
           {testimonials.map((slide, index) => (
             <ImageSlide key={slide.image.url}>
-              <SlideImage fluid={slide.image.fluid} />
+              <SlideImage fixed={slide.image.fixed} />
             </ImageSlide>
           ))}
         </ImageSlider>
