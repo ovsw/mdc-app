@@ -7,6 +7,7 @@ import mapimage from 'src/images/mdc-map.jpg'
 
 // import icon from 'leaflet/dist/images/marker-icon.png'
 // import iconShadow from 'leaflet/dist/images/marker-shadow.png'
+import emptyIcon from '../../images/px.png'
 import styles from './InteractiveMap.module.css'
 import MapLightBox from './LightBox'
 
@@ -14,9 +15,9 @@ if (typeof window !== 'undefined') {
   delete L.Icon.Default.prototype._getIconUrl
 
   L.Icon.Default.mergeOptions({
-    // iconRetinaUrl: icon,
-    // iconUrl: icon,
-    // shadowUrl: iconShadow,
+    iconRetinaUrl: emptyIcon,
+    iconUrl: emptyIcon,
+    shadowUrl: emptyIcon,
   })
 }
 
@@ -94,14 +95,23 @@ export default class InteractiveMap extends Component {
           <Map
             className={styles.map}
             crs={L.CRS.Simple}
-            bounds={[[0, 0], [1063, 1920]]}
+            bounds={[
+              [0, 0],
+              [1063, 1920],
+            ]}
             minZoom={-0.5}
             maxZoom={1}
             zoomSnap={0.1}
             center={[650, 900]}
             style={{ height: `${(height - 86).toString()}px` }}
           >
-            <ImageOverlay url={mapimage} bounds={[[0, 0], [1063, 1920]]} />
+            <ImageOverlay
+              url={mapimage}
+              bounds={[
+                [0, 0],
+                [1063, 1920],
+              ]}
+            />
             {/* <Polygon
             positions={[[300, 900], [300, 600], [600, 600], [600, 900]]}
             color="blue"
