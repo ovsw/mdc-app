@@ -28,7 +28,7 @@ export const query = graphql`
             auto: "enhance,compress"
             fit: "crop"
             crop: "faces,entropy"
-            monochrome: "14FF5D00"
+            mono: "14FF5D00"
           }
         ) {
           ...GatsbyDatoCmsFluid
@@ -60,7 +60,7 @@ export const query = graphql`
               auto: "enhance,compress"
               fit: "crop"
               crop: "faces,entropy"
-              monochrome: "14FF5D00"
+              mono: "14FF5D00"
             }
           ) {
             ...GatsbyDatoCmsFluid
