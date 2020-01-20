@@ -242,8 +242,15 @@ module.exports = {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_API_TOKEN,
-        previewMode: process.env.DATO_PREVIEW,
-        disableLiveReload: true,
+        // previewMode: process.env.DATO_PREVIEW,
+        disableLiveReload: false,
+        previewMode: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-rss',
+      options: {
+        rssURL: 'https://medium.com/feed/@maplewoodcountrydaycamp',
       },
     },
     {
