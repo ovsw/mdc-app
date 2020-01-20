@@ -102,6 +102,11 @@ module.exports = {
           url: '/summer-camp/smart-lunches',
           children: [],
         },
+        {
+          title: 'Bostonwise Partnership',
+          url: '/summer-camp/bostonwise-partnership',
+          children: [],
+        },
       ],
       [
         {
@@ -245,12 +250,6 @@ module.exports = {
         // previewMode: process.env.DATO_PREVIEW,
         disableLiveReload: false,
         previewMode: true,
-      },
-    },
-    {
-      resolve: 'gatsby-source-rss',
-      options: {
-        rssURL: 'https://medium.com/feed/@maplewoodcountrydaycamp',
       },
     },
     {
