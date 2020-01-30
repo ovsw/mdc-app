@@ -184,6 +184,11 @@ module.exports = {
           url: 'https://campscui.active.com/orgs/MaplewoodCountryDayCamp',
           children: [],
         },
+        {
+          title: 'Online Store',
+          url: '/online-store',
+          children: [],
+        },
       ],
     ],
     staffNav: [
