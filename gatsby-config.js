@@ -168,8 +168,8 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Summer Group Schedules',
-          url: '/summer-camp/summer-group-schedules',
+          title: 'Online Store',
+          url: '/online-store',
           children: [],
         },
       ],
@@ -180,13 +180,25 @@ module.exports = {
           children: [],
         },
         {
-          title: 'School Year Login',
-          url: 'https://campscui.active.com/orgs/MaplewoodCountryDayCamp',
+          title: 'Summer Group Schedules',
+          url: '/summer-camp/summer-group-schedules',
+          children: [],
+        },
+      ],
+      [
+        {
+          title: 'Preschool Forms',
+          url: '/school-year-programs/preschool-program-forms',
           children: [],
         },
         {
-          title: 'Online Store',
-          url: '/online-store',
+          title: 'After School Forms',
+          url: '/school-year-programs/after-school-program-forms',
+          children: [],
+        },
+        {
+          title: 'School Year Login',
+          url: 'https://campscui.active.com/orgs/MaplewoodCountryDayCamp',
           children: [],
         },
       ],
