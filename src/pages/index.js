@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faSun, faStar, faNewspaper } from '@fortawesome/free-solid-svg-icons'
+import { faHeart, faSun, faStar, faNewspaper, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
 
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
@@ -16,7 +16,9 @@ import Countdown from 'src/components/Countdown'
 import BlockLinks from 'src/components/Content/BlockLinks/BlockLinks'
 import TestimonialSliders from 'src/components/TestimonialSliders'
 import RecentNews from 'src/components/News/RecentNewsListing'
-import Accordion from 'src/components/Content/Accordion/Accordion'
+// import Accordion from 'src/components/Content/Accordion/Accordion'
+import HpNotice from 'src/components/HpNotice'
+import { FakeButton } from 'src/components/common/Button'
 
 import { NavContext } from 'src/layouts'
 
@@ -36,11 +38,26 @@ const IndexPage = ({ data }) => (
       <title>{data.datoCmsHome.seoSettings.title}</title>
       <meta name="description" content={data.datoCmsHome.seoSettings.description} />
     </HelmetDatoCms>
+
     <MainBannerWrapper>
       <MainSlideshow slides={data.datoCmsHome.heroSlideshow} />
     </MainBannerWrapper>
 
     <MainContentWrapper>
+      <HpNotice>
+        <NarrowContent>
+          <div className="text-center">
+            <h1>Coronavirus Day Camp Updates</h1>
+            <p className="my-5">
+              We have created an update page for all of our latest information regarding the coronavirus. Please click
+              “Learn More” to see the latest communications.
+            </p>
+            <FakeButton primary light>
+              <FontAwesomeIcon icon={faExclamationTriangle} fixedWidth size="1x" /> Learn More
+            </FakeButton>
+          </div>
+        </NarrowContent>
+      </HpNotice>
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
