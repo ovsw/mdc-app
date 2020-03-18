@@ -18,7 +18,7 @@ import TestimonialSliders from 'src/components/TestimonialSliders'
 import RecentNews from 'src/components/News/RecentNewsListing'
 // import Accordion from 'src/components/Content/Accordion/Accordion'
 import HpNotice from 'src/components/HpNotice'
-import { FakeButton } from 'src/components/common/Button'
+import { FakeButton, LinkButton } from 'src/components/common/Button'
 
 import { NavContext } from 'src/layouts'
 
@@ -52,9 +52,9 @@ const IndexPage = ({ data }) => (
               We have created an update page for all of our latest information regarding the coronavirus. Please click
               “Learn More” to see the latest communications.
             </p>
-            <FakeButton primary light>
+            <LinkButton primary light to="/school-year-programs/updates-on-camp-and-coronavirus/">
               <FontAwesomeIcon icon={faExclamationTriangle} fixedWidth size="1x" /> Learn More
-            </FakeButton>
+            </LinkButton>
           </div>
         </NarrowContent>
       </HpNotice>
