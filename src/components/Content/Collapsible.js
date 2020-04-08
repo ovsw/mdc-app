@@ -4,7 +4,7 @@ import Collapsible from 'react-collapsible'
 // import NarrowContent from 'src/components/common/NarrowContent'
 
 const RichTextBlockStyled = styled.div`
-  ${tw`px-3`}
+  ${tw`px-3 mx-auto max-w-md`}
   h2,
   h3 {
     color: ${props => props.theme.primaryColor};

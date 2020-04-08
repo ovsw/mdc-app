@@ -158,6 +158,11 @@ module.exports = {
     familiesNav: [
       [
         {
+          title: 'Maplewood At Home',
+          url: '/at-home',
+          children: [],
+        },
+        {
           title: 'New for 2020!',
           url: '/summer-camp/new-for-2020',
           children: [],
