@@ -38,59 +38,57 @@ const BasicPageTemplate = ({
     embedCodes,
     events,
   },
-}) => {
-  console.log(body)
-  return (
-    <>
-      {seoSettings && (
-        <HelmetDatoCms>
-          {seoSettings.title && <title>{seoSettings.title}</title>}
-          {seoSettings.description && <meta name="description" content={seoSettings.description} />}
-        </HelmetDatoCms>
-      )}
-      <BannerImage image={bannerImage} quickLinks={callToActionText} />
+}) => (
+  // console.log(body)
+  <>
+    {seoSettings && (
+      <HelmetDatoCms>
+        {seoSettings.title && <title>{seoSettings.title}</title>}
+        {seoSettings.description && <meta name="description" content={seoSettings.description} />}
+      </HelmetDatoCms>
+    )}
+    <BannerImage image={bannerImage} quickLinks={callToActionText} />
 
-      <MainContentWrapper>
-        <BasicPageContentSection bottomTexture>
-          <NarrowContent>
-            <MainHeading>
-              {title}
-              {titleContinued && <br />}
-              {titleContinued}
-            </MainHeading>
-            {longDate && <p className=" text-sm font-bold">{longDate}</p>}
-          </NarrowContent>
-          {console.log(body)}
-          {body.map(block => (
-            <div key={block.id}>
-              {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
-              {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
-              {block.model.apiKey === 'image' && <ImageBlock block={block} />}
-              {block.model.apiKey === 'video' && <VideoBlock block={block} />}
-              {block.model.apiKey === 'collapsible' && <Collapsible block={block} />}
-            </div>
-          ))}
+    <MainContentWrapper>
+      <BasicPageContentSection bottomTexture>
+        <NarrowContent>
+          <MainHeading>
+            {title}
+            {titleContinued && <br />}
+            {titleContinued}
+          </MainHeading>
+          {longDate && <p className=" text-sm font-bold">{longDate}</p>}
+        </NarrowContent>
 
-          {quickLinks && <BlockLink items={quickLinks} />}
+        {body.map(block => (
+          <div key={block.id}>
+            {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
+            {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
+            {block.model.apiKey === 'image' && <ImageBlock block={block} />}
+            {block.model.apiKey === 'video' && <VideoBlock block={block} />}
+            {block.model.apiKey === 'collapsible' && <Collapsible block={block} />}
+          </div>
+        ))}
 
-          {events && <KidsEvents events={events} />}
-          <NarrowContent>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: embedCodes,
-              }}
-            />
-          </NarrowContent>
-        </BasicPageContentSection>
-      </MainContentWrapper>
-      {(callToActionLink || callToActionLink2) && (
-        <CTAWrapper>
-          {callToActionText && <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>}
-          {callToActionText2 && <CTAMobileBtn to={callToActionLink2}>{callToActionText2}</CTAMobileBtn>}
-        </CTAWrapper>
-      )}
-    </>
-  )
-}
+        {quickLinks && <BlockLink items={quickLinks} />}
+
+        {events && <KidsEvents events={events} />}
+        <NarrowContent>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: embedCodes,
+            }}
+          />
+        </NarrowContent>
+      </BasicPageContentSection>
+    </MainContentWrapper>
+    {(callToActionLink || callToActionLink2) && (
+      <CTAWrapper>
+        {callToActionText && <CTAMobileBtn to={callToActionLink}>{callToActionText}</CTAMobileBtn>}
+        {callToActionText2 && <CTAMobileBtn to={callToActionLink2}>{callToActionText2}</CTAMobileBtn>}
+      </CTAWrapper>
+    )}
+  </>
+)
 
 export default BasicPageTemplate
