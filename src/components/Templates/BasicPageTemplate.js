@@ -15,13 +15,11 @@ import CTAWrapper from 'src/components/CTAWrapper'
 import CTAMobileBtn from 'src/components/CTAMobileBtn'
 import KidsEvents from 'src/components/KidsEvents'
 import VideoBlock from 'src/components/Content/VideoBlock'
+import Collapsible from 'src/components/Content/Collapsible'
 
 const BasicPageContentSection = styled(PageSection)`
   ${tw`pt-px pb-px`};
   min-height: 800px;
-  & p:last-child {
-    margin-bottom: 0 !important;
-  }
 `
 
 const BasicPageTemplate = ({
@@ -62,13 +60,14 @@ const BasicPageTemplate = ({
             </MainHeading>
             {longDate && <p className=" text-sm font-bold">{longDate}</p>}
           </NarrowContent>
-
+          {console.log(body)}
           {body.map(block => (
             <div key={block.id}>
               {block.model.apiKey === 'rich_text' && <RichTextBlock block={block} />}
               {block.model.apiKey === 'quote' && <QuoteBlock block={block} />}
               {block.model.apiKey === 'image' && <ImageBlock block={block} />}
               {block.model.apiKey === 'video' && <VideoBlock block={block} />}
+              {block.model.apiKey === 'collapsible' && <Collapsible block={block} />}
             </div>
           ))}
 
