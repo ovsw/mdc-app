@@ -37,6 +37,14 @@ export const query = graphql`
         }
       }
       body {
+        ... on DatoCmsCollapsible {
+          id
+          model {
+            apiKey
+          }
+          title
+          text
+        }
         ... on DatoCmsRichText {
           id
           model {
