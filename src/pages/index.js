@@ -52,7 +52,7 @@ const IndexPage = ({ data }) => (
               We have created an update page for all of our latest information regarding the coronavirus. Please click
               “Learn More” to see the latest communications.
             </p>
-            <LinkButton primary light to="/school-year-programs/updates-on-camp-and-coronavirus/">
+            <LinkButton primary light to="/school-year-programs/updates-on-school-year-and-coronavirus/">
               <FontAwesomeIcon icon={faExclamationTriangle} fixedWidth size="1x" /> Learn More
             </LinkButton>
           </div>
