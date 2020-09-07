@@ -134,12 +134,12 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Preschool (2.9-5 yrs)',
+          title: 'Preschool & Kindergarten',
           url: '/school-year-programs/preschool-program',
           children: [],
         },
         {
-          title: 'After School (K-8th)',
+          title: 'Remote Learning (K-8th)',
           url: '/school-year-programs/after-school-program',
           children: [],
         },

@@ -97,7 +97,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Preschool"
+              linkTitle="Preschool & Kindergarten"
               linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faChild} />}
               linkUrl="/school-year-programs/preschool-program"
@@ -105,7 +105,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="After-School"
+              linkTitle="Remote Learning School Age"
               linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faClock} />}
               linkUrl="/school-year-programs/after-school-program"
@@ -189,7 +189,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Preschool"
+              linkTitle="Preschool & Kindergarten"
               linkSubtitle="Apply Now"
               icon={<FontAwesomeIcon icon={faChild} />}
               linkUrl="/school-year-programs/preschool-program-application"
@@ -197,10 +197,10 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="After-School"
+              linkTitle="Remote Learning School Age"
               linkSubtitle="Apply Now"
               icon={<FontAwesomeIcon icon={faClock} />}
-              linkUrl="/school-year-programs/after-school-program-application"
+              linkUrl="/school-year-programs/after-school-program"
               label="syAfter"
               click={closeAllOverlays}
             />
