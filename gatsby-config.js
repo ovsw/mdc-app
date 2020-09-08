@@ -192,12 +192,12 @@ module.exports = {
       ],
       [
         {
-          title: 'Preschool Forms',
+          title: 'Preschool & Kindergarten Forms',
           url: '/school-year-programs/preschool-program-forms',
           children: [],
         },
         {
-          title: 'After School Forms',
+          title: 'Remote Learning Forms',
           url: '/school-year-programs/after-school-program-forms',
           children: [],
         },
