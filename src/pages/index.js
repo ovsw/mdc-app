@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => (
       <NavContext.Consumer>
         {({ toggleEnrollNowOverlay }) => (
           <CtaBlock>
-            <Countdown date="2020-06-29T00:00:00" toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
+            <Countdown date="2021-06-28T00:00:00" toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
           </CtaBlock>
         )}
       </NavContext.Consumer>
