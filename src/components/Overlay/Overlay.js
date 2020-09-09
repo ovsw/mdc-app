@@ -100,7 +100,7 @@ class Overlay extends React.Component {
               linkTitle="Preschool & Kindergarten"
               linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faChild} />}
-              linkUrl="/school-year-programs/preschool-program"
+              linkUrl="/school-year-programs/preschool-program-forms"
               label="syPre"
               click={closeAllOverlays}
             />
@@ -108,7 +108,7 @@ class Overlay extends React.Component {
               linkTitle="Remote Learning School Age"
               linkSubtitle="Dates & Rates"
               icon={<FontAwesomeIcon icon={faClock} />}
-              linkUrl="/school-year-programs/after-school-program"
+              linkUrl="/school-year-programs/after-school-program-forms"
               label="syAfter"
               click={closeAllOverlays}
             />
