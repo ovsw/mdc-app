@@ -105,14 +105,14 @@ class Overlay extends React.Component {
               label="syVacation"
               click={closeAllOverlays}
             />
-            <OverlayLink
+            {/* <OverlayLink
               linkTitle="Birthday Parties"
               linkSubtitle="Dates & Rates"
               icon="FaBirthdayCake"
               linkUrl="/school-year-programs/birthday-parties"
               label="syBirthdays"
               click={closeAllOverlays}
-            />
+            /> */}
           </OverlayWrapper>
         )}
         {enrollNowOverlayVisible && (
@@ -197,14 +197,14 @@ class Overlay extends React.Component {
               label="syVacation"
               click={closeAllOverlays}
             />
-            <OverlayLink
+            {/* <OverlayLink
               linkTitle="Birthday Parties"
               linkSubtitle="Schedule Now"
               icon="FaBirthdayCake"
               linkUrl="/school-year-programs/birthday-parties-dates-and-rates"
               label="syBirthdays"
               click={closeAllOverlays}
-            />
+            /> */}
           </OverlayWrapper>
         )}
         {requestInfoOverlayVisible && (
