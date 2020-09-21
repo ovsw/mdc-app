@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
 import Img from 'gatsby-image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import { FaTimesCircle } from 'react-icons/fa'
 import LoaderImage from 'src/images/loader.gif'
 
 const LightBoxWrapper = styled.div`
@@ -42,7 +41,7 @@ const LightBoxBg = styled.div`
   background: rgba(15, 31, 5, 0.62);
   z-index: 11;
 `
-const CloseIcon = styled(FontAwesomeIcon)`
+const CloseIcon = styled(FaTimesCircle)`
   ${tw`absolute cursor-pointer`};
   color: ${props => props.theme.primaryColor};
   bottom: 1rem;

@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import media from 'src/components/responsive'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import Arrow from 'src/components/common/Arrow'
 
 const SlidersWrapper = styled.div`
@@ -120,7 +119,7 @@ function NextArrow(props) {
   const { onClick, dark } = props
   return (
     <Arrow dir="right" onClick={onClick} dark={dark}>
-      <FontAwesomeIcon icon={faChevronRight} />
+      <FaChevronRight />
     </Arrow>
   )
 }
@@ -129,7 +128,7 @@ function PrevArrow(props) {
   const { onClick, dark } = props
   return (
     <Arrow dir="left" onClick={onClick} dark={dark}>
-      <FontAwesomeIcon icon={faChevronLeft} />
+      <FaChevronLeft />
     </Arrow>
   )
 }

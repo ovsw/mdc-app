@@ -23,6 +23,22 @@ import infoSpeakImg from 'src/images/overlayBgs/infoSpeak.jpg'
 import infoContactImg from 'src/images/overlayBgs/infoContact.jpg'
 import MainLink from './MainLink'
 
+// import {
+//   FaSun,
+//   FaGraduationCap,
+//   FaStar,
+//   FaChild,
+//   FaBellSchool,
+//   FaClock,
+//   FaBellSchoolSlash,
+//   FaBirthdayCake,
+//   FaPenNib,
+//   FaPaperPlane,
+//   FaComments,
+//   FaCalendarStar,
+//   FaCalendarCheck,
+// } from "react-icons/fa"
+
 const TextWrapper = styled.span`
   ${tw`text-xl md:text-2xl xl:text-3xl xl:mx-4`};
   line-height: 1;
@@ -58,14 +74,46 @@ const bgImages = {
   infoContact: infoContactImg,
 }
 
-export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, ofTwo, icon }) => (
+export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, ofTwo, icon }) => {
+  // let actualIcon = <FaStar />
+  // switch (icon) {
+  // case 'FaSun':
+  //   actualIcon = <FaSun />
+  // case 'FaGraduationCap':
+  //   actualIcon = <FaGraduationCap />
+  // case 'FaStar':
+  //   actualIcon = <actualIcon />
+  // case 'FaChild':
+  //   actualIcon = <FaChild />
+  // case 'FaBellSchool':
+  //   actualIcon = <FaBellSchool />
+  // case 'FaClock':
+  //   actualIcon = <FaClock />
+  // case 'FaBellSchoolSlash':
+  //   actualIcon = <FaBellSchoolSlash />
+  // case 'FaBirthdayCake':
+  //   actualIcon = <FaBirthdayCake />
+  // case 'FaPenNib':
+  //   actualIcon = <FaPenNib />
+  // case 'FaPaperPlane':
+  //   actualIcon = <FaPaperPlane />
+  // case 'FaComments':
+  //   actualIcon = <FaComments />
+  // case 'FaCalendarStar':
+  //   actualIcon = <FaCalendarStar />
+  // case 'FaCalendarCheck':
+  //   actualIcon = <FaCalendarCheck />
+  // default:
+  //   actualIcon = <FaStar />
+  // }
+  return(
   <MainLink ofTwo={ofTwo} bgImage={bgImages[label]} style={{ backgroundImage: `${MapImage}` }}>
     {linkUrl.indexOf('https') !== 0 ? (
       <Link to={linkUrl} onClick={click}>
         <TextWrapper>
           {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
           <LinkButton primary light>
-            {icon && <IconWrapper>{icon}</IconWrapper>}
+          {/* <IconWrapper>{icon}</IconWrapper> */}
             {linkSubtitle}
           </LinkButton>
         </TextWrapper>
@@ -75,25 +123,59 @@ export const OverlayLink = ({ linkTitle, linkSubtitle, linkUrl, label, click, of
         <TextWrapper>
           {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
           <LinkButton primary light>
-            {icon && <IconWrapper>{icon}</IconWrapper>}
+          {/* <IconWrapper>{icon}</IconWrapper> */}
             {linkSubtitle}
           </LinkButton>
         </TextWrapper>
       </a>
     )}
   </MainLink>
-)
+)}
 
-export const IntOverlayLink = ({ linkTitle, linkSubtitle, label, click, ofTwo, icon }) => (
+export const IntOverlayLink = ({ linkTitle, linkSubtitle, label, click, ofTwo, icon }) => {
+  // let actualIcon = <FaStar />
+  // console.log(icon)
+  // switch (icon) {
+  //   case 'FaSun':
+  //     actualIcon = <FaSun />
+  //   case 'FaGraduationCap':
+  //     actualIcon = <FaGraduationCap />
+  //   case 'FaStar':
+  //     actualIcon = <actualIcon />
+  //   case 'FaChild':
+  //     actualIcon = <FaChild />
+  //   case 'FaBellSchool':
+  //     actualIcon = <FaBellSchool />
+  //   case 'FaClock':
+  //     actualIcon = <FaClock />
+  //   case 'FaBellSchoolSlash':
+  //     actualIcon = <FaBellSchoolSlash />
+  //   case 'FaBirthdayCake':
+  //     actualIcon = <FaBirthdayCake />
+  //   case 'FaPenNib':
+  //     actualIcon = <FaPenNib />
+  //   case 'FaPaperPlane':
+  //     actualIcon = <FaPaperPlane />
+  //   case 'FaComments':
+  //     actualIcon = <FaComments />
+  //   case 'FaCalendarStar':
+  //     actualIcon = <FaCalendarStar />
+  //   case 'FaCalendarCheck':
+  //     actualIcon = <FaCalendarCheck />
+  //   default:
+  //     actualIcon = <FaStar />
+  // }
+  
+  return(
   <MainLink ofTwo={ofTwo} bgImage={bgImages[label]} style={{ backgroundImage: MapImage }}>
     <a href="#" onClick={click}>
       <TextWrapper>
         {linkTitle && <LinkTitle>{linkTitle}</LinkTitle>}
         <LinkButton primary light>
-          {icon && <IconWrapper>{icon}</IconWrapper>}
+        {/* <IconWrapper>{icon}</IconWrapper> */}
           {linkSubtitle}
         </LinkButton>
       </TextWrapper>
     </a>
   </MainLink>
-)
+)}

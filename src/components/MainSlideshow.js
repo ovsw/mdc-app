@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import media from 'src/components/responsive'
 import Img from 'gatsby-image'
 import Slider from 'react-slick'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 import { LinkButton } from 'src/components/common/Button'
 import Arrow from 'src/components/common/Arrow'
 
@@ -53,7 +52,7 @@ function NextArrow(props) {
   const { className, style, onClick } = props
   return (
     <Arrow dir="right" onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronRight} />
+      <FaChevronRight />
     </Arrow>
   )
 }
@@ -62,7 +61,7 @@ function PrevArrow(props) {
   const { className, style, onClick } = props
   return (
     <Arrow dir="left" onClick={onClick}>
-      <FontAwesomeIcon icon={faChevronLeft} />
+      <FaChevronLeft />
     </Arrow>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHeart, faSun, faStar, faNewspaper, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaHeart, FaSun, FaStar, FaNewspaper, FaExclamationTriangle } from 'react-icons/fa'
 
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
@@ -52,8 +52,8 @@ const IndexPage = ({ data }) => (
               We have created an update page for all of our latest information regarding the coronavirus. Please click
               “Learn More” to see the latest communications.
             </p>
-            <LinkButton primary light to="/school-year-programs/updates-on-school-year-and-coronavirus/">
-              <FontAwesomeIcon icon={faExclamationTriangle} fixedWidth size="1x" /> Learn More
+            <LinkButton primary  to="/school-year-programs/updates-on-school-year-and-coronavirus/">
+              <FaExclamationTriangle /> Learn More
             </LinkButton>
           </div>
         </NarrowContent>
@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => (
       <HomePageSection topTexture bottomTexture>
         <NarrowContent>
           <MainHeading h2 centered>
-            <FontAwesomeIcon icon={faSun} fixedWidth size="1x" /> The fun doesn't end with the summer
+            <FaSun /> The fun doesn't end with the summer
           </MainHeading>
           <p className="text-center">At Maplewood we offer both Summer Camp and School Year programs!</p>
         </NarrowContent>
@@ -95,7 +95,7 @@ const IndexPage = ({ data }) => (
       <HomePageSection alternate>
         <NarrowContent className="md:mb-0 lg:pb-2">
           <MainHeading h2 centered>
-            <FontAwesomeIcon icon={faHeart} fixedWidth size="1x" /> What our families say:
+            <FaHeart /> What our families say:
           </MainHeading>
         </NarrowContent>
         <TestimonialSliders testimonials={data.datoCmsHome.testimonials} />
@@ -104,7 +104,7 @@ const IndexPage = ({ data }) => (
       <HomePageSection topTexture bottomTexture className="-mt-16">
         <NarrowContent className="md:mb-0 lg:pb-2">
           <MainHeading h2 centered>
-            <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> Latest News:
+            <FaNewspaper /> Latest News:
           </MainHeading>
           <RecentNews articles={data.allDatoCmsNewsArticle} />
         </NarrowContent>

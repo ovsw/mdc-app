@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Ovi Savescu <ovi@ovswebsites.com>",
   "dependencies": {
-    "@fortawesome/pro-light-svg-icons": "^5.12.1",
     "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^6.0.0",
     "gatsby": "^2.19.45",
@@ -37,6 +36,7 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.0",
     "react-icon-base": "^2.1.2",
+    "react-icons": "^3.11.0",
     "react-leaflet": "^2.6.3",
     "react-masonry-component": "^6.2.1",
     "react-slick": "0.23.1",
@@ -60,11 +60,6 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\""
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-pro": "^5.12.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.9",
     "babel-eslint": "^10.1.0",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",

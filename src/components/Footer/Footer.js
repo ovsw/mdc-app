@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faFacebookSquare,
-  faTwitterSquare,
-  faInstagram,
-  faYoutube,
-  faPinterestSquare,
-} from '@fortawesome/free-brands-svg-icons'
+import { 
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaInstagram,
+  FaYoutube,
+  FaPinterestSquare
+} from "react-icons/fa"
+
 import acaLogo from 'src/images/aca-logo.png'
 
 const FooterStyled = styled.footer`
@@ -90,7 +90,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebookSquare} />
+            <FaFacebookSquare />
           </SocialIcon>
           <SocialIcon
             name="Maplewood Instagram Page"
@@ -99,7 +99,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} />
+            <FaInstagram />
           </SocialIcon>
           <SocialIcon
             name="Maplewood Youtube Channel"
@@ -108,7 +108,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faYoutube} />
+            <FaYoutube />
           </SocialIcon>
           <SocialIcon
             name="Maplewood Twitter Page"
@@ -117,7 +117,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faTwitterSquare} />
+            <FaTwitterSquare />
           </SocialIcon>
           <SocialIcon
             name="Maplewood Pinterest Page"
@@ -126,7 +126,7 @@ const Footer = () => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faPinterestSquare} />
+            <FaPinterestSquare />
           </SocialIcon>
         </Icons>
         <AffiliateLogo src={acaLogo} alt="American Camp Association Logo" />

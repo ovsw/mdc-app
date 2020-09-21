@@ -11,7 +11,7 @@ import Header from 'src/components/Header/Header'
 import Footer from 'src/components/Footer/Footer'
 import Overlay from 'src/components/Overlay/Overlay'
 
-import '@fortawesome/fontawesome-svg-core/styles.css'
+// import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'src/css/style.css'
 
 const ContentWrapper = styled.div`

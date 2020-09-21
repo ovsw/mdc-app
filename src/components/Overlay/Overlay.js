@@ -1,22 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faSun,
-  faGraduationCap,
-  faStar,
-  faChild,
-  faBellSchool,
-  faClock,
-  faBellSchoolSlash,
-  faBirthdayCake,
-  faPenNib,
-  faPaperPlane,
-  faComments,
-  faCalendarStar,
-  faCalendarCheck,
-} from '@fortawesome/pro-light-svg-icons'
+
 
 import { OverlayLink, IntOverlayLink } from './OverlayLink'
 
@@ -63,7 +48,7 @@ class Overlay extends React.Component {
               linkTitle="Summer Camp"
               linkSubtitle="Dates & Rates"
               linkUrl="/summer-camp/dates-and-rates"
-              icon={<FontAwesomeIcon icon={faSun} />}
+              icon="FaSun"
               label="scDatesRates"
               click={closeAllOverlays}
               ofTwo
@@ -71,7 +56,7 @@ class Overlay extends React.Component {
             <IntOverlayLink
               linkTitle="School Year"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faBellSchool} />}
+              icon="FaBellSchool"
               click={toggleDatesRatesSchoolOverlay}
               label="syDatesRates"
               ofTwo
@@ -83,7 +68,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Children's Classes"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faGraduationCap} />}
+              icon="FaGraduationCap"
               linkUrl="/school-year-programs/childrens-classes"
               label="syClasses"
               click={closeAllOverlays}
@@ -91,7 +76,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Kid's Events"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faStar} />}
+              icon="FaStar"
               linkUrl="/school-year-programs/kids-weekly-events-listing"
               label="syEvents"
               click={closeAllOverlays}
@@ -99,7 +84,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Preschool & Kindergarten"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faChild} />}
+              icon="FaChild"
               linkUrl="/school-year-programs/preschool-program-forms"
               label="syPre"
               click={closeAllOverlays}
@@ -107,7 +92,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Remote Learning School Age"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faClock} />}
+              icon="FaClock"
               linkUrl="/school-year-programs/after-school-program-forms"
               label="syAfter"
               click={closeAllOverlays}
@@ -115,7 +100,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Vacation Program"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faBellSchoolSlash} />}
+              icon="FaBellSchoolSlash"
               linkUrl="/school-year-programs/vacation-program"
               label="syVacation"
               click={closeAllOverlays}
@@ -123,7 +108,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Birthday Parties"
               linkSubtitle="Dates & Rates"
-              icon={<FontAwesomeIcon icon={faBirthdayCake} />}
+              icon="FaBirthdayCake"
               linkUrl="/school-year-programs/birthday-parties"
               label="syBirthdays"
               click={closeAllOverlays}
@@ -135,7 +120,7 @@ class Overlay extends React.Component {
             <IntOverlayLink
               linkTitle="Summer Camp"
               linkSubtitle="Enroll Now"
-              icon={<FontAwesomeIcon icon={faSun} />}
+              icon="FaSun"
               click={toggleEnrollCampOverlay}
               label="scEnroll"
               ofTwo
@@ -143,7 +128,7 @@ class Overlay extends React.Component {
             <IntOverlayLink
               linkTitle="School Year"
               linkSubtitle="Enroll Now"
-              icon={<FontAwesomeIcon icon={faBellSchool} />}
+              icon="FaBellSchool"
               click={toggleEnrollSchoolOverlay}
               label="syEnroll"
               ofTwo
@@ -155,7 +140,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="New Campers"
               linkSubtitle="Enroll Now"
-              icon={<FontAwesomeIcon icon={faPenNib} />}
+              icon="FaPenNib"
               linkUrl="https://maplewood.campintouch.com/ui/forms/application/camper/App"
               label="scNew"
               click={closeAllOverlays}
@@ -163,7 +148,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Returning Campers"
               linkSubtitle="Enroll Now"
-              icon={<FontAwesomeIcon icon={faPenNib} />}
+              icon="FaPenNib"
               linkUrl="https://maplewood.campintouch.com/v2/login/login.aspx?"
               label="scReturning"
               click={closeAllOverlays}
@@ -175,7 +160,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Classes"
               linkSubtitle="Apply Now"
-              icon={<FontAwesomeIcon icon={faGraduationCap} />}
+              icon="FaGraduationCap"
               linkUrl="/school-year-programs/childrens-classes"
               label="syClasses"
               click={closeAllOverlays}
@@ -183,7 +168,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Kid's Events"
               linkSubtitle="Register Now"
-              icon={<FontAwesomeIcon icon={faStar} />}
+              icon="FaStar"
               linkUrl="/school-year-programs/kids-weekly-events-listing"
               label="syEvents"
               click={closeAllOverlays}
@@ -191,7 +176,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Preschool & Kindergarten"
               linkSubtitle="Apply Now"
-              icon={<FontAwesomeIcon icon={faChild} />}
+              icon="FaChild"
               linkUrl="/school-year-programs/preschool-program-application"
               label="syPre"
               click={closeAllOverlays}
@@ -199,7 +184,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Remote Learning School Age"
               linkSubtitle="Apply Now"
-              icon={<FontAwesomeIcon icon={faClock} />}
+              icon="FaClock"
               linkUrl="/school-year-programs/after-school-program"
               label="syAfter"
               click={closeAllOverlays}
@@ -207,7 +192,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Vacation Program"
               linkSubtitle="Signup Now"
-              icon={<FontAwesomeIcon icon={faBellSchoolSlash} />}
+              icon="FaBellSchoolSlash"
               linkUrl="/school-year-programs/vacation-program"
               label="syVacation"
               click={closeAllOverlays}
@@ -215,7 +200,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Birthday Parties"
               linkSubtitle="Schedule Now"
-              icon={<FontAwesomeIcon icon={faBirthdayCake} />}
+              icon="FaBirthdayCake"
               linkUrl="/school-year-programs/birthday-parties-dates-and-rates"
               label="syBirthdays"
               click={closeAllOverlays}
@@ -227,14 +212,14 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Take a Tour"
               linkSubtitle="Schedule Now"
-              icon={<FontAwesomeIcon icon={faCalendarStar} />}
+              icon="FaCalendarStar"
               linkUrl="/schedule-a-tour"
               label="infoTour"
               click={closeAllOverlays}
             />
             <OverlayLink
               linkTitle="Attend Info Session"
-              icon={<FontAwesomeIcon icon={faCalendarCheck} />}
+              icon="FaCalendarCheck"
               linkSubtitle="View Schedule"
               linkUrl="upcoming-info-sessions"
               label="infoEvent"
@@ -243,7 +228,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Chat with us"
               linkSubtitle="Chat Now"
-              icon={<FontAwesomeIcon icon={faComments} />}
+              icon="FaComments"
               linkUrl="#"
               label="infoSpeak"
               click={this.triggerChat}
@@ -251,7 +236,7 @@ class Overlay extends React.Component {
             <OverlayLink
               linkTitle="Request Info"
               linkSubtitle="Contact Us"
-              icon={<FontAwesomeIcon icon={faPaperPlane} />}
+              icon="FaPaperPlane"
               linkUrl="/contact-us"
               label="infoContact"
               click={closeAllOverlays}

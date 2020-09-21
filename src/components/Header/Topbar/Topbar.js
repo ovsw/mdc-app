@@ -3,8 +3,8 @@ import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
 import { NavContext } from 'src/layouts'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faMap, faNewspaper, faSignInAlt } from '@fortawesome/free-solid-svg-icons'
+import { FaPhone, FaMap, FaNewspaper, FaSignInAlt } from  'react-icons/fa'
+
 
 const TopBarStyled = styled.div`
   ${tw`px-0 md:px-2`};
@@ -62,7 +62,7 @@ class Topbar extends React.Component {
         }) => (
           <>
             {/* <MobileOnlyTopBar>
-                <button type="button" onClick={this.triggerChat}><FontAwesomeIcon icon={faComments} fixedWidth size="1x" /> Chat Now</button>
+                <button type="button" onClick={this.triggerChat}><FaComments /> Chat Now</button>
                 <a href="tel:4123213">Call Now</a>
               </MobileOnlyTopBar> */}
             <TopBarStyled>
@@ -70,22 +70,22 @@ class Topbar extends React.Component {
               <div className="hidden lg:flex container mx-auto px-1 justify-between">
                 <div>
                   <ExternalLink href="tel:1-508-238-2387" className="ml-6">
-                    <FontAwesomeIcon icon={faPhone} fixedWidth size="1x" /> Call Us (508)-238-2387
+                    <FaPhone /> Call Us (508)-238-2387
                   </ExternalLink>
                   <InternalLink emphasized to="/interactive-map" className="ml-4">
-                    <FontAwesomeIcon icon={faMap} fixedWidth size="1x" /> Interactive Map
+                    <FaMap /> Interactive Map
                   </InternalLink>
                 </div>
                 <div>
                   <InternalLink emphasized to="/news" className="mr-6">
-                    <FontAwesomeIcon icon={faNewspaper} fixedWidth size="1x" /> News
+                    <FaNewspaper /> News
                   </InternalLink>
                   <ExternalLink
                     href="https://maplewood.campintouch.com/v2/login/login.aspx?"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <FontAwesomeIcon icon={faSignInAlt} fixedWidth size="1x" /> Summer Login
+                    <FaSignInAlt /> Summer Login
                   </ExternalLink>
                 </div>
               </div>
