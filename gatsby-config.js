@@ -148,11 +148,11 @@ module.exports = {
           url: '/school-year-programs/vacation-program',
           children: [],
         },
-        {
-          title: 'Birthday Parties',
-          url: '/school-year-programs/birthday-parties',
-          children: [],
-        },
+        // {
+        //   title: 'Birthday Parties',
+        //   url: '/school-year-programs/birthday-parties',
+        //   children: [],
+        // },
       ],
     ],
     familiesNav: [
