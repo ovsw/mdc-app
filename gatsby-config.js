@@ -115,6 +115,26 @@ module.exports = {
           children: [],
         },
         {
+          title: 'Preschool Program',
+          url: '/school-year-programs/preschool-program',
+          children: [],
+        },
+        {
+          title: 'Kindergarten Program',
+          url: '/school-year-programs/kindergarten-program',
+          children: [],
+        },
+        {
+          title: 'Remote Learning (K-8th)',
+          url: '/school-year-programs/after-school-program',
+          children: [],
+        },
+        {
+          title: 'Vacation Program',
+          url: '/school-year-programs/vacation-program',
+          children: [],
+        },
+        {
           title: "Children's Classes",
           url: '/school-year-programs/childrens-classes',
           children: [
@@ -132,22 +152,7 @@ module.exports = {
           title: `Kids' Weekly Events`,
           url: '/school-year-programs/kids-weekly-events',
           children: [],
-        },
-        {
-          title: 'Preschool & Kindergarten',
-          url: '/school-year-programs/preschool-program',
-          children: [],
-        },
-        {
-          title: 'Remote Learning (K-8th)',
-          url: '/school-year-programs/after-school-program',
-          children: [],
-        },
-        {
-          title: 'Vacation Program',
-          url: '/school-year-programs/vacation-program',
-          children: [],
-        },
+        }
         // {
         //   title: 'Birthday Parties',
         //   url: '/school-year-programs/birthday-parties',
