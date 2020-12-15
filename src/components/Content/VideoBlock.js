@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import YouTube from 'react-youtube'
+import getVideoId from 'get-video-id'
+import VimeoPlayer from '@u-wave/react-vimeo'
 
 const VideoWrapper = styled.div`
   ${tw`relative`};
@@ -14,17 +16,13 @@ const VideoWrapper = styled.div`
 `
 
 const VideoBlock = ({ block }) => {
-  let videoId = block.videoUrl.split('v=')[1]
-  const ampersandPosition = videoId.indexOf('&')
-  if (ampersandPosition !== -1) {
-    videoId = videoId.substring(0, ampersandPosition)
-  }
+  const { id, service } = getVideoId(block.videoUrl)
 
   const Container = styled.div`
     ${tw`container mx-auto mb-8 px-4`};
   `
 
-  const opts = {
+  const youtubeOpts = {
     height: '390',
     width: '640',
     playerVars: {
@@ -34,10 +32,13 @@ const VideoBlock = ({ block }) => {
       rel: 0,
     },
   }
+
+  const videoEmbed = service === 'youtube' ? (<YouTube videoId={id} opts={youtubeOpts} />) : (<VimeoPlayer video={id} style={{textAlign: 'center', width: '100%'}} />)
+
   return (
     <Container>
       <VideoWrapper>
-        <YouTube videoId={videoId} opts={opts} />
+        {videoEmbed}
       </VideoWrapper>
     </Container>
   )
