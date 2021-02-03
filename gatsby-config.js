@@ -97,16 +97,16 @@ module.exports = {
           url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
-        {
-          title: 'Smart Lunches',
-          url: '/summer-camp/smart-lunches',
-          children: [],
-        },
-        {
-          title: 'Bostonwise Partnership',
-          url: '/summer-camp/bostonwise-partnership',
-          children: [],
-        },
+        // {
+        //   title: 'Smart Lunches',
+        //   url: '/summer-camp/smart-lunches',
+        //   children: [],
+        // },
+        // {
+        //   title: 'Bostonwise Partnership',
+        //   url: '/summer-camp/bostonwise-partnership',
+        //   children: [],
+        // },
       ],
       [
         {
