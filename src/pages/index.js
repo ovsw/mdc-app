@@ -47,7 +47,7 @@ const IndexPage = ({ data }) => (
       <HpNotice>
         <NarrowContent>
           <div className="text-center">
-            <h1>Updates on School-year and COVID-19</h1>
+            <h1>Updates on COVID-19</h1>
             <p className="my-5">
               We have created an update page for all of our latest information regarding the coronavirus. Please click
               “Learn More” to see the latest communications.
