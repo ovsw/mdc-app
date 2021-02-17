@@ -168,8 +168,8 @@ module.exports = {
           children: [],
         },
         {
-          title: 'New for 2020!',
-          url: '/summer-camp/new-for-2020',
+          title: 'New for 2021!',
+          url: '/summer-camp/new-for-2021',
           children: [],
         },
         {
