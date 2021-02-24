@@ -134,25 +134,25 @@ module.exports = {
           url: '/school-year-programs/vacation-program',
           children: [],
         },
-        {
-          title: "Children's Classes",
-          url: '/school-year-programs/childrens-classes',
-          children: [
-            {
-              title: '6 Years & Under',
-              url: '/school-year-programs/childrens-classes/6-years-and-under-classes',
-            },
-            {
-              title: 'K-8th grade',
-              url: '/school-year-programs/childrens-classes/kindergarten-to-8th-grade-classes',
-            },
-          ],
-        },
-        {
-          title: `Kids' Weekly Events`,
-          url: '/school-year-programs/kids-weekly-events',
-          children: [],
-        }
+        // {
+        //   title: "Children's Classes",
+        //   url: '/school-year-programs/childrens-classes',
+        //   children: [
+        //     {
+        //       title: '6 Years & Under',
+        //       url: '/school-year-programs/childrens-classes/6-years-and-under-classes',
+        //     },
+        //     {
+        //       title: 'K-8th grade',
+        //       url: '/school-year-programs/childrens-classes/kindergarten-to-8th-grade-classes',
+        //     },
+        //   ],
+        // },
+        // {
+        //   title: `Kids' Weekly Events`,
+        //   url: '/school-year-programs/kids-weekly-events',
+        //   children: [],
+        // }
         // {
         //   title: 'Birthday Parties',
         //   url: '/school-year-programs/birthday-parties',
