@@ -129,11 +129,11 @@ module.exports = {
           url: '/school-year-programs/remote-learning-program',
           children: [],
         },
-        // {
-        //   title: 'After-school Program',
-        //   url: '/school-year-programs/after-school-program',
-        //   children: [],
-        // },
+        {
+          title: 'After-school Program',
+          url: '/school-year-programs/after-school-program',
+          children: [],
+        },
         {
           title: 'Vacation Program',
           url: '/school-year-programs/vacation-program',
