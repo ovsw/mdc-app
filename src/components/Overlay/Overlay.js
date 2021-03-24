@@ -90,7 +90,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Remote Learning School Age"
+              linkTitle="After School"
               linkSubtitle="Dates & Rates"
               icon="FaClock"
               linkUrl="/school-year-programs/after-school-program-forms"
@@ -182,7 +182,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Remote Learning School Age"
+              linkTitle="After School"
               linkSubtitle="Apply Now"
               icon="FaClock"
               linkUrl="/school-year-programs/after-school-program"

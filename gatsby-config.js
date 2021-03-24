@@ -124,11 +124,11 @@ module.exports = {
           url: '/school-year-programs/kindergarten-program',
           children: [],
         },
-        {
-          title: 'Remote Learning (K-8th)',
-          url: '/school-year-programs/remote-learning-program',
-          children: [],
-        },
+        // {
+        //   title: 'Remote Learning (K-8th)',
+        //   url: '/school-year-programs/remote-learning-program',
+        //   children: [],
+        // },
         {
           title: 'After-school Program',
           url: '/school-year-programs/after-school-program',
@@ -207,7 +207,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Remote Learning Forms',
+          title: 'After School Forms',
           url: '/school-year-programs/after-school-program-forms',
           children: [],
         },
