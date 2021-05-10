@@ -41,7 +41,7 @@ const LightBoxBg = styled.div`
   background: rgba(15, 31, 5, 0.62);
   z-index: 11;
 `
-const CloseIcon = styled(FaTimesCircle)`
+const CloseIcon = styled.span`
   ${tw`absolute cursor-pointer`};
   color: ${props => props.theme.primaryColor};
   bottom: 1rem;
@@ -76,7 +76,15 @@ class LightBox extends React.Component {
       <LightBoxWrapper>
         <LightBoxBg onClick={closeLightBox} />
         <ContentWrapper>
-          <CloseIcon icon={faTimesCircle} fixedWidth size="2x" onClick={closeLightBox} />
+          {/* <CloseIcon
+            icon={faTimesCircle}
+            fixedWidth
+            size="2x"
+            onClick={closeLightBox}
+          /> */}
+          <CloseIcon onClick={closeLightBox}>
+            <FaTimesCircle />
+          </CloseIcon>
           <CurrentImage fluid={images[activeImage].large} />
           <RightColumn>
             <h2>{title}</h2>
