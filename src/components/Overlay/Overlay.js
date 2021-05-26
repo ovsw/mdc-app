@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import media from 'src/components/responsive'
 
-
 import { OverlayLink, IntOverlayLink } from './OverlayLink'
 
 const OverlayWrapper = styled.div`
@@ -185,7 +184,7 @@ class Overlay extends React.Component {
               linkTitle="After School"
               linkSubtitle="Apply Now"
               icon="FaClock"
-              linkUrl="/school-year-programs/after-school-program"
+              linkUrl="/school-year-programs/after-school-program-forms"
               label="syAfter"
               click={closeAllOverlays}
             />
