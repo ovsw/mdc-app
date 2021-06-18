@@ -3,7 +3,13 @@ import { graphql } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { FaHeart, FaSun, FaStar, FaNewspaper, FaExclamationTriangle } from 'react-icons/fa'
+import {
+  FaHeart,
+  FaSun,
+  FaStar,
+  FaNewspaper,
+  FaExclamationTriangle,
+} from 'react-icons/fa'
 
 import MainSlideshow from 'src/components/MainSlideshow'
 import MainBannerWrapper from 'src/components/Content/MainBannerWrapper'
@@ -36,7 +42,10 @@ const IndexPage = ({ data }) => (
   <>
     <HelmetDatoCms>
       <title>{data.datoCmsHome.seoSettings.title}</title>
-      <meta name="description" content={data.datoCmsHome.seoSettings.description} />
+      <meta
+        name="description"
+        content={data.datoCmsHome.seoSettings.description}
+      />
     </HelmetDatoCms>
 
     <MainBannerWrapper>
@@ -49,10 +58,14 @@ const IndexPage = ({ data }) => (
           <div className="text-center">
             <h1>Updates on COVID-19</h1>
             <p className="my-5">
-              We have created an update page for all of our latest information regarding the coronavirus. Please click
-              “Learn More” to see the latest communications.
+              We have created an update page for all of our latest information
+              regarding the coronavirus. Please click “Learn More” to see the
+              latest communications.
             </p>
-            <LinkButton primary  to="/school-year-programs/updates-on-school-year-and-coronavirus/">
+            <LinkButton
+              primary
+              to="/school-year-programs/updates-on-school-year-and-coronavirus/"
+            >
               <FaExclamationTriangle /> Learn More
             </LinkButton>
           </div>
@@ -61,7 +74,9 @@ const IndexPage = ({ data }) => (
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
-          <MainHeading>Maplewood Country Day Camp & Enrichment Center</MainHeading>
+          <MainHeading>
+            Maplewood Country Day Camp & Enrichment Center
+          </MainHeading>
         </NarrowContent>
 
         <NarrowContent className="md:mb-0 md:pb-0">
@@ -76,7 +91,10 @@ const IndexPage = ({ data }) => (
       <NavContext.Consumer>
         {({ toggleEnrollNowOverlay }) => (
           <CtaBlock>
-            <Countdown date="2021-06-28T00:00:00" toggleDatesRatesOverlay={toggleEnrollNowOverlay} />
+            <Countdown
+              date="2021-06-29T00:00:00"
+              toggleDatesRatesOverlay={toggleEnrollNowOverlay}
+            />
           </CtaBlock>
         )}
       </NavContext.Consumer>
@@ -86,7 +104,9 @@ const IndexPage = ({ data }) => (
           <MainHeading h2 centered>
             <FaSun /> The fun doesn't end with the summer
           </MainHeading>
-          <p className="text-center">At Maplewood we offer both Summer Camp and School Year programs!</p>
+          <p className="text-center">
+            At Maplewood we offer both Summer Camp and School Year programs!
+          </p>
         </NarrowContent>
 
         <BlockLinks items={data.datoCmsHome.sectionLinks} />
@@ -135,7 +155,12 @@ export const query = graphql`
           fluid(
             maxWidth: 1200
             maxHeight: 768
-            imgixParams: { fm: "jpg", auto: "enhance,compress", fit: "crop", crop: "faces,entropy" }
+            imgixParams: {
+              fm: "jpg"
+              auto: "enhance,compress"
+              fit: "crop"
+              crop: "faces,entropy"
+            }
           ) {
             ...GatsbyDatoCmsFluid
           }
