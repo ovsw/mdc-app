@@ -94,7 +94,8 @@ module.exports = {
         },
         {
           title: 'Camper Daily Photos',
-          url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
+          url:
+            '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
         // {
@@ -139,6 +140,11 @@ module.exports = {
           url: '/school-year-programs/vacation-program',
           children: [],
         },
+        {
+          title: "Children's Classes, 6 years and under",
+          url: '/school-year-programs/childrens-classes/6-years-and-under-classes',
+          children: [],
+        },
         // {
         //   title: "Children's Classes",
         //   url: '/school-year-programs/childrens-classes',
@@ -179,7 +185,8 @@ module.exports = {
         },
         {
           title: 'Camper Daily Photos',
-          url: '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
+          url:
+            '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
         {
