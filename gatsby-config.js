@@ -179,7 +179,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'New for 2021!',
+          title: 'New for 2022!',
           url: '/summer-camp/new-for-2021',
           children: [],
         },
