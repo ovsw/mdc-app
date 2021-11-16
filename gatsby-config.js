@@ -180,7 +180,7 @@ module.exports = {
         },
         {
           title: 'New for 2022!',
-          url: '/summer-camp/new-for-2021',
+          url: '/summer-camp/new-for-2022',
           children: [],
         },
         {
