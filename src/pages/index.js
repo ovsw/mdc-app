@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => (
     </MainBannerWrapper>
 
     <MainContentWrapper>
-      <HpNotice>
+      {/* <HpNotice>
         <NarrowContent>
           <div className="text-center">
             <h1>Updates on COVID-19</h1>
@@ -70,7 +70,7 @@ const IndexPage = ({ data }) => (
             </LinkButton>
           </div>
         </NarrowContent>
-      </HpNotice>
+      </HpNotice> */}
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
