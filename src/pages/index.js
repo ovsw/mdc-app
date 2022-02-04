@@ -53,24 +53,26 @@ const IndexPage = ({ data }) => (
     </MainBannerWrapper>
 
     <MainContentWrapper>
-      {/* <HpNotice>
-        <NarrowContent>
-          <div className="text-center">
-            <h1>Updates on COVID-19</h1>
-            <p className="my-5">
-              We have created an update page for all of our latest information
-              regarding the coronavirus. Please click “Learn More” to see the
-              latest communications.
-            </p>
-            <LinkButton
-              primary
-              to="/school-year-programs/updates-on-school-year-and-coronavirus/"
-            >
-              <FaExclamationTriangle /> Learn More
-            </LinkButton>
-          </div>
-        </NarrowContent>
-      </HpNotice> */}
+      {data.datoCmsHome.showCovid19Notice && (
+        <HpNotice>
+          <NarrowContent>
+            <div className="text-center">
+              <h1>Updates on COVID-19</h1>
+              <p className="my-5">
+                We have created an update page for all of our latest information
+                regarding the coronavirus. Please click “Learn More” to see the
+                latest communications.
+              </p>
+              <LinkButton
+                primary
+                to="/school-year-programs/updates-on-school-year-and-coronavirus/"
+              >
+                <FaExclamationTriangle /> Learn More
+              </LinkButton>
+            </div>
+          </NarrowContent>
+        </HpNotice>
+      )}
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
@@ -140,6 +142,7 @@ export default IndexPage
 export const query = graphql`
   query IndexQuery {
     datoCmsHome {
+      showCovid19Notice
       seoSettings {
         title
         description
