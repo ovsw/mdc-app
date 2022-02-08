@@ -142,7 +142,8 @@ module.exports = {
         },
         {
           title: "Children's Classes, 6 years and under",
-          url: '/school-year-programs/childrens-classes/6-years-and-under-classes',
+          url:
+            '/school-year-programs/childrens-classes/6-years-and-under-classes',
           children: [],
         },
         // {
@@ -209,7 +210,7 @@ module.exports = {
       ],
       [
         {
-          title: 'Preschool & Kindergarten Forms',
+          title: 'Preschool Forms',
           url: '/school-year-programs/preschool-program-forms',
           children: [],
         },

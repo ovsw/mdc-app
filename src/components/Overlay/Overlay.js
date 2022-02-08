@@ -81,7 +81,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Preschool & Kindergarten"
+              linkTitle="Preschool"
               linkSubtitle="Dates & Rates"
               icon="FaChild"
               linkUrl="/school-year-programs/preschool-program-forms"
@@ -173,7 +173,7 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Preschool & Kindergarten"
+              linkTitle="Preschool"
               linkSubtitle="Apply Now"
               icon="FaChild"
               linkUrl="/school-year-programs/preschool-program-forms"
