@@ -120,11 +120,11 @@ module.exports = {
           url: '/school-year-programs/preschool-program',
           children: [],
         },
-        {
-          title: 'Kindergarten Program',
-          url: '/school-year-programs/kindergarten-program',
-          children: [],
-        },
+        // {
+        //   title: 'Kindergarten Program',
+        //   url: '/school-year-programs/kindergarten-program',
+        //   children: [],
+        // },
         // {
         //   title: 'Remote Learning (K-8th)',
         //   url: '/school-year-programs/remote-learning-program',
