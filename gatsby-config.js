@@ -60,8 +60,8 @@ module.exports = {
               url: '/summer-camp/preschool-and-kindergarten',
             },
             {
-              title: '1st-7th Grade',
-              url: '/summer-camp/1st-7th-grade',
+              title: '1st-9th Grade',
+              url: '/summer-camp/1st-9th-grade',
             },
             {
               title: 'Teen Leadership (C.I.T.)',
