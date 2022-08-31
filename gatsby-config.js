@@ -184,11 +184,11 @@ module.exports = {
           url: '/at-home',
           children: [],
         },
-        {
-          title: 'New for 2022!',
-          url: '/summer-camp/new-for-2022',
-          children: [],
-        },
+        // {
+        //   title: 'New for 2022!',
+        //   url: '/summer-camp/new-for-2022',
+        //   children: [],
+        // },
         {
           title: 'Camper Daily Photos',
           url:
