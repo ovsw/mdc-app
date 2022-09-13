@@ -141,7 +141,7 @@ module.exports = {
           children: [],
         },
         {
-          title: 'Indoor/Outdoor Playgrounds',
+          title: 'Indoor/Outdoor Playground',
           url: '/school-year-programs/indoor-outdoor-playgrounds',
           children: [],
         },
