@@ -165,10 +165,10 @@ class Overlay extends React.Component {
               click={closeAllOverlays}
             />
             <OverlayLink
-              linkTitle="Kid's Events"
-              linkSubtitle="Register Now"
+              linkTitle="Indoor/Outdoor Playground"
+              linkSubtitle="Enroll Now"
               icon="FaStar"
-              linkUrl="/school-year-programs/kids-weekly-events-listing"
+              linkUrl="/school-year-programs/indoor-outdoor-playgrounds"
               label="syEvents"
               click={closeAllOverlays}
             />
