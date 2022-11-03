@@ -11,10 +11,6 @@
  */
 @import 'tailwindcss/preflight';
 
-p {
-  margin-bottom: 1.4 rem;
-}
-
 /**
   * This injects any component classes registered by plugins.
   *
