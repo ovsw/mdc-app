@@ -9,18 +9,18 @@
  *
  * @import "tailwindcss/preflight";
  */
-@import "tailwindcss/preflight";
+/* @import "tailwindcss/preflight"; */
 
- /**
+/**
   * This injects any component classes registered by plugins.
   *
   * If using `postcss-import`, use this import instead:
   *
   * @import "tailwindcss/components";
   */
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 
- /**
+/**
   * Here you would add any of your custom component classes; stuff that you'd
   * want loaded *before* the utilities so that the utilities could still
   * override them.
@@ -36,10 +36,10 @@
   * @import "components/forms";
   */
 
-  @import "./components/contentImage.css";
-  @import "./components/headings.css";
+@import './components/contentImage.css';
+@import './components/headings.css';
 
- /**
+/**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.
   *
@@ -47,9 +47,9 @@
   *
   * @import "tailwindcss/utilities";
   */
-  @import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';
 
- /**
+/**
   * Here you would add any custom utilities you need that don't come out of the
   * box with Tailwind.
   *
@@ -64,5 +64,5 @@
   * @import "utilities/skew-transforms";
   */
 
-  @import "./utilities/main.css";
-  @import "./utilities/gradients.css";
+@import './utilities/main.css';
+@import './utilities/gradients.css';
