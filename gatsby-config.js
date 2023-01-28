@@ -179,11 +179,11 @@ module.exports = {
     ],
     familiesNav: [
       [
-        {
-          title: 'Maplewood At Home',
-          url: '/at-home',
-          children: [],
-        },
+        // {
+        //   title: 'Maplewood At Home',
+        //   url: '/at-home',
+        //   children: [],
+        // },
         // {
         //   title: 'New for 2022!',
         //   url: '/summer-camp/new-for-2022',
