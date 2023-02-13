@@ -71,12 +71,10 @@ module.exports = {
               title: 'Additional Programs',
               url: '/summer-camp/additional-programs',
             },
-          ],
-        },
-        {
-          title: 'Activities',
-          url: '/summer-camp/activities',
-          children: [
+            {
+              title: 'Activities',
+              url: '/summer-camp/activities'
+            },
             {
               title: 'Swimming & Boating ',
               url: '/summer-camp/activities/swimming-and-boating',
@@ -87,6 +85,20 @@ module.exports = {
             },
           ],
         },
+        // {
+        //   title: 'Activities',
+        //   url: '/summer-camp/activities',
+        //   children: [
+        //     {
+        //       title: 'Swimming & Boating ',
+        //       url: '/summer-camp/activities/swimming-and-boating',
+        //     },
+        //     {
+        //       title: 'Club Day - Electives',
+        //       url: '/summer-camp/activities/club-day-electives',
+        //     },
+        //   ],
+        // },
         {
           title: 'Bus Transportation',
           url: '/summer-camp/bus-transportation',
