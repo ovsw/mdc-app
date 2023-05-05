@@ -283,6 +283,14 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-root-import`,
     {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: false, // optional parameter to include script in development
+        id: 3477876,
+        sv: 6,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en',
