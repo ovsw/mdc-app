@@ -94,7 +94,7 @@ const IndexPage = ({ data }) => (
         {({ toggleEnrollNowOverlay }) => (
           <CtaBlock>
             <Countdown
-              date="2023-06-26T00:00:00"
+              date="2023-06-27T07:00:00"
               toggleDatesRatesOverlay={toggleEnrollNowOverlay}
             />
           </CtaBlock>
