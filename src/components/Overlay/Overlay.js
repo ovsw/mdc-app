@@ -88,14 +88,14 @@ class Overlay extends React.Component {
               label="syPre"
               click={closeAllOverlays}
             />
-            <OverlayLink
+            {/* <OverlayLink
               linkTitle="After School"
               linkSubtitle="Dates & Rates"
               icon="FaClock"
               linkUrl="/school-year-programs/after-school-program-forms"
               label="syAfter"
               click={closeAllOverlays}
-            />
+            /> */}
             <OverlayLink
               linkTitle="Vacation Program"
               linkSubtitle="Dates & Rates"
@@ -180,14 +180,14 @@ class Overlay extends React.Component {
               label="syPre"
               click={closeAllOverlays}
             />
-            <OverlayLink
+            {/* <OverlayLink
               linkTitle="After School"
               linkSubtitle="Apply Now"
               icon="FaClock"
               linkUrl="/school-year-programs/after-school-program-forms"
               label="syAfter"
               click={closeAllOverlays}
-            />
+            /> */}
             <OverlayLink
               linkTitle="Vacation Program"
               linkSubtitle="Signup Now"

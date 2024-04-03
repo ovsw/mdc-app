@@ -73,7 +73,7 @@ module.exports = {
             },
             {
               title: 'Activities',
-              url: '/summer-camp/activities'
+              url: '/summer-camp/activities',
             },
             {
               title: 'Swimming & Boating ',
@@ -142,11 +142,11 @@ module.exports = {
         //   url: '/school-year-programs/remote-learning-program',
         //   children: [],
         // },
-        {
-          title: 'After-school Program',
-          url: '/school-year-programs/after-school-program',
-          children: [],
-        },
+        // {
+        //   title: 'After-school Program',
+        //   url: '/school-year-programs/after-school-program',
+        //   children: [],
+        // },
         {
           title: 'Vacation Program',
           url: '/school-year-programs/vacation-program',
@@ -231,11 +231,11 @@ module.exports = {
           url: '/school-year-programs/preschool-program-forms',
           children: [],
         },
-        {
-          title: 'After School Forms',
-          url: '/school-year-programs/after-school-program-forms',
-          children: [],
-        },
+        // {
+        //   title: 'After School Forms',
+        //   url: '/school-year-programs/after-school-program-forms',
+        //   children: [],
+        // },
         {
           title: 'School Year Login',
           url: 'https://campscui.active.com/orgs/MaplewoodCountryDayCamp',
