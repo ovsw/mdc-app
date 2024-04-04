@@ -216,22 +216,22 @@ class Overlay extends React.Component {
               label="infoTour"
               click={closeAllOverlays}
             />
-            <OverlayLink
+            {/* <OverlayLink
               linkTitle="Attend Info Session"
               icon="FaCalendarCheck"
               linkSubtitle="View Schedule"
               linkUrl="upcoming-info-sessions"
               label="infoEvent"
               click={closeAllOverlays}
-            />
-            <OverlayLink
+            /> */}
+            {/* <OverlayLink
               linkTitle="Chat with us"
               linkSubtitle="Chat Now"
               icon="FaComments"
               linkUrl="#"
               label="infoSpeak"
               click={this.triggerChat}
-            />
+            /> */}
             <OverlayLink
               linkTitle="Request Info"
               linkSubtitle="Contact Us"
