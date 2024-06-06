@@ -93,7 +93,14 @@ class Topbar extends React.Component {
 
               {/* MOBILE */}
               <MobileBarWrapper>
-                {!datesRatesOverlayVisible ? (
+                <ExternalLink
+                  href="https://maplewood.campintouch.com/v2/login/login.aspx?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaSignInAlt /> Summer Login
+                </ExternalLink>
+                {/* {!datesRatesOverlayVisible ? (
                   <ButtonLink type="button" onClick={toggleDatesRatesOverlay}>
                     <span>Dates &amp; Rates</span>
                   </ButtonLink>
@@ -101,7 +108,7 @@ class Topbar extends React.Component {
                   <ButtonLink active type="button" onClick={closeAllOverlays}>
                     Close
                   </ButtonLink>
-                )}
+                )} */}
                 {enrollNowOverlayVisible || enrollCampOverlayVisible || enrollSchoolOverlayVisible ? (
                   <ButtonLink type="button" onClick={closeAllOverlays}>
                     Close
