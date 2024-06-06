@@ -21,6 +21,15 @@ const ExternalLink = styled.a`
   color: ${props => (props.emphasized ? 'white' : props.theme.secondaryColor)}!important;
   }
 `
+const ExternalLinkLeftTopBar = styled.a`
+${() => LinkStyles}
+color: ${props => (props.emphasized ? props.theme.secondaryColor : 'white')}!important;
+margin-left: 1rem;
+&:hover {
+color: ${props => (props.emphasized ? 'white' : props.theme.secondaryColor)}!important;
+}
+`
+
 const InternalLink = styled(Link)`
   ${() => LinkStyles}
   color: ${props => (props.emphasized ? props.theme.secondaryColor : 'white')}!important;
@@ -93,13 +102,13 @@ class Topbar extends React.Component {
 
               {/* MOBILE */}
               <MobileBarWrapper>
-                <ExternalLink
+                <ExternalLinkLeftTopBar
                   href="https://maplewood.campintouch.com/v2/login/login.aspx?"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FaSignInAlt /> Summer Login
-                </ExternalLink>
+                </ExternalLinkLeftTopBar>
                 {/* {!datesRatesOverlayVisible ? (
                   <ButtonLink type="button" onClick={toggleDatesRatesOverlay}>
                     <span>Dates &amp; Rates</span>
