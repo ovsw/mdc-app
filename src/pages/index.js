@@ -73,6 +73,8 @@ const IndexPage = ({ data }) => (
           </NarrowContent>
         </HpNotice>
       )}
+
+      
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
