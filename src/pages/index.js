@@ -74,7 +74,7 @@ const IndexPage = ({ data }) => (
         </HpNotice>
       )}
 
-      
+
       <HomePageSection bottomTexture>
         {/* <IconUkulele width="200" height="200" className="iconhover" /> */}
         <NarrowContent>
@@ -92,17 +92,6 @@ const IndexPage = ({ data }) => (
         </NarrowContent>
       </HomePageSection>
 
-      <NavContext.Consumer>
-        {({ toggleEnrollNowOverlay }) => (
-          <CtaBlock>
-            <Countdown
-              date="2025-06-23T07:00:00"
-              toggleDatesRatesOverlay={toggleEnrollNowOverlay}
-            />
-          </CtaBlock>
-        )}
-      </NavContext.Consumer>
-
       <HomePageSection topTexture bottomTexture>
         <NarrowContent>
           <MainHeading h2 centered>
@@ -115,6 +104,17 @@ const IndexPage = ({ data }) => (
 
         <BlockLinks items={data.datoCmsHome.sectionLinks} />
       </HomePageSection>
+
+      <NavContext.Consumer>
+        {({ toggleEnrollNowOverlay }) => (
+          <CtaBlock>
+            <Countdown
+              date="2025-06-23T07:00:00"
+              toggleDatesRatesOverlay={toggleEnrollNowOverlay}
+            />
+          </CtaBlock>
+        )}
+      </NavContext.Consumer>
 
       <HomePageSection alternate>
         <NarrowContent className="md:mb-0 lg:pb-2">
