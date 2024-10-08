@@ -89,11 +89,11 @@ const IndexPage = ({ data }) => (
               __html: data.datoCmsHome.introText,
             }}
           />
-        </NarrowContent>
+        {/* </NarrowContent>
       </HomePageSection>
 
-      <HomePageSection topTexture bottomTexture>
-        <NarrowContent>
+      <HomePageSection  topTexture bottomTexture>
+        <NarrowContent> */}
           <MainHeading h2 centered>
             <FaSun /> The fun doesn't end with the summer
           </MainHeading>
