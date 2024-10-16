@@ -94,12 +94,12 @@ const IndexPage = ({ data }) => (
 
       <HomePageSection  topTexture bottomTexture>
         <NarrowContent> */}
-          <MainHeading h2 centered>
+          {/* <MainHeading h2 centered>
             <FaSun /> The fun doesn't end with the summer
           </MainHeading>
           <p className="text-center">
             At Maplewood we offer both Summer Camp and School Year programs!
-          </p>
+          </p> */}
         </NarrowContent>
 
         <BlockLinks items={data.datoCmsHome.sectionLinks} />
