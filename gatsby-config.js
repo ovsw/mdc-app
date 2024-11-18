@@ -110,11 +110,11 @@ module.exports = {
             '/summer-camp/campanion-summer-camp-photos-app-face-finder-technology',
           children: [],
         },
-        // {
-        //   title: 'Smart Lunches',
-        //   url: '/summer-camp/smart-lunches',
-        //   children: [],
-        // },
+        {
+          title: 'My Hot Lunchbox',
+          url: '/summer-camp/my-hot-lunchbox',
+          children: [],
+        },
         // {
         //   title: 'Bostonwise Partnership',
         //   url: '/summer-camp/bostonwise-partnership',
@@ -214,6 +214,11 @@ module.exports = {
         },
       ],
       [
+        {
+          title: 'New: My Hot Lunchbox',
+          url: '/summer-camp/my-hot-lunchbox',
+          children: [],
+        },
         {
           title: 'Summer Camp Login',
           url: 'https://maplewood.campintouch.com/v2/login/login.aspx?',
