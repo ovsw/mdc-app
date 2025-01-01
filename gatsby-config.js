@@ -360,5 +360,17 @@ module.exports = {
     },
     // `gatsby-plugin-offline`,
     `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: 'gatsby-plugin-posthog',
+      options: {
+        apiKey: process.env.POSTHOG_API_KEY,
+        // Change this to your PostHog instance URL if not using Cloud
+        apiHost: 'https://app.posthog.com', // or maybe https://eu.i.posthog.com???
+        // Enable in development mode
+        enableInDevelopment: false,
+        // Only load PostHog in the browser (recommended)
+        isEnabledDevMode: false,
+      },
+    },
   ],
 }
